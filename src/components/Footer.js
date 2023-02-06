@@ -12,52 +12,52 @@ const Footer = () => {
   return (
     <div className="bg-black h-full text-white p-4">
       <p className="text-center p-3 text-4xl">Follow me</p>
-      <section className="w-full md:w-full  flex-wrap flex bg-dark   justify-center items-center mx-auto">
+      <section className="w-full md:w-full  flex-wrap flex bg-dark   justify-center items-center ">
         <a
           href="https://www.instagram.com/"
-          className="border-white border-2 group p-4 hover:bg-white duration-300  ease-in-out   "
+          className="border-white border-2 p-4 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
         >
           <AiFillInstagram className="text-4xl group-hover:text-black group-hover:text-black hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
         <a
           href="https://www.instagram.com/"
-          className="border-white border-2 p-4   border-l-0  group hover:bg-white duration-300  ease-in-out "
+          className="border-white border-2 p-4 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
         >
           <AiFillFacebook className="text-4xl group-hover:text-black   group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
         <a
           href="https://www.instagram.com/"
-          className="border-white border-2 md:border-r-0 p-4 cursor-pointer  border-l-0 group hover:bg-white duration-300  ease-in-out  "
+          className="border-white border-2 p-4 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
         >
           <AiFillTwitterCircle className="text-4xl  group-hover:text-black group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
         <a
           href="https://www.instagram.com/"
-          className="border-white border-2  border-l-0 md:border-l-2 md:border-t-2 group hover:bg-white duration-300  ease-in-out    p-4 cursor-pointer    "
+          className="border-white border-2 p-4 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
         >
           <FaTiktok className="text-4xl  group-hover:text-black  group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
         <a
           href="https://www.instagram.com/"
-          className="border-white border-2 border-t-0 p-4 group hover:bg-white duration-300  ease-in-out  cursor-pointer  md:border-l-0 md:border-t-2   "
+          className="border-white border-2 p-4 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
         >
           <BsApple className="text-4xl group-hover:text-black   group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
         <a
           href="https://www.instagram.com/"
-          className="border-white border-2 group hover:bg-white duration-300  ease-in-out  border-t-0 p-4 cursor-pointer   border-l-0 md:border-t-2  "
+          className="border-white border-2 p-4 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
         >
           <BsSpotify className="text-4xl group-hover:text-black  group-hover:scale-110 duration-300  mx-2 cursor-pointer " />
         </a>
         <a
           href="https://www.instagram.com/"
-          className="border-white border-2 border-t-0 p-4 group hover:bg-white duration-300  ease-in-out  cursor-pointer   border-l-0  md:border-t-2 "
+          className="border-white border-2 p-4 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
         >
           <BsSnapchat className="text-4xl group-hover:text-black group-hover:scale-110 duration-300 mx-2 cursor-pointer" />
         </a>
         <a
           href="https://www.instagram.com/"
-          className="border-white border-2 p-4  group hover:bg-white duration-300  ease-in-out   border-t-0 border-l-0 md:border-t-2  "
+          className="border-white border-2 p-4 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
         >
           <SiTwitch className="text-4xl group-hover:text-black   group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
