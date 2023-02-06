@@ -7,6 +7,7 @@ import {
 import { FaTiktok } from "react-icons/fa";
 import { BsSnapchat, BsSpotify, BsApple } from "react-icons/bs";
 import { SiTwitch } from "react-icons/si";
+import { ImPlus, ImCross } from "react-icons/im";
 
 const Footer = () => {
   return (
@@ -17,7 +18,7 @@ const Footer = () => {
           href="https://www.instagram.com/"
           className="border-white border-2 md:p-4 p-2 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
         >
-          <AiFillInstagram className="text-4xl group-hover:text-black group-hover:text-black hover:scale-110 duration-300 mx-2 cursor-pointer " />
+          <AiFillInstagram className="text-4xl  group-hover:text-black hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
         <a
           href="https://www.instagram.com/"
@@ -63,7 +64,7 @@ const Footer = () => {
         </a>
       </section>
 
-      <section className="flex flex-col mt-10 gap-10 md:flex-row justify-center items-center">
+      <section className="flex flex-col mt-10 gap-10 md:flex-row justify-center my-4 items-center">
         <div className="flex flex-col justify-center items-center ">
           <p className="text-center p-3 text-4xl">Contact</p>
           <p className="text-center p-1  text-gray-400 ">Email: </p>
@@ -85,6 +86,19 @@ const Footer = () => {
           <p className="text-center p-1  text-gray-400  ">Phone: </p>
         </div>
       </section>
+
+      <section className="flex my-5 flex-row justify-between text-white items-center">
+        <div className="flex">
+          <ImPlus className="text-4xl mx-2 cursor-pointer animate-bounce" />
+          <ImCross className="text-4xl mx-2 cursor-pointer animate-bounce" />
+        </div>
+        <div className="flex ">
+          <p className="text-center p-1  text-gray-400  ">© 2023</p>
+          <p className="text-center p-1  text-gray-400  ">daqchild ent </p>
+          <p className="text-center p-1  text-gray-400  ">All rights reserved</p>
+        </div>
+      </section>
+
     </div>
   );
 };
