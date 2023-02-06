@@ -87,12 +87,12 @@ const Footer = () => {
         </div>
       </section>
 
-      <section className="flex my-6 flex-row justify-between text-white items-center">
-        <div className="flex">
-          <ImPlus className="text-6xl md:text-4xl mx-2 cursor-pointer animate-bounce" />
-          <ImCross className="text-6xl md:text-4xl mx-2 cursor-pointer animate-bounce" />
+      <section className="flex my-6 flex-row justify-between items-center">
+        <div className="flex mx-2 group">
+          <ImPlus className="text-6xl text-gray-300 group-hover:text-white md:text-4xl mx-2 cursor-pointer animate-bounce" />
+          <ImCross className="text-6xl text-gray-300 group-hover:text-white md:text-4xl mx-2 cursor-pointer animate-bounce" />
         </div>
-        <div className="flex  flex-col items-start md:flex-row">
+        <div className="flex  flex-col mx-2 items-start md:flex-row">
           <p className="text-center p-1  text-gray-400  ">© 2023</p>
           <p className="text-center p-1  text-gray-400  ">daqchild ent </p>
           <p className="text-center p-1  text-gray-400  ">All rights reserved</p>
