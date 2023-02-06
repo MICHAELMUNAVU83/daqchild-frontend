@@ -92,7 +92,7 @@ const Footer = () => {
           <ImPlus className="text-4xl mx-2 cursor-pointer animate-bounce" />
           <ImCross className="text-4xl mx-2 cursor-pointer animate-bounce" />
         </div>
-        <div className="flex ">
+        <div className="flex  flex-col items-start md:flex-row">
           <p className="text-center p-1  text-gray-400  ">© 2023</p>
           <p className="text-center p-1  text-gray-400  ">daqchild ent </p>
           <p className="text-center p-1  text-gray-400  ">All rights reserved</p>
