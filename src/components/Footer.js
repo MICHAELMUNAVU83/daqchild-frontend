@@ -8,7 +8,8 @@ import { FaTiktok } from "react-icons/fa";
 import { BsSnapchat, BsSpotify, BsApple } from "react-icons/bs";
 import { SiTwitch } from "react-icons/si";
 import { ImPlus, ImCross } from "react-icons/im";
-
+import {FaFacebookF} from "react-icons/fa"
+import {IoLogoTiktok} from "react-icons/io5"
 const Footer = () => {
   return (
     <div className="bg-black h-full text-white md:p-4 p-2">
@@ -24,7 +25,7 @@ const Footer = () => {
           href="https://www.instagram.com/"
           className="border-white border-2 md:p-4 p-2 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
         >
-          <AiFillFacebook className="text-4xl group-hover:text-black   group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
+          <FaFacebookF className="text-4xl group-hover:text-black   group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
         <a
           href="https://www.instagram.com/"
@@ -36,7 +37,7 @@ const Footer = () => {
           href="https://www.instagram.com/"
           className="border-white border-2 md:p-4 p-2 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
         >
-          <FaTiktok className="text-4xl  group-hover:text-black  group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
+          <IoLogoTiktok className="text-4xl  group-hover:text-black  group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
         <a
           href="https://www.instagram.com/"
@@ -64,26 +65,26 @@ const Footer = () => {
         </a>
       </section>
 
-      <section className="flex flex-col mt-10 gap-10 md:flex-row justify-center my-4 items-center">
+      <section className="flex flex-col mt-10 md:gap-24 gap-10 md:flex-row justify-center my-4 items-center">
         <div className="flex flex-col justify-center items-center ">
-          <p className="text-center p-3 text-4xl">Contact</p>
-          <p className="text-center p-1  text-gray-400 ">Email: </p>
-          <p className="text-center p-1  text-gray-400  ">Phone: </p>
+          <p className="text-center p-3 text-4xl">MIXES</p>
+          <p className="text-center p-1  text-gray-400 ">Video Mixes</p>
+          <p className="text-center p-1  text-gray-400  ">Audio Mixes</p>
+          <p className="text-center p-1  text-gray-400  ">Live Mixes</p>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <p className="text-center p-3 text-4xl">Contact</p>
-          <p className="text-center p-1  text-gray-400  ">Email: </p>
-          <p className="text-center p-1  text-gray-400  ">Phone: </p>
+          <p className="text-center p-3 text-4xl">Mercandise</p>
+          <p className="text-center p-1  text-gray-400  ">T-Shirts</p>
+          <p className="text-center p-1  text-gray-400  ">Hoodies</p>
+          <p className="text-center p-1  text-gray-400  ">Caps</p>
+
         </div>
+       
         <div className="flex flex-col justify-center items-center">
           <p className="text-center p-3 text-4xl">Contact</p>
-          <p className="text-center p-1  text-gray-400  ">Email: </p>
-          <p className="text-center p-1  text-gray-400  ">Phone: </p>
-        </div>
-        <div className="flex flex-col justify-center items-center">
-          <p className="text-center p-3 text-4xl">Contact</p>
-          <p className="text-center p-1  text-gray-400 ">Email: </p>
-          <p className="text-center p-1  text-gray-400  ">Phone: </p>
+          <p className="text-center p-1  text-gray-400 ">daqchild@gmail.com </p>
+          <p className="text-center p-1  text-gray-400  ">+234 803 000 0000</p>
+          <p className="text-center p-1  text-gray-400  ">@daqchild</p>
         </div>
       </section>
 
