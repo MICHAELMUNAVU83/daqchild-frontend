@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <div className="bg-black h-full text-white p-4">
       <p className="text-center p-3 text-4xl">Follow me</p>
-      <section className="w-96 md:w-full flex-wrap flex bg-dark   justify-center items-center mx-auto">
+      <section className="w-full md:w-full  flex-wrap flex bg-dark   justify-center items-center mx-auto">
         <a
           href="https://www.instagram.com/"
           className="border-white border-2 group p-4 hover:bg-white duration-300  ease-in-out   "
