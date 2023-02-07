@@ -28,7 +28,7 @@ const NavBar = () => {
         <div
           className={
             isOpen
-              ? "absolute top-0 z-10 right-0 bottom-0 left-0 w-full h-[200vh] md:h-[100vh] bg-black text-white duration-500 ease-in-out"
+              ? "absolute top-0 z-10 right-0 bottom-0 left-0 w-full h-[150vh] md:h-[100vh] bg-black text-white duration-500 ease-in-out"
               : "absolute top-0 right-0 left-[-120%] bottom-0 flex justify-center items-center w-full h-screen bg-black/70 text-white duration-500 ease-in-out"
           }
         >
@@ -41,19 +41,44 @@ const NavBar = () => {
           <div className="flex md:justify-around md:flex-row flex-col items-center gap-10">
             <ol className=" list-[upper-roman] ml-10">
               <li className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer">
-                Home
+                <div className="flex align-baseline">
+                  <p className="text-3xl font-bold uppercase">Home</p>
+                  <small className="font-normal text-sm mt-3  ml-2 text-gray-200">
+                    homepage
+                  </small>
+                </div>
               </li>
               <li className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer">
-                Home
+                <div className="flex align-baseline">
+                  <p className="text-3xl font-bold uppercase">Home</p>
+                  <small className="font-normal text-sm mt-3  ml-2 text-gray-200">
+                    homepage
+                  </small>
+                </div>
               </li>
               <li className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer">
-                Home
+                <div className="flex align-baseline">
+                  <p className="text-3xl font-bold uppercase">Home</p>
+                  <small className="font-normal text-sm mt-3  ml-2 text-gray-200">
+                    homepage
+                  </small>
+                </div>
               </li>
               <li className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer">
-                Home
+                <div className="flex align-baseline">
+                  <p className="text-3xl font-bold uppercase">Home</p>
+                  <small className="font-normal text-sm mt-3  ml-2 text-gray-200">
+                    homepage
+                  </small>
+                </div>
               </li>
               <li className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer">
-                Home
+                <div className="flex align-baseline">
+                  <p className="text-3xl font-bold uppercase">Home</p>
+                  <small className="font-normal text-sm mt-3  ml-2 text-gray-200">
+                    homepage
+                  </small>
+                </div>
               </li>
             </ol>
 
