@@ -9,9 +9,16 @@ const NavBar = () => {
           <ImPlus className="text-2xl" />
         </div>
 
-        <div className="group">
-          <p className="h-2 w-8 bg-black my-1 group-hover:rotate-90  duration-500 ease-in-out" />
-          <p className="h-2 w-8 bg-black group-hover:absolute top-5  duration-500 ease-in-out" />
+        <div className="flex">
+          <div>
+            <p className="h-2 w-8 bg-black my-1 group-hover:rotate-90  duration-500 ease-in-out" />
+            <p className="h-2 w-8 bg-black group-hover:absolute top-5  duration-500 ease-in-out" />
+                  </div>
+                  <div>
+                      <p className="text-2xl h-2 ">
+                          MENU
+                      </p>
+                  </div>
         </div>
       </section>
     </div>
