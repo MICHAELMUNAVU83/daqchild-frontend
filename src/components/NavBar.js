@@ -29,7 +29,7 @@ const NavBar = () => {
           className={
             isOpen
               ? "absolute top-0 z-10 right-0 bottom-0 left-0 w-full h-[120vh] bg-black text-white duration-500 ease-in-out"
-              : "absolute top-0 right-0 left-[-100%] bottom-0 flex justify-center items-center w-full h-screen bg-black/70 text-white duration-500 ease-in-out"
+              : "absolute top-0 right-0 left-[-120%] bottom-0 flex justify-center items-center w-full h-screen bg-black/70 text-white duration-500 ease-in-out"
           }
         >
           <div
