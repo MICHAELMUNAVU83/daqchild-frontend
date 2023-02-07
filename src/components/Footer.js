@@ -1,18 +1,16 @@
 import React from "react";
 import {
   AiFillInstagram,
-  AiFillFacebook,
   AiFillTwitterCircle,
 } from "react-icons/ai";
-import { FaTiktok } from "react-icons/fa";
 import { BsSnapchat, BsSpotify, BsApple } from "react-icons/bs";
 import { SiTwitch } from "react-icons/si";
 import { ImPlus, ImCross } from "react-icons/im";
-import {FaFacebookF} from "react-icons/fa"
-import {IoLogoTiktok} from "react-icons/io5"
+import { FaFacebookF } from "react-icons/fa";
+import { IoLogoTiktok } from "react-icons/io5";
 const Footer = () => {
   return (
-    <div className="bg-black h-full text-white md:p-4 p-2 ">
+    <div className="bg-black h-full text-white md:p-4 p-2 z-0 ">
       <p className="text-center p-3 text-4xl">Follow me</p>
       <section className="w-full md:w-full  flex-wrap flex bg-dark   justify-center items-center ">
         <a
@@ -77,9 +75,8 @@ const Footer = () => {
           <p className="text-center p-1  text-gray-400  ">T-Shirts</p>
           <p className="text-center p-1  text-gray-400  ">Hoodies</p>
           <p className="text-center p-1  text-gray-400  ">Caps</p>
-
         </div>
-       
+
         <div className="flex flex-col justify-center items-center">
           <p className="text-center p-3 text-4xl">Contact</p>
           <p className="text-center p-1  text-gray-400 ">daqchild@gmail.com </p>
@@ -96,10 +93,11 @@ const Footer = () => {
         <div className="flex  flex-col mx-2 items-start md:flex-row">
           <p className="text-center p-1  text-gray-400  ">© 2023</p>
           <p className="text-center p-1  text-gray-400  ">daqchild ent </p>
-          <p className="text-center p-1  text-gray-400  ">All rights reserved</p>
+          <p className="text-center p-1  text-gray-400  ">
+            All rights reserved
+          </p>
         </div>
       </section>
-
     </div>
   );
 };
