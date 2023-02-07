@@ -1,10 +1,22 @@
 import React, { useState } from "react";
 import { ImCross, ImPlus } from "react-icons/im";
-import navbarImage from "./navbarpic.jpg";
+import navbarImage from "./images/navbarpic.jpg";
+import dj1 from "./images/dj1.jpg";
+import dj2 from "./images/dj2.jpg";
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [current, setCurrent] = useState(0);
+  const images = [navbarImage, dj1, dj2];
+
+  const changeImage = () => {
+    setTimeout(() => {
+      setCurrent(current === images.length - 1 ? 0 : current + 1);
+    }, 500);
+  };
+
   return (
-    <div >
+    <div  style={{background: "#ffffff00"}}>
       <section className="flex justify-between p-4">
         <div className="flex ">
           <ImCross className="text-2xl mx-2" />
@@ -40,7 +52,10 @@ const NavBar = () => {
           </div>
           <div className="flex md:justify-around md:flex-row flex-col items-center gap-10">
             <ol className=" list-[upper-roman] ml-10">
-              <li className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer">
+              <li
+                className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
+                onMouseEnter={changeImage}
+              >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
                   <p className="text-3xl font-bold uppercase">Home</p>
                   <small className="font-normal text-sm mt-3  ml-2">
@@ -48,7 +63,10 @@ const NavBar = () => {
                   </small>
                 </div>
               </li>
-              <li className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer">
+              <li
+                onMouseEnter={changeImage}
+                className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
+              >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
                   <p className="text-3xl font-bold uppercase">Home</p>
                   <small className="font-normal text-sm mt-3  ml-2">
@@ -56,7 +74,10 @@ const NavBar = () => {
                   </small>
                 </div>
               </li>
-              <li className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer">
+              <li
+                onMouseEnter={changeImage}
+                className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
+              >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
                   <p className="text-3xl font-bold uppercase">Home</p>
                   <small className="font-normal text-sm mt-3  ml-2">
@@ -64,7 +85,10 @@ const NavBar = () => {
                   </small>
                 </div>
               </li>
-              <li className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer">
+              <li
+                onMouseEnter={changeImage}
+                className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
+              >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
                   <p className="text-3xl font-bold uppercase">Home</p>
                   <small className="font-normal text-sm mt-3  ml-2">
@@ -72,7 +96,10 @@ const NavBar = () => {
                   </small>
                 </div>
               </li>
-              <li className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer">
+              <li
+                onMouseEnter={changeImage}
+                className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
+              >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
                   <p className="text-3xl font-bold uppercase">Home</p>
                   <small className="font-normal text-sm mt-3  ml-2">
@@ -84,7 +111,7 @@ const NavBar = () => {
 
             <div className="text-white">
               <img
-                src={navbarImage}
+                src={images[current]}
                 alt="navbarImage"
                 className=" md:h-96 md:w-96   h-80"
               />

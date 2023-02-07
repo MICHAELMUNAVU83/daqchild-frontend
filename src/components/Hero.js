@@ -3,7 +3,7 @@ import { CgScrollV } from "react-icons/cg";
 
 const Hero = () => {
   return (
-    <div className=" hero-background h-[100vh] bg-fixed bg-no-repeat bg-cover bg-center">
+    <div className=" hero-background h-[100vh]  bg-fixed bg-no-repeat bg-cover bg-center">
       <div className="flex flex-col justify-center items-center h-full">
         <h1 className="text-5xl text-white font-bold">THE DAQCHILD</h1>
         <p className="text-2xl text-white font-bold">king of good times </p>
