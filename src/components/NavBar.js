@@ -19,7 +19,7 @@ const NavBar = () => {
         >
           <div>
             <p className="h-2 w-8 bg-black my-1 group-hover:rotate-90  duration-500 ease-in-out" />
-            <p className="h-2 w-8 bg-black group-hover:absolute top-5  duration-500 ease-out" />
+            <p className="h-2 w-8 bg-black group-hover:absolute top-5  duration-500 ease-in-out" />
           </div>
           <div>
             <p className="text-2xl mx-2 ">MENU</p>
@@ -28,8 +28,8 @@ const NavBar = () => {
         <div
           className={
             isOpen
-              ? "absolute top-0 z-10 right-0 bottom-0 left-0 w-full h-[150vh] md:h-[100vh] bg-black text-white duration-500 ease-in-out"
-              : "absolute top-0 right-0 left-[-120%] bottom-0 flex justify-center items-center w-full h-screen bg-black/70 text-white duration-500 ease-in-out"
+              ? "absolute top-0 z-10 right-0 bottom-0 left-0 w-full h-[150vh] md:h-[100vh] bg-black text-white duration-500 ease-in"
+              : "absolute top-0 right-0 left-[-120%] bottom-0 flex justify-center items-center w-full h-screen bg-black/70 text-white duration-500 ease-out"
           }
         >
           <div
