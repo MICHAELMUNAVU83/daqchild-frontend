@@ -12,7 +12,7 @@ import {FaFacebookF} from "react-icons/fa"
 import {IoLogoTiktok} from "react-icons/io5"
 const Footer = () => {
   return (
-    <div className="bg-black h-full text-white md:p-4 p-2">
+    <div className="bg-black h-full text-white md:p-4 p-2 ">
       <p className="text-center p-3 text-4xl">Follow me</p>
       <section className="w-full md:w-full  flex-wrap flex bg-dark   justify-center items-center ">
         <a
