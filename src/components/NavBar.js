@@ -19,7 +19,7 @@ const NavBar = () => {
         >
           <div>
             <p className="h-2 w-8 bg-black my-1 group-hover:rotate-90  duration-500 ease-in-out" />
-            <p className="h-2 w-8 bg-black group-hover:absolute top-5  duration-500 ease-in-out" />
+            <p className="h-2 w-8 bg-black group-hover:absolute top-5  duration-500 ease-out" />
           </div>
           <div>
             <p className="text-2xl mx-2 ">MENU</p>
