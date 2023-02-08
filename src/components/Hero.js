@@ -1,6 +1,6 @@
 import React from "react";
 import { CgScrollV } from "react-icons/cg";
-
+import MovingText from "react-moving-text";
 const Hero = () => {
   return (
     <div className=" hero-background h-[100vh]  bg-fixed bg-no-repeat bg-cover bg-center">
