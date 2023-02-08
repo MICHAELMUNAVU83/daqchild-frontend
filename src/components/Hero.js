@@ -12,7 +12,7 @@ const Hero = () => {
         </button>
 
         <div className="flex justify-center items-center mt-10">
-          <CgScrollV className="text-4xl text-white animate-bounce" />
+          <CgScrollV className="text-8xl text-white animate-bounce" />
         </div>
       </div>
     </div>

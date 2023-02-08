@@ -3,7 +3,7 @@ import { ImCross, ImPlus } from "react-icons/im";
 import navbarImage from "./images/navbarpic.jpg";
 import dj1 from "./images/dj1.jpg";
 import dj2 from "./images/dj2.jpg";
-
+import { motion } from "framer-motion";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [current, setCurrent] = useState(0);
@@ -16,7 +16,7 @@ const NavBar = () => {
   };
 
   return (
-    <div  style={{background: "#ffffff00"}}>
+    <div style={{ backgroundColor: "##f7f7f700" }}>
       <section className="flex justify-between p-4">
         <div className="flex ">
           <ImCross className="text-2xl mx-2" />
@@ -109,13 +109,18 @@ const NavBar = () => {
               </li>
             </ol>
 
-            <div className="text-white">
+            <motion.div
+              className="text-white"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 1 }}
+            >
               <img
                 src={images[current]}
                 alt="navbarImage"
                 className=" md:h-96 md:w-96   h-80"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
