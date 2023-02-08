@@ -11,8 +11,13 @@ const HorizontalText = () => {
   const changeImage = () => {
     setTimeout(() => {
       setCurrent(current === images.length - 1 ? 0 : current + 1);
-    }, 500);
+    }, 4000);
   };
+
+  useEffect(() => {
+    changeImage();
+  }, [current]);
+
 
   return (
     <div className="md:h-[100vh] h-[80vh]  bg-black text-white overflow-hidden w-full">
@@ -21,32 +26,32 @@ const HorizontalText = () => {
           <img
             src={images[current]}
             alt="navbarImage"
-            className=" md:w-[60%] w-80 absolute md:h-[60vh]  md:h-[80vh] object-cover"
+            className=" md:w-[60%] w-80 absolute md:h-[80vh]  md:h-[80vh] object-cover"
           />
         </div>
-        <section className=" flex flex-col h-full justify-center align-center relative text-3xl md:text-5xl font-bold ">
+        <section className="pt-20 flex flex-col h-full justify-center align-center relative text-3xl md:text-5xl font-bold ">
           <div className="marquee-w">
             <div className="marquee">
-              <span>WELCOME TO THE DAQCHILD</span>
+              <span>GIBBZ THE DAQCHILD</span>
             </div>
             <div className="marquee marquee2">
-              <span>KING OF GOOD TIMES AND HITS</span>
+              <span>THE KING OF GOOD TIMES</span>
+            </div>
+          </div>
+          <div className="marquee-w">
+            <div className="marquee1">
+              <span>AFROBEATS . AMAPIANO . GENGETONE </span>
+            </div>
+            <div className="marquee1 marquee2">
+              <span>HIP-HOP . BONGO . OLD-SCHOOL </span>
             </div>
           </div>
           <div className="marquee-w">
             <div className="marquee">
-              <span>WELCOME TO THE DAQCHILD</span>
+              <span>GIBBZ THE DAQCHILD</span>
             </div>
             <div className="marquee marquee2">
-              <span>KING OF GOOD TIMES AND HITS</span>
-            </div>
-          </div>
-          <div className="marquee-w">
-            <div className="marquee">
-              <span>WELCOME TO THE DAQCHILD</span>
-            </div>
-            <div className="marquee marquee2">
-              <span>KING OF GOOD TIMES AND HITS</span>
+              <span>THE KING OF GOOD TIMES</span>
             </div>
           </div>
         </section>

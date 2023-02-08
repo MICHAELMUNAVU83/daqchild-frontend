@@ -5,6 +5,16 @@ const Hero = () => {
   return (
     <div className="p-4 hero-background md:h-[100vh] h-[70vh]  bg-fixed bg-no-repeat bg-cover bg-center">
       <div className="flex flex-col justify-center text-center items-center h-full">
+      <h1
+          className="md:text-8xl text-5xl text-white font-bold"
+          style={{
+            WebkitTextStroke: "2px white",
+            WebkitTextFillColor: "transparent",
+            textShadow: "0 0 10",
+          }}
+        >
+          GIBBZ
+        </h1>
         <h1
           className="md:text-8xl text-5xl text-white font-bold"
           style={{
