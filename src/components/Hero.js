@@ -1,11 +1,20 @@
 import React from "react";
 import { CgScrollV } from "react-icons/cg";
-import MovingText from "react-moving-text";
+
 const Hero = () => {
   return (
-    <div className=" hero-background h-[100vh]  bg-fixed bg-no-repeat bg-cover bg-center">
-      <div className="flex flex-col justify-center items-center h-full">
-        <h1 className="text-5xl text-white font-bold">THE DAQCHILD</h1>
+    <div className="p-4 hero-background md:h-[100vh] h-[70vh]  bg-fixed bg-no-repeat bg-cover bg-center">
+      <div className="flex flex-col justify-center text-center items-center h-full">
+        <h1
+          className="md:text-8xl text-5xl text-white font-bold"
+          style={{
+            WebkitTextStroke: "2px white",
+            WebkitTextFillColor: "transparent",
+            textShadow: "0 0 10",
+          }}
+        >
+          THE DAQCHILD
+        </h1>
         <p className="text-2xl text-white font-bold">king of good times </p>
         <button className="bg-white uppercase text-black font-bold py-4 px-8  mt-4">
           Explore
