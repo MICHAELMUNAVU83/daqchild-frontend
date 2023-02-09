@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactAudioPlayer from "react-audio-player";
 
 function AddMix() {
   const [audio, setAudio] = useState("");
@@ -16,16 +17,21 @@ function AddMix() {
         setAudio(data.secure_url);
       });
   };
+
   return (
     <div className="App">
       <input type="file" onChange={(e) => uploadImage(e.target.files)} />
 
-      <audio controls autoPlay>
-        <source
-          src="https://res.cloudinary.com/dakiak4mc/video/upload/v1675945950/vmo2lxodl3e5vdat57nx.mp3"
-          type="audio/mp3"
-        />
-      </audio>
+      {audio && (
+        <>
+          <ReactAudioPlayer
+            src={audio}
+            autoPlay
+            controls
+            style={{ width: 500 }}
+          />
+        </>
+      )}
     </div>
   );
 }
