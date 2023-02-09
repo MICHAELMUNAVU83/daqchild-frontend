@@ -2,9 +2,6 @@
   background-image: url("./components/images/heroes.jpg");
 }
 
-
-
-
 .scroll-container {
   width: 100%;
   overflow: hidden;
@@ -12,11 +9,19 @@
 }
 
 .scroll-text {
-
   animation: scroll-animation 20s linear infinite;
-  font-family: 'poppinsbold';
+  font-family: "poppinsbold";
   text-align: center;
+  font-weight: bolder;
+  color: white;
   -webkit-text-stroke: 1px purple;
+
+}
+
+.scroll-text:hover {
+  animation-play-state: paused;
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes scroll-animation {
@@ -28,7 +33,6 @@
   }
 }
 
-
 .middle-scroll-container {
   width: 100%;
   overflow: hidden;
@@ -36,12 +40,17 @@
 }
 
 .middle-scroll-text {
-
   animation: middle-scroll-container 30s linear infinite;
-  font-family: 'poppinsbold';
+  font-family: "poppinsbold";
   text-align: center;
-  
-  
+  font-weight: bolder;
+  -webkit-text-stroke: 1px purple;
+}
+
+.middle-scroll-text:hover {
+  animation-play-state: paused;
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes middle-scroll-container {
@@ -53,10 +62,6 @@
   }
 }
 
-
-
-
-
 .last-scroll-container {
   width: 100%;
   overflow: hidden;
@@ -64,11 +69,16 @@
 }
 
 .last-scroll-text {
-
   animation: last-scroll-animation 25s linear infinite;
-  font-family: 'poppinsbold';
+  font-family: "poppinsbold";
   text-align: center;
   -webkit-text-stroke: 1px purple;
+}
+
+.last-scroll-text:hover {
+  animation-play-state: paused;
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes last-scroll-animation {
