@@ -3,124 +3,79 @@
 }
 
 
-.marquee-w {
-  position: relative;
-  display: block;
+
+
+.scroll-container {
   width: 100%;
-  height: 140px;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   overflow: hidden;
-}
-.marquee {
-  position: absolute;
-  display: block;
-  margin: auto auto;
   white-space: nowrap;
-  overflow: hidden;
-  min-width: 100%;
-  height: 100%;
 }
-.marquee span {
-  display: inline-block;
-  padding-left: 100%;
+
+.scroll-text {
+
+  animation: scroll-animation 20s linear infinite;
   font-family: 'poppinsbold';
   text-align: center;
   -webkit-text-stroke: 1px purple;
-  white-space: nowrap;
-  min-width: 100%;
-  height: 100%;
-  line-height: 140px;
-  font-size: 85px;
-  animation: marquee 10s linear infinite;
-}
-.marquee2 span {
-  animation-delay: 5s;
 }
 
-
-
-
-@keyframes marquee {
-  0% {
-      transform: translate(0, 0);
+@keyframes scroll-animation {
+  from {
+    transform: translateX(100%);
   }
-  100% {
-      transform: translate(-100%, 0);
+  to {
+    transform: translateX(-100%);
   }
 }
 
-@media screen and (max-width: 768px) {
- 
-  .marquee span {
-    animation: marquee 10s linear infinite;
-    line-height: 100px;
-    font-size: 50px;
-  }
-  .marquee2 span {
-    animation-delay: 5s;
-  }
-}
 
-/* {} */
-
-.marquee-w {
-  position: relative;
-  display: block;
+.middle-scroll-container {
   width: 100%;
-  height: 140px;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   overflow: hidden;
-}
-.marquee1 {
-  position: absolute;
-  display: block;
-  margin: auto auto;
   white-space: nowrap;
-  overflow: hidden;
-  min-width: 100%;
-  height: 100%;
 }
-.marquee1 span {
-  display: inline-block;
-  padding-left: 100%;
+
+.middle-scroll-text {
+
+  animation: middle-scroll-container 30s linear infinite;
+  font-family: 'poppinsbold';
+  text-align: center;
+  
+  
+}
+
+@keyframes middle-scroll-container {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+
+
+
+
+.last-scroll-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.last-scroll-text {
+
+  animation: last-scroll-animation 25s linear infinite;
   font-family: 'poppinsbold';
   text-align: center;
   -webkit-text-stroke: 1px purple;
-  white-space: nowrap;
-  min-width: 100%;
-  height: 100%;
-  line-height: 140px;
-  font-size: 85px;
-  animation: marquee1 10s linear infinite;
-}
-.marquee2 span {
-  animation-delay: 5s;
 }
 
-
-
-
-@keyframes marquee1 {
-  0% {
-      transform: translate(-100%, 0);
+@keyframes last-scroll-animation {
+  from {
+    transform: translateX(100%);
   }
-  100% {
-      transform: translate(0, 0);
-  }
-}
-
-@media screen and (max-width: 768px) {
- 
-  .marquee1 span {
-    animation: marquee 10s linear infinite;
-    line-height: 100px;
-    font-size: 50px;
-  }
-  .marquee2 span {
-    animation-delay: 5s;
+  to {
+    transform: translateX(-100%);
   }
 }
