@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { AiFillHeart } from "react-icons/ai";
 const Mixes = () => {
   const [mixes, setMixes] = useState([]);
   useEffect(() => {
@@ -8,7 +8,7 @@ const Mixes = () => {
       .then((data) => {
         setMixes(data);
       });
-  }, []);
+  }, [mixes]);
   const handleDownload = async (audiofile, name) => {
     const response = await fetch(audiofile);
     const blob = await response.blob();
@@ -36,13 +36,32 @@ const Mixes = () => {
             <p> Plays {mix.plays} </p>
             <button
               className="bg-black p-2 text-white text-2xl"
-                          onClick={() => {
+              onClick={() => {
                 handleDownload(mix.audio_mp3, mix.name);
               }}
             >
               Download
             </button>
-            <p> Likes {mix.likes} </p>
+            <div className="flex items-center">
+              <AiFillHeart
+                className="text-2xl "
+                onClick={() => {
+                  fetch(`http://localhost:3000/mixes/${mix.id}`, {
+                    method: "PATCH",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ likes: mix.likes + 1 }),
+                  })
+                    .then((response) => response.json())
+                    .then((data) => {
+                      console.log(data);
+                    });
+                }}
+              />
+
+              <p>{mix.likes}</p>
+            </div>
           </div>
         </div>
       </div>
