@@ -59,6 +59,7 @@ function AddMix() {
         name: name,
         audio_mp3: audio,
         poster: poster,
+        genre: genre,
       }),
     })
       .then((response) => response.json())

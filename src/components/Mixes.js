@@ -100,7 +100,7 @@ const Mixes = () => {
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <div className="flex items-baseline">
               <span className="bg-purple-500 text-white text-xs px-2  inline-block rounded-full  uppercase font-semibold tracking-wide">
-                New
+               afrobeats
               </span>
               <div className="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
                 {mix.likes} likes &bull; {mix.plays} plays
@@ -178,7 +178,7 @@ const Mixes = () => {
 
   return (
     <div>
-      <h1>Mixes</h1>
+     
       <div className="flex justify-center">
         <div className="grid md:grid-cols-2 md:gap-20 gap-10 grid-cols-1">
           {mixDisplay}
