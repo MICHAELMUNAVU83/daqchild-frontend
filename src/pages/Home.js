@@ -1,15 +1,13 @@
 import React from "react";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
-import HorizontalText from "../components/HorizontalText";
-import LatestMixes from "../components/LatestMixes";
-import StackableDivs from "../components/StackableDivs";
-import AddMix from "../components/AddMix";
+import Mixes from "../components/Mixes";
+
 const Home = () => {
   return (
     <div>
       <Hero />
-      <AddMix/>
+      <Mixes />
       <Footer />
     </div>
   );

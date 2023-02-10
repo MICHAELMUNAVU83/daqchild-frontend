@@ -4,6 +4,7 @@ import navbarImage from "./images/navbarpic.jpg";
 import dj1 from "./images/dj1.jpg";
 import dj2 from "./images/dj2.jpg";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [current, setCurrent] = useState(0);
@@ -51,16 +52,24 @@ const NavBar = () => {
             <ImCross className="text-3xl " />
           </div>
           <div className="flex md:justify-around md:flex-row flex-col items-center gap-10">
-            <ol className=" list-[upper-roman] ml-10">
+            <ol
+              className=" list-[upper-roman] ml-10"
+              onClick={() => {
+                setIsOpen(!isOpen);
+              }}
+            >
               <li
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
                 onMouseEnter={changeImage}
               >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <p className="text-3xl font-bold uppercase">Home</p>
-                  <small className="font-normal text-sm mt-3  ml-2">
-                    homepage
-                  </small>
+                  <Link to="/" className="flex ">
+                    <p className="text-3xl font-bold uppercase">Home</p>
+
+                    <small className="font-normal text-sm mt-3  ml-2">
+                      homepage
+                    </small>
+                  </Link>
                 </div>
               </li>
               <li
@@ -68,10 +77,12 @@ const NavBar = () => {
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <p className="text-3xl font-bold uppercase">Home</p>
-                  <small className="font-normal text-sm mt-3  ml-2">
-                    homepage
-                  </small>
+                  <Link to="/add-mix" className="flex ">
+                    <p className="text-3xl font-bold uppercase">Add Mix</p>
+                    <small className="font-normal text-sm mt-3  ml-2">
+                      homepage
+                    </small>
+                  </Link>
                 </div>
               </li>
               <li
