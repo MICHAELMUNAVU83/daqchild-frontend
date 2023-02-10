@@ -1,7 +1,19 @@
-import React, { useState } from "react";
-import ReactAudioPlayer from "react-audio-player";
-
+import React, { useState, useRef } from "react";
+import dj1 from "./images/dj1.jpg";
 function AddMix() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+
+  const togglePlay = () => {
+    setIsPlaying(!isPlaying);
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+  };
+
+
   const [audio, setAudio] = useState("");
   const uploadImage = (files) => {
     const formData = new FormData();
@@ -17,6 +29,16 @@ function AddMix() {
         setAudio(data.secure_url);
       });
   };
+  const handleDownload = async () => {
+    const response = await fetch(audio);
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    // add a custom name to the file
+    link.href = url;
+    link.download =  "my-mix.mp3"
+    link.click();
+  };
 
   return (
     <div className="App">
@@ -24,12 +46,11 @@ function AddMix() {
 
       {audio && (
         <>
-          <ReactAudioPlayer
-            src={audio}
-            autoPlay
-            controls
-            style={{ width: 500 }}
-          />
+          <img src={dj1} alt="" />
+          <audio ref={audioRef} src={audio} controls={true} />
+          <button onClick={togglePlay}>{isPlaying ? "Pause" : "Play"}</button>
+       
+          <button onClick={handleDownload}>Download</button>
         </>
       )}
     </div>
