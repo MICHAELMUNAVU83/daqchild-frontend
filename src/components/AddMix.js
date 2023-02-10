@@ -16,6 +16,7 @@ function AddMix() {
   const [audio, setAudio] = useState("");
   const [poster, setPoster] = useState("");
   const [name, setName] = useState("");
+  const [genre, setGenre] = useState("");
 
   const uploadAudio = (files) => {
     const formData = new FormData();
@@ -93,6 +94,30 @@ function AddMix() {
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
+      <label htmlFor="genre">Genre</label>
+      <select
+        name="genre"
+        id="genre"
+        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        value={genre}
+        onChange={(e) => setGenre(e.target.value)}
+      >
+        <option value="" selected disabled hidden >
+          Select a genre
+        </option>
+        <option value="house">House</option>
+        <option value="techno">Techno</option>
+        <option value="dubstep">Dubstep</option>
+        <option value="trap">Trap</option>
+        <option value="hiphop">Hip Hop</option>
+        <option value="rnb">RnB</option>
+        <option value="pop">Pop</option>
+        <option value="rock">Rock</option>
+        <option value="jazz">Jazz</option>
+        <option value="reggae">Reggae</option>
+        <option value="soul">Soul</option>
+        <option value="funk">Funk</option>
+      </select>
       <button
         className="text-center bg-black p-4 text-white"
         onClick={addMixFunctionality}
