@@ -56,7 +56,7 @@ const Events = () => {
             style={{
               backgroundImage: `url(${slides[currentIndex].url})`,
             }}
-            className="rounded-2xl bg-center bg-cover duration-500 md:w-[500px] md:h-[500px] w-[350px] h-[350px]"
+            className="rounded-2xl bg-center bg-cover duration-500 md:w-[500px] md:h-[500px] flex justify-center w-[300px] h-[300px]"
           ></div>
           {/* Left Arrow */}
           <div className="group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/70 text-white cursor-pointer">
