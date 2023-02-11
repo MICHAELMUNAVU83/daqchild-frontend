@@ -90,10 +90,12 @@ const NavBar = () => {
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <p className="text-3xl font-bold uppercase">Home</p>
-                  <small className="font-normal text-sm mt-3  ml-2">
-                    homepage
-                  </small>
+                  <Link to="/add-events" className="flex ">
+                    <p className="text-3xl font-bold uppercase">Add Events</p>
+                    <small className="font-normal text-sm mt-3  ml-2">
+                      events
+                    </small>
+                  </Link>
                 </div>
               </li>
               <li

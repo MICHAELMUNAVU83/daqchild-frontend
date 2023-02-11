@@ -4,76 +4,65 @@ import { RxDotFilled } from "react-icons/rx";
 import "@splidejs/react-splide/css";
 import dj1 from "./images/dj1.jpg";
 import dj2 from "./images/dj2.jpg";
-
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import moment from "moment";
 const Events = () => {
-  const slides = [
-    {
-      url: dj1,
-    },
-    {
-      url: dj2,
-    },
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
-
-
+  const dateformat = moment().format("dddd");
+  const [events, setEvents] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3000/events")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setEvents(data);
+      });
+  }, []);
 
   return (
-    <div className="h-[100vh]  pt-10 text-black text-5xl">
-      <section className="flex flex-col md:flex-row justify-around   ">
-        <div className="flex flex-col   ml-4">
-          <h1 className="md:text-7xl text-3xl font-bold">KING OF GOOD TIMES</h1>
-          <h2 className="text-5xl py-2">Events for the week</h2>
-          <p className="text-2xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            quae.
-          </p>
-        </div>
-        <div className=" m-auto  px-4 relative group">
-          <div
-            style={{
-              backgroundImage: `url(${slides[currentIndex].url})`,
-            }}
-            className="rounded-2xl bg-center bg-cover duration-500 md:w-[500px] md:h-[500px] flex justify-center w-[300px] h-[300px]"
-          ></div>
-          {/* Left Arrow */}
-          <div className="group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/70 text-white cursor-pointer">
-            <BsChevronCompactLeft onClick={prevSlide} size={30} />
-          </div>
-          {/* Right Arrow */}
-          <div className="group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/70 text-white cursor-pointer">
-            <BsChevronCompactRight onClick={nextSlide} size={30} />
-          </div>
-          <div className="flex top-4 justify-center py-2">
-            {slides.map((slide, slideIndex) => (
-              <div
-                key={slideIndex}
-                onClick={() => goToSlide(slideIndex)}
-                className="text-2xl cursor-pointer"
-              >
-                <RxDotFilled />
+    <div>
+      {events.length > 0 && (
+        <div className="flex flex-col md:flex-row justify-around pt-10">
+          <div>
+            <h2 className="text-4xl  font-bold">KING OF GOOD TIMES EVENTS</h2>
+            {events.map((event) => (
+              <div className="flex flex-col md:flex-row justify-around pt-10">
+                <div className="md:w-1/2">
+                  <h2 className="text-4xl  font-bold">{event.location}</h2>
+                  <p className="text-2xl font-bold">
+                    {moment(event.date).format("dddd")}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
+          <div className="md:w-1/2">
+            <Splide
+              options={{
+                perPage: 1,
+                perMove: 1,
+                rewind: true,
+                gap: "1rem",
+                pagination: true,
+                autoplay: true,
+                drag: true,
+                interval: 4000,
+                arrows: true,
+                loop: "true",
+              }}
+            >
+              {events.map((event) => (
+                <SplideSlide key={event.id}>
+                  <img
+                    src={event.poster}
+                    alt="event poster"
+                    className="w-[100%]  md:px-0 px-4 h-96 "
+                  />
+                </SplideSlide>
+              ))}
+            </Splide>
+          </div>
         </div>
-      </section>
+      )}
     </div>
   );
 };
