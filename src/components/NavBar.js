@@ -17,8 +17,8 @@ const NavBar = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "##f7f7f700" }}>
-      <section className="flex justify-between p-4">
+    <div className="bg-gradient-to-r from-white via-pink-100 to-pink-200 p-2">
+      <section className="flex justify-between ">
         <div className="flex ">
           <ImCross className="text-2xl mx-2" />
           <ImPlus className="text-2xl" />
