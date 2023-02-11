@@ -33,12 +33,7 @@ const Events = () => {
     setCurrentIndex(slideIndex);
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 4000);
-    return () => clearInterval(interval);
-  });
+
 
   return (
     <div className="h-[100vh]  pt-10 text-black text-5xl">
