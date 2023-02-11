@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-import { RxDotFilled } from "react-icons/rx";
 import "@splidejs/react-splide/css";
-import dj1 from "./images/dj1.jpg";
-import dj2 from "./images/dj2.jpg";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import moment from "moment";
 const Events = () => {
