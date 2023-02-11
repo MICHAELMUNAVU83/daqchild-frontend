@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { ImCross, ImPlus } from "react-icons/im";
-import navbarImage from "./images/navbarpic.jpg";
-import dj1 from "./images/dj1.jpg";
-import dj2 from "./images/dj2.jpg";
+
+import J6 from "./images/J6.jpg";
+import J11 from "./images/J11.jpg";
+import V1 from "./images/v1.jpg";
+import V2 from "./images/v2.jpg";
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [current, setCurrent] = useState(0);
-  const images = [navbarImage, dj1, dj2];
-
+  const images = [J6, J11, V1, V2];
   const changeImage = () => {
     setTimeout(() => {
       setCurrent(current === images.length - 1 ? 0 : current + 1);
@@ -17,11 +19,11 @@ const NavBar = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-white via-pink-100 to-pink-200 p-2">
+    <div className="fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-transparent p-4 ">
       <section className="flex justify-between ">
-        <div className="flex ">
-          <ImCross className="text-2xl mx-2" />
-          <ImPlus className="text-2xl" />
+        <div className="flex text-white ">
+          <ImCross className="text-3xl mx-2" />
+          <ImPlus className="text-3xl" />
         </div>
 
         <div
@@ -31,11 +33,11 @@ const NavBar = () => {
           className="flex group cursor-pointer"
         >
           <div>
-            <p className="h-2 w-8 bg-black my-1 group-hover:rotate-90  duration-500 ease-in-out" />
-            <p className="h-2 w-8 bg-black group-hover:absolute top-5  duration-500 ease-in-out" />
+            <p className="h-3 w-10 bg-white my-1 group-hover:rotate-90  duration-500 ease-in-out" />
+            <p className="h-3 w-10 bg-white group-hover:absolute top-5  duration-500 ease-in-out" />
           </div>
           <div>
-            <p className="text-2xl mx-2 ">MENU</p>
+            <p className="text-3xl text-white font-bold mx-2 ">MENU</p>
           </div>
         </div>
         <div
