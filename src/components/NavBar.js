@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ImCross, ImPlus } from "react-icons/im";
 
 import J6 from "./images/J6.jpg";
@@ -12,16 +12,34 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [current, setCurrent] = useState(0);
   const images = [J6, J11, V1, V2];
+  const [backgroundColor, setBackgroundColor] = useState("transparent");
+  const [textColor, setTextColor] = useState("white");
   const changeImage = () => {
     setTimeout(() => {
       setCurrent(current === images.length - 1 ? 0 : current + 1);
     }, 500);
   };
 
+  useEffect(() => {
+    const changeBackground = () => {
+      if (window.scrollY >= 200) {
+        setBackgroundColor("pink");
+        setTextColor("black");
+      } else {
+        setBackgroundColor("transparent");
+        setTextColor("white");
+      }
+    };
+    window.addEventListener("scroll", changeBackground);
+  }, []);
+
   return (
-    <div className="fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-transparent p-4 ">
+    <div
+      className="fixed left-0 top-0 w-full z-10 ease-in duration-300  p-4 "
+      style={{ backgroundColor: `${backgroundColor}` }}
+    >
       <section className="flex justify-between ">
-        <div className="flex text-white ">
+        <div className="flex  " style={{ color: `${textColor}` }}>
           <ImCross className="text-3xl mx-2" />
           <ImPlus className="text-3xl" />
         </div>
@@ -33,11 +51,22 @@ const NavBar = () => {
           className="flex group cursor-pointer"
         >
           <div>
-            <p className="h-3 w-10 bg-white my-1 group-hover:rotate-90  duration-500 ease-in-out" />
-            <p className="h-3 w-10 bg-white group-hover:absolute top-5  duration-500 ease-in-out" />
+            <p
+              style={{ backgroundColor: `${textColor}` }}
+              className="h-3 w-10  my-1 group-hover:rotate-90  duration-500 ease-in-out"
+            />
+            <p
+              style={{ backgroundColor: `${textColor}` }}
+              className="h-3 w-10  group-hover:absolute top-5  duration-500 ease-in-out"
+            />
           </div>
           <div>
-            <p className="text-3xl text-white font-bold mx-2 ">MENU</p>
+            <p
+              style={{ color: `${textColor}` }}
+              className="text-3xl  font-bold mx-2 "
+            >
+              MENU
+            </p>
           </div>
         </div>
         <div

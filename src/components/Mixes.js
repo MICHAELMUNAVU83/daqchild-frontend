@@ -38,7 +38,8 @@ const Mixes = () => {
                   afrobeats
                 </span>
                 <div className="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
-                  {mix.likes} likes &bull; {mix.plays} plays
+                  {mix.likes} likes &bull; {mix.plays} plays &bull;{" "}
+                  {mix.downloads} downloads
                 </div>
               </div>
 
@@ -98,6 +99,17 @@ const Mixes = () => {
                   className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
                   onClick={() => {
                     handleDownload(mix.audio_mp3, mix.name);
+                    fetch(`http://localhost:3000/mixes/${mix.id}`, {
+                      method: "PATCH",
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify({ downloads: mix.downloads + 1 }),
+                    })
+                      .then((response) => response.json())
+                      .then((data) => {
+                        console.log(data);
+                      });
                   }}
                 >
                   Download
