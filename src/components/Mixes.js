@@ -34,7 +34,7 @@ const Mixes = () => {
           <div className="relative px-4 -mt-16  ">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="flex items-baseline">
-                <span className="bg-purple-500 text-white text-xs px-2  inline-block rounded-full  uppercase font-semibold tracking-wide">
+                <span className="bg-pink-500 text-white text-xs px-2  inline-block rounded-full  uppercase font-semibold tracking-wide">
                   {mix.genre}
                 </span>
                 <div className="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
@@ -75,7 +75,7 @@ const Mixes = () => {
               <div className="mt-4">
                 <audio
                   controls
-                  className="flex justify-center  p-2 rounded-lg shadow-lg shadow-purple-500 overflow-hidden"
+                  className="flex justify-center  p-2 rounded-lg shadow-lg shadow-pink-500 overflow-hidden"
                   onPlay={() => {
                     fetch(`http://localhost:3000/mixes/${mix.id}`, {
                       method: "PATCH",
@@ -96,7 +96,7 @@ const Mixes = () => {
 
               <div className="flex place-content-center mt-4">
                 <button
-                  className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+                  className="bg-pink-500 text-white font-bold py-2 px-4 rounded"
                   onClick={() => {
                     handleDownload(mix.audio_mp3, mix.name);
                     fetch(`http://localhost:3000/mixes/${mix.id}`, {
@@ -123,6 +123,7 @@ const Mixes = () => {
 
   return (
     <div>
+      <h1 className="text-7xl font-bold text-center mt-10">Mixes</h1>
       <div className="flex justify-center">
         <div className="grid md:grid-cols-2 md:gap-20 gap-10 grid-cols-1">
           {mixDisplay}

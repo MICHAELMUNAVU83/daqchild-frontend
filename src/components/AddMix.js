@@ -80,7 +80,7 @@ function AddMix() {
   };
 
   return (
-    <div className="App">
+    <div className="mt-10">
       <h1>Upload your mix</h1>
       <label htmlFor="file">Upload your audio file</label>
       <input type="file" onChange={(e) => uploadAudio(e.target.files)} />
@@ -107,11 +107,11 @@ function AddMix() {
           Select a genre
         </option>
         <option value="house">House</option>
-        <option value="techno">Techno</option>
-        <option value="dubstep">Dubstep</option>
+        <option value="afrobeat">Afrobeat</option>
+        <option value="old school">old school</option>
         <option value="trap">Trap</option>
         <option value="hiphop">Hip Hop</option>
-        <option value="rnb">RnB</option>
+        <option value="bongo">Bongo</option>
         <option value="pop">Pop</option>
         <option value="rock">Rock</option>
         <option value="jazz">Jazz</option>

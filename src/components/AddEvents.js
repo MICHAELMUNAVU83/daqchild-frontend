@@ -39,7 +39,7 @@ const AddEvents = () => {
   };
 
   return (
-    <div>
+    <div className="mt-10">
       <label htmlFor="file">Upload your event poster</label>
       <input type="file" onChange={(e) => uploadPoster(e.target.files)} />
       <input

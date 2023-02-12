@@ -46,7 +46,7 @@ const Events = () => {
               options={{
                 perPage: 1,
                 perMove: 1,
-                rewind: true,
+                rewind: "true",
                 gap: "1rem",
                 pagination: true,
                 autoplay: true,
