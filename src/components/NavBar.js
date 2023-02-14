@@ -63,7 +63,7 @@ const NavBar = () => {
           <div>
             <p
               style={{ color: `${textColor}` }}
-              className="text-3xl  font-bold mx-2 "
+              className="md:text-3xl text-xl  font-bold mx-2 "
             >
               MENU
             </p>

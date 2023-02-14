@@ -1,18 +1,5 @@
-import React, { useState, useRef } from "react";
-import dj1 from "./images/dj1.jpg";
+import React, { useState } from "react";
 function AddMix() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(null);
-
-  const togglePlay = () => {
-    setIsPlaying(!isPlaying);
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
-    }
-  };
-
   const [audio, setAudio] = useState("");
   const [poster, setPoster] = useState("");
   const [name, setName] = useState("");
@@ -68,8 +55,6 @@ function AddMix() {
       });
   };
 
-
-
   return (
     <div className="mt-10">
       <h1>Upload your mix</h1>
@@ -94,7 +79,7 @@ function AddMix() {
         value={genre}
         onChange={(e) => setGenre(e.target.value)}
       >
-        <option value="" selected disabled hidden >
+        <option value="" selected disabled hidden>
           Select a genre
         </option>
         <option value="house">House</option>

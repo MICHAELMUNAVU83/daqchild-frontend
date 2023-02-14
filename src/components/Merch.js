@@ -8,9 +8,11 @@ const Merch = () => {
     <div className="md:ml-20 ml-10">
       <Splide
         options={{
-          rewind: true,
+            type: "loop",
           perPage: 3,
-          perMove: 1,
+                  perMove: 1,
+                  speed: 400,
+          drag: true,
           autoplay: true,
           gap: "2rem",
           arrows: false,

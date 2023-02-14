@@ -3,10 +3,10 @@ import "@splidejs/react-splide/css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import moment from "moment";
 import { FaHandPointRight } from "react-icons/fa";
-import { BsDashLg } from "react-icons/bs";
+
 
 const Events = () => {
-  const dateformat = moment().format("dddd");
+  
   const [events, setEvents] = useState([]);
   useEffect(() => {
     fetch("http://localhost:3000/events")

@@ -1,5 +1,4 @@
 import React from "react";
-import { CgScrollV } from "react-icons/cg";
 import { AiOutlineCaretDown } from "react-icons/ai";
 const Hero = () => {
   return (
