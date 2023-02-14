@@ -1,7 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const MerchCard = ({ product }) => {
   return (
-    <a href="#" className="group relative block mx-4 bg-pink-500/80">
+    <Link
+      className="group relative block mx-4 bg-pink-500/80"
+      to={`/products/${product.id}`}
+    >
       <img
         alt="Developer"
         src={product.product_image}
@@ -17,13 +21,11 @@ const MerchCard = ({ product }) => {
 
         <div className="mt-64">
           <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
-            <p className="text-sm text-white">
-             {product.description}
-            </p>
+            <p className="text-sm text-white">{product.description}</p>
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 

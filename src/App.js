@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AddMix from "./components/AddMix";
 import AddEvents from "./components/AddEvents";
 import AddMerch from "./components/AddMerch";
+import Product from "./components/Product";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/add-mix" element={<AddMix />} />
           <Route path="/add-events" element={<AddEvents />} />
           <Route path="/add-merch" element={<AddMerch />} />
+          <Route path="/products/:id" element={<Product />} />
         </Routes>
       </Router>
     </>
