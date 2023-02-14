@@ -5,7 +5,7 @@ import "@splidejs/react-splide/css";
 import "swiper/css";
 const Merch = () => {
   return (
-    <div className="ml-20">
+    <div className="md:ml-20 ml-10">
       <Splide
         options={{
           rewind: true,

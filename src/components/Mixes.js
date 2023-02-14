@@ -75,7 +75,7 @@ const Mixes = () => {
               <div className="mt-4">
                 <audio
                   controls
-                  className="flex justify-center  p-2 rounded-lg shadow-lg shadow-pink-500 overflow-hidden"
+                  className="flex justify-center  p-2 rounded-lg shadow-lg shadow-pink-500 overflow-hidden w-[95%]"
                   onPlay={() => {
                     fetch(`http://localhost:3000/mixes/${mix.id}`, {
                       method: "PATCH",
