@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import MerchCard from "./MerchCard";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import "swiper/css";
 const Merch = () => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3000/products")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setProducts(data);
+      });
+  }, []);
+
   return (
-    <div className="md:ml-20 ml-10">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <Splide
         options={{
-            type: "loop",
+          type: "loop",
           perPage: 3,
-                  perMove: 1,
-                  speed: 400,
+          perMove: 1,
+          speed: 400,
           drag: true,
           autoplay: true,
           gap: "2rem",
@@ -33,18 +43,11 @@ const Merch = () => {
           },
         }}
       >
-        <SplideSlide>
-          <MerchCard />
-        </SplideSlide>
-        <SplideSlide>
-          <MerchCard />
-        </SplideSlide>
-        <SplideSlide>
-          <MerchCard />
-        </SplideSlide>
-        <SplideSlide>
-          <MerchCard />
-        </SplideSlide>
+        {products.map((product) => (
+          <SplideSlide key={product.id}>
+            <MerchCard product={product} />
+          </SplideSlide>
+        ))}
       </Splide>
     </div>
   );

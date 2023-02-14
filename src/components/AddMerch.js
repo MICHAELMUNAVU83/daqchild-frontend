@@ -4,6 +4,7 @@ const AddMerch = () => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [productImage, setProductImage] = useState("");
+  const [description, setDescription] = useState("");
   const uploadImage = (files) => {
     const formData = new FormData();
 
@@ -30,6 +31,7 @@ const AddMerch = () => {
         name: name,
         price: price,
         product_image: productImage,
+        description: description,
       }),
     })
       .then((response) => response.json())
@@ -53,8 +55,18 @@ const AddMerch = () => {
           value={price}
           onChange={(e) => setPrice(e.target.value)}
         />
+
+        <input
+          type="text"
+          placeholder="Description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        />
+
         <input type="file" onChange={(e) => uploadImage(e.target.files)} />
-        <button className="bg-black text-white p-4" type="submit">Add Merch</button>
+        <button className="bg-black text-white p-4" type="submit">
+          Add Merch
+        </button>
       </form>
     </div>
   );
