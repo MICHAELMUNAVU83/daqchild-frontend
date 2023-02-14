@@ -1,5 +1,5 @@
 import React from "react";
-
+import jumper from "./images/jumper.png";
 const MerchCard = () => {
   return (
     <div className="w-80 bg-white shadow rounded">
@@ -13,21 +13,7 @@ const MerchCard = () => {
           {" "}
           <button className="text-white hover:text-blue-500">
             {" "}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {" "}
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 4v16m8-8H4"
-              />{" "}
-            </svg>{" "}
+           
           </button>{" "}
         </div>{" "}
         <div>
