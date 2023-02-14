@@ -2,7 +2,7 @@ import React from "react";
 import jumper from "./images/jumper.png";
 const MerchCard = () => {
   return (
-    <div className="w-80 bg-white shadow rounded">
+    <div className="w-[80%] bg-white shadow rounded">
       {" "}
       <div
         className="h-48 w-full bg-red-200 flex flex-col justify-between p-4 bg-cover bg-center"
