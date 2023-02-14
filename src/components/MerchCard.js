@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const MerchCard = ({ product }) => {
   return (
     <Link
-      className="group relative block mx-4 bg-pink-500/80"
+      className="group h-[500px] relative block mx-4 bg-pink-500/80"
       to={`/products/${product.id}`}
     >
       <img
@@ -20,8 +20,8 @@ const MerchCard = ({ product }) => {
         <p className="text-2xl font-bold text-white">Ksh {product.price} </p>
 
         <div className="mt-64">
-          <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
-            <p className="text-sm text-white">{product.description}</p>
+          <div className="translate-y-8 transform opacity-0 rounded-3xl p-2 transition-all group-hover:translate-y-0 group-hover:opacity-100 bg-white">
+            <p className="text-md">{product.description}</p>
           </div>
         </div>
       </div>
