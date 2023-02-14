@@ -53,11 +53,11 @@ const NavBar = () => {
           <div>
             <p
               style={{ backgroundColor: `${textColor}` }}
-              className="h-3 w-10  my-1 group-hover:rotate-90  duration-500 ease-in-out"
+              className="md:h-3 h-2 md:w-10 w-8 my-1 group-hover:rotate-90  duration-500 ease-in-out"
             />
             <p
               style={{ backgroundColor: `${textColor}` }}
-              className="h-3 w-10  group-hover:absolute top-5  duration-500 ease-in-out"
+              className="md:h-3 h-2 md:w-10 w-8  group-hover:absolute top-5  duration-500 ease-in-out"
             />
           </div>
           <div>
@@ -95,9 +95,11 @@ const NavBar = () => {
               >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
                   <Link to="/" className="flex ">
-                    <p className="text-3xl font-bold uppercase">Home</p>
+                    <p className="md:text-3xl text-xl font-bold uppercase">
+                      Home
+                    </p>
 
-                    <small className="font-normal text-sm mt-3  ml-2">
+                    <small className="font-normal text-sm md:mt-3 mt-2  ml-2">
                       homepage
                     </small>
                   </Link>
@@ -109,8 +111,10 @@ const NavBar = () => {
               >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
                   <Link to="/add-mix" className="flex ">
-                    <p className="text-3xl font-bold uppercase">Add Mix</p>
-                    <small className="font-normal text-sm mt-3  ml-2">
+                    <p className="md:text-3xl text-xl font-bold uppercase">
+                      Add Mix
+                    </p>
+                    <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
                       homepage
                     </small>
                   </Link>
@@ -122,8 +126,10 @@ const NavBar = () => {
               >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
                   <Link to="/add-events" className="flex ">
-                    <p className="text-3xl font-bold uppercase">Add Events</p>
-                    <small className="font-normal text-sm mt-3  ml-2">
+                    <p className="md:text-3xl text-xl font-bold uppercase">
+                      Add Events
+                    </p>
+                    <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
                       events
                     </small>
                   </Link>
@@ -135,9 +141,11 @@ const NavBar = () => {
               >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
                   <Link to="/add-merch" className="flex ">
-                    <p className="text-3xl font-bold uppercase">Add Merch</p>
+                    <p className="md:text-3xl text-xl font-bold uppercase">
+                      Add Merch
+                    </p>
 
-                    <small className="font-normal text-sm mt-3  ml-2">
+                    <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
                       add merchandises
                     </small>
                   </Link>
@@ -148,8 +156,10 @@ const NavBar = () => {
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <p className="text-3xl font-bold uppercase">Home</p>
-                  <small className="font-normal text-sm mt-3  ml-2">
+                  <p className="md:text-3xl text-xl font-bold uppercase">
+                    Home
+                  </p>
+                  <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
                     homepage
                   </small>
                 </div>

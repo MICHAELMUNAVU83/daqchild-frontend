@@ -20,8 +20,8 @@ const MerchCard = ({ product }) => {
         <p className="text-2xl font-bold text-white">Ksh {product.price} </p>
 
         <div className="mt-64">
-          <div className="translate-y-8 transform opacity-0 rounded-3xl p-2 transition-all group-hover:translate-y-0 group-hover:opacity-100 bg-white">
-            <p className="text-md">{product.description}</p>
+          <div className="translate-y-8 transform opacity-0 p-2 transition-all group-hover:translate-y-0 group-hover:opacity-100 ">
+            <p className="text-md text-white">{product.description}</p>
           </div>
         </div>
       </div>
