@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AddMix from "./components/AddMix";
 import AddEvents from "./components/AddEvents";
+import AddMerch from "./components/AddMerch";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/add-mix" element={<AddMix />} />
           <Route path="/add-events" element={<AddEvents />} />
+          <Route path="/add-merch" element={<AddMerch />} />
         </Routes>
       </Router>
     </>
