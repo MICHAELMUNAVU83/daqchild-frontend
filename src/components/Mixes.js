@@ -123,7 +123,12 @@ const Mixes = () => {
 
   return (
     <div>
-      <h1 className="text-7xl font-bold text-center mt-10">Mixes</h1>
+      <h1 className="text-7xl font-bold text-start ml-6 mt-10">Mixes</h1>
+      <p className="text-2xl  text-start ml-6 my-4">
+        Enjoy the best audio mixes from the Daqchild ranging from amapiano mixes ,
+        afrobeat mixes and hiphop mixes. Download and enjoy
+
+      </p>
       <div className="flex justify-center">
         <div className="grid md:grid-cols-2 md:gap-20 gap-10 grid-cols-1">
           {mixDisplay}
