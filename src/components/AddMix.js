@@ -68,16 +68,7 @@ function AddMix() {
       });
   };
 
-  const handleDownload = async (audiofile, name) => {
-    const response = await fetch(audiofile);
-    const blob = await response.blob();
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    // add a custom name to the file
-    link.href = url;
-    link.download = name;
-    link.click();
-  };
+
 
   return (
     <div className="mt-10">

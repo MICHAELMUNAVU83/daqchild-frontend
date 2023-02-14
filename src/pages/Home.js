@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Mixes from "../components/Mixes";
 import Events from "../components/Events";
+import Merch from "../components/Merch";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Hero />
       <Events />
       <Mixes />
+      <Merch />
       <Footer />
     </div>
   );
