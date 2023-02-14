@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [current, setCurrent] = useState(0);
-  const images = [J6, J11, V1, V2];
+  const images = [J6, J11, V1, V2, J6];
   const [backgroundColor, setBackgroundColor] = useState("transparent");
   const [textColor, setTextColor] = useState("white");
   const changeImage = () => {
@@ -134,7 +134,7 @@ const NavBar = () => {
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
-                <Link to="/add-merch" className="flex ">
+                  <Link to="/add-merch" className="flex ">
                     <p className="text-3xl font-bold uppercase">Add Merch</p>
 
                     <small className="font-normal text-sm mt-3  ml-2">
