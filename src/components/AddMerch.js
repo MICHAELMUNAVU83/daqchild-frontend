@@ -41,34 +41,6 @@ const AddMerch = () => {
   };
 
   return (
-    // <div className="mt-20">
-    //   <form className="flex flex-col gap-4" onSubmit={addMerchFunctionality}>
-    //     <input
-    //       type="text"
-    //       placeholder="Name"
-    //       value={name}
-    //       onChange={(e) => setName(e.target.value)}
-    //     />
-    //     <input
-    //       type="integer"
-    //       placeholder="Price"
-    //       value={price}
-    //       onChange={(e) => setPrice(e.target.value)}
-    //     />
-
-    //     <input
-    //       type="text"
-    //       placeholder="Description"
-    //       value={description}
-    //       onChange={(e) => setDescription(e.target.value)}
-    //     />
-
-    //     <input type="file" onChange={(e) => uploadImage(e.target.files)} />
-    //     <button className="bg-black text-white p-4" type="submit">
-    //       Add Merch
-    //     </button>
-    //   </form>
-    // </div>
     <div className="mt-20">
       <div className="md:max-w-[50%] w-[80%] mx-auto py-6 sm:px-6 lg:px-8">
         <div className="mt-5 md:col-span-2 md:mt-0">
@@ -162,7 +134,9 @@ const AddMerch = () => {
                           for="file-upload"
                           className="relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500"
                         >
-                          <span className="text-center">Add merchandise image</span>
+                          <span className="text-center">
+                            Add merchandise image
+                          </span>
                           <input
                             id="file-upload"
                             name="file-upload"
@@ -171,7 +145,6 @@ const AddMerch = () => {
                             onChange={(e) => uploadImage(e.target.files)}
                           />
                         </label>
-                       
                       </div>
                       <p className="text-xs text-gray-500">
                         PNG, JPG, GIF up to 10MB
@@ -181,27 +154,24 @@ const AddMerch = () => {
                 </div>
               </div>
               {name && description && price && productImage ? (
-
-              <div className="bg-gray-50 flex justify-center px-4 py-3 text-right sm:px-6">
-                <button
-                  type="submit"
-                  className=" text-center rounded-md border border-transparent bg-indigo-600 py-2 px-4  font-bold text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                >
-                  Add Merchandise 
-                </button>
+                <div className="bg-gray-50 flex justify-center px-4 py-3 text-right sm:px-6">
+                  <button
+                    type="submit"
+                    className=" text-center rounded-md border border-transparent bg-indigo-600 py-2 px-4  font-bold text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  >
+                    Add Merchandise
+                  </button>
                 </div>
-                
               ) : (
                 <div className="bg-gray-50 flex justify-center px-4 py-3 text-right sm:px-6">
-                <button
-                  type="button"
-                  className=" text-center rounded-md border border-transparent bg-pink-600 py-2 px-4  font-bold text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                >
-                  Add Your Merchandise Details
-                </button>
-                  </div>
+                  <button
+                    type="button"
+                    className=" text-center rounded-md border border-transparent bg-pink-600 py-2 px-4  font-bold text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  >
+                    Add Your Merchandise Details
+                  </button>
+                </div>
               )}
-                  
             </div>
           </form>
         </div>
