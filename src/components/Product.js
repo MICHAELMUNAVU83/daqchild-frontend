@@ -10,12 +10,13 @@ const Product = () => {
       .then((response) => response.json())
       .then((data) => {
         setProduct(data);
+        console.log(data);
       });
   }, [id]);
 
   return (
     <section className="text-gray-700 body-font overflow-hidden bg-white">
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 py-16 mx-auto">
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
           <img
             alt="ecommerce"
@@ -92,13 +93,19 @@ const Product = () => {
                 </span>
               </span>
               <span className="flex ml-3 pl-3 py-2 border-l-2 border-gray-200">
-                <a className="text-gray-500">
+                <a className="text-gray-500" href="https://www.instagram.com/">
                   <AiFillInstagram size={25} />
                 </a>
-                <a className="ml-2 text-gray-500">
+                <a
+                  className="ml-2 text-gray-500"
+                  href="https://www.instagram.com/"
+                >
                   <RiWhatsappFill size={25} />
                 </a>
-                <a className="ml-2 text-gray-500">
+                <a
+                  className="ml-2 text-gray-500"
+                  href="https://www.instagram.com/"
+                >
                   <AiFillTwitterCircle size={25} />
                 </a>
               </span>
@@ -106,19 +113,22 @@ const Product = () => {
             <p className="leading-relaxed">{product.description}</p>
             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
               <div className="flex">
-                <span className="mr-3">Color</span>
-                <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
-                <button className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
-                <button className="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>
+                <span className="mr-1">Colors:</span>
+                {product.colors && product.colors.map((color) => (
+                  <button
+                    className="border-2 border-gray-300 rounded-full md:w-6 md:h-6  w-8  h-8 focus:outline-none"
+                    style={{ backgroundColor: color.name }}
+                  ></button>
+                ))}
               </div>
               <div className="flex ml-6 items-center">
-                <span className="mr-3">Size</span>
+                <span className="mr-3">Sizes :</span>
                 <div className="relative">
-                  <select className="rounded border appearance-none border-gray-400 py-2 focus:outline-none focus:border-red-500 text-base pl-3 pr-10">
-                    <option>SM</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
+                  <select className="rounded border appearance-none border-gray-400 py-2 focus:outline-none focus:border-pink-500 text-base pl-3 pr-10">
+                    <option selected>See Sizes</option>
+                    {product.sizes && product.sizes.map((size) => (
+                      <option>{size.name}</option>
+                    ))}
                   </select>
                   <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
                     <svg
@@ -140,8 +150,8 @@ const Product = () => {
               <span className="title-font font-medium text-2xl text-gray-900">
                 KSH {product.price}
               </span>
-              <button className="flex ml-auto text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                Button
+              <button className="flex ml-auto text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:scale-110 duration-300 ease-in-out rounded">
+                Add to Cart
               </button>
             </div>
           </div>
