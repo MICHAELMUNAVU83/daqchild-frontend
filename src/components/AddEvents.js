@@ -106,12 +106,12 @@ const AddEvents = () => {
                           stroke-linejoin="round"
                         />
                       </svg>
-                      <div className="flex text-sm text-gray-600">
+                      <div className="text-sm text-gray-600">
                         <label
                           for="file-upload"
                           className="relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500"
                         >
-                          <span>Add an image</span>
+                          <span>Add event poster</span>
                           <input
                             id="file-upload"
                             name="file-upload"
@@ -120,7 +120,7 @@ const AddEvents = () => {
                             onChange={(e) => uploadPoster(e.target.files)}
                           />
                         </label>
-                        <p className="pl-1">or drag and drop</p>
+                       
                       </div>
                       <p className="text-xs text-gray-500">
                         PNG, JPG, GIF up to 10MB
