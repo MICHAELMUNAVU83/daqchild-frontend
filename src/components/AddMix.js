@@ -101,16 +101,6 @@ function AddMix() {
       >
         Submit
       </button>
-
-      {/* {audio && (
-        <>
-          <img src={dj1} alt="" />
-          <audio ref={audioRef} src={audio} controls={true} />
-          <button onClick={togglePlay}>{isPlaying ? "Pause" : "Play"}</button>
-
-          <button onClick={handleDownload}>Download</button>
-        </>
-      )} */}
     </div>
   );
 }
