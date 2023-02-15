@@ -41,7 +41,7 @@ const Events = () => {
               </div>
             ))}
           </div>
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 pl-32">
             <Splide
               options={{
                 perPage: 1,
@@ -51,13 +51,13 @@ const Events = () => {
                 pagination: true,
                 autoplay: true,
                 drag: true,
-                interval: 4000,
+                interval: 3000,
                 arrows: true,
                 loop: "true",
               }}
             >
               {events.map((event) => (
-                <SplideSlide key={event.id}>
+                <SplideSlide key={event.id} className="w-[80%]">
                   <img
                     src={event.poster}
                     alt="event poster"
