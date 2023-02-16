@@ -83,3 +83,11 @@ html {
     }
 }
 
+.events-div{
+  background-image: url("./components/images/design.png");
+  
+}
+
+.body{
+  background-color: #FDFFFC;
+}

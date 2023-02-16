@@ -38,7 +38,8 @@ const Mixes = () => {
                   {mix.genre}
                 </span>
                 <div className="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
-                  {mix.likes} likes &bull; {mix.plays} {mix.plays>1 ? "plays" : "play"} &bull;
+                  {mix.likes} likes &bull; {mix.plays}{" "}
+                  {mix.plays > 1 ? "plays" : "play"} &bull;
                   {mix.downloads} downloads
                 </div>
               </div>
@@ -51,7 +52,7 @@ const Mixes = () => {
                 <div className="flex items-center gap-2">
                   <p>{mix.likes}</p>
                   <AiFillHeart
-                    className="text-2xl "
+                    className="text-2xl hover:text-red-500 cursor-pointer"
                     onClick={() => {
                       fetch(`http://localhost:3000/mixes/${mix.id}`, {
                         method: "PATCH",
@@ -59,17 +60,13 @@ const Mixes = () => {
                           "Content-Type": "application/json",
                         },
                         body: JSON.stringify({ likes: mix.likes + 1 }),
-                      })
-                        .then((response) => response.json())
-                        .then((data) => {
-                          console.log(data);
-                        });
+                      });
                     }}
                   />
                 </div>
                 <div className="flex gap-2 items-center">
                   <p> {mix.plays} </p>
-                  <p> {mix.plays>1 ? "plays" : "play"}</p>
+                  <p> {mix.plays > 1 ? "plays" : "play"}</p>
                 </div>
               </div>
               <div className="mt-4">
@@ -122,12 +119,13 @@ const Mixes = () => {
     ));
 
   return (
-    <div>
-      <h1 className="text-7xl font-bold text-start ml-6 mt-10">Mixes</h1>
-      <p className="text-2xl  text-start ml-6 my-4">
-        Enjoy the best audio mixes from the Daqchild ranging from amapiano mixes ,
-        afrobeat mixes and hiphop mixes. Download and enjoy
-
+    <div className="bg-black py-6 text-white">
+      <h1 className="text-7xl text-white font-bold text-start ml-6 mt-10">
+        Mixes
+      </h1>
+      <p className="text-2xl text-white text-start ml-6 my-4">
+        Enjoy the best audio mixes from the Daqchild ranging from amapiano mixes
+        , afrobeat mixes and hiphop mixes. Download and enjoy
       </p>
       <div className="flex justify-center">
         <div className="grid md:grid-cols-2 md:gap-20 gap-10 grid-cols-1">

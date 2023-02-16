@@ -3,34 +3,18 @@ import { Link } from "react-router-dom";
 
 const MerchCard = ({ product }) => {
   return (
-    <div className="container">
-      <div className="max-w-md w-full bg-gray-900 shadow-lg rounded-xl p-6 ">
+    <div className="container hover:shadow-lg hover:scale-105 transform transition duration-500 ease-in-out">
+      <div className=" bg-black shadow-lg rounded-xl p-4 ">
         <div className="flex flex-col ">
           <div className="">
             <div className="relative h-62 w-full mb-3">
-              <div className="absolute flex flex-col top-0 right-0 p-3">
-                <button className="transition ease-in duration-300 bg-gray-800  hover:text-purple-500 shadow hover:shadow-md text-gray-500 rounded-full w-8 h-8 text-center p-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                </button>
+              <div className="flex  justify-center relative bg-gradient-to-b  from-purple-600 via  overflow-hidden rounded-md w-[350px] h-[300px]">
+                <img
+                  src={product.product_image}
+                  alt="Just a flower"
+                  className=" object-cover mr-2  object-fill  rounded-2xl h-[300px] w-[350px]"
+                />
               </div>
-              <img
-                src={product.product_image}
-                alt="Just a flower"
-                className=" object-cover  object-fill  rounded-2xl h-[300px] w-[350px]"
-              />
             </div>
             <div className="flex-auto justify-evenly">
               <div className="flex flex-wrap ">
@@ -52,7 +36,7 @@ const MerchCard = ({ product }) => {
                   <h2 className="text-lg mr-auto cursor-pointer text-gray-200 hover:text-purple-500 truncate ">
                     {product.name}
                   </h2>
-                  <div className="flex items-center bg-green-400 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                  <div className="flex items-center font-bold bg-green-400/80 text-white text-xs px-2 py-1 ml-3 rounded-lg">
                     INSTOCK
                   </div>
                 </div>
@@ -63,8 +47,9 @@ const MerchCard = ({ product }) => {
 
               <div className="flex space-x-2 text-sm font-medium my-2 justify-center">
                 <button className="transition ease-in duration-300 inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-purple-500 px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-full hover:bg-purple-600 ">
-                  <Link to={`/products/${product.id}`}>View {product.name}</Link>
-
+                  <Link to={`/products/${product.id}`}>
+                    View {product.name}
+                  </Link>
                 </button>
               </div>
             </div>

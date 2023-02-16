@@ -2,11 +2,9 @@ import React, { useState, useEffect } from "react";
 import "@splidejs/react-splide/css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import moment from "moment";
-import { FaHandPointRight } from "react-icons/fa";
-
+import { ImMusic } from "react-icons/im";
 
 const Events = () => {
-  
   const [events, setEvents] = useState([]);
   useEffect(() => {
     fetch("http://localhost:3000/events")
@@ -18,28 +16,39 @@ const Events = () => {
   }, []);
 
   return (
-    <div className="py-3  ">
+    <div className="py-8  ">
       {events.length > 0 && (
         <div className="flex flex-col md:flex-row justify-around pt-10">
           <div>
-            <h2 className="text-6xl  font-bold">KING OF GOOD TIMES </h2>
+            <h2 className="text-6xl   font-bold">KING OF GOOD TIMES </h2>
 
-            <h2 className="text-3xl  font-bold border-b-2 border-pink-600">
+            <h2 className="text-3xl text-gray-900  font-bold underline "
+              
+            >
               {" "}
               THIS WEEKS' EVENT SCHEDULE
             </h2>
-
-            {events.map((event) => (
-              <div className="text-start">
-                <div className="flex ">
-                  <p className="text-2xl font-bold">
-                    {moment(event.date).format("dddd")}
-                  </p>
-                  <FaHandPointRight className="text-2xl font-bold mt-2 mx-2" />
-                  <h2 className="text-2xl  font-bold">{event.location}</h2>
-                </div>
-              </div>
-            ))}
+            <ul className="flex flex-col bg-[#9d6ef4] p-4 rounded-lg mt-4 ">
+              {events.map((event) => (
+                <li className="border-gray-400 flex flex-row mb-2 h-[50px]">
+                  <div className="select-none cursor-pointer text-white bg-black  flex flex-1 items-center p-2  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
+                    <div className="flex flex-col rounded-md w-8 h-8 bg-[#9d6ef4] p-2 justify-center items-center mr-4">
+                      <ImMusic className="text-2xl text-white" />
+                    </div>
+                    <div className="flex-1 pl-1 mr-16">
+                      <div className="font-medium">
+                        {" "}
+                        {moment(event.date).format("dddd")}{" "}
+                      </div>
+                      <div className=" text-sm">
+                        {moment(event.date).format("MMM Do YYYY")}{" "}
+                      </div>
+                    </div>
+                    <div className=" text-3xl">{event.location} </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
           <div className="md:w-1/2 md:pl-32">
             <Splide
@@ -61,7 +70,7 @@ const Events = () => {
                   <img
                     src={event.poster}
                     alt="event poster"
-                    className="w-[100%] rounded-2xl md:px-0 px-4 h-96 "
+                    className="w-[100%] rounded-2xl md:px-0 px-4 h-[500px] "
                   />
                 </SplideSlide>
               ))}

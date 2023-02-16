@@ -21,21 +21,18 @@ const NavBar = () => {
     }, 500);
   };
   const location = useLocation();
-
   useEffect(() => {
-    if (window.scrollY >= 200 && location.pathname === "/") {
-      setBackgroundColor("pink");
-      setTextColor("black");
-    } else if (location.pathname !== "/") {
-      setBackgroundColor("pink");
-      setTextColor("black");
-    } else if (location.pathname === "/" && window.scrollY < 200) {
-      setBackgroundColor("transparent");
-      setTextColor("white");
-    }
-
-    
-  }, [location.pathname, window.scrollY]);
+    const changeBackground = () => {
+      if (window.scrollY >= 200) {
+        setBackgroundColor("#9d6ef4 ");
+        setTextColor("white");
+      } else {
+        setBackgroundColor("transparent");
+        setTextColor("white");
+      }
+    };
+    window.addEventListener("scroll", changeBackground);
+  }, []);
 
   return (
     <div
