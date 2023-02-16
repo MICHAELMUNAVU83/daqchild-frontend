@@ -1,5 +1,5 @@
 .hero-background {
-  background-image: url("./components/images/prof.jpg");
+  background-image: url("./components/images/ma.jpg");
 }
 
 html {
@@ -37,62 +37,6 @@ html {
   }
 }
 
-.middle-scroll-container {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.middle-scroll-text {
-  animation: middle-scroll-container 30s linear infinite;
-  font-family: "poppinsbold";
-  text-align: center;
-  font-weight: bolder;
-  -webkit-text-stroke: 1px purple;
-}
-
-.middle-scroll-text:hover {
-  animation-play-state: paused;
-  -webkit-text-stroke: 1px white;
-  -webkit-text-fill-color: transparent;
-}
-
-@keyframes middle-scroll-container {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(100%);
-  }
-}
-
-.last-scroll-container {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.last-scroll-text {
-  animation: last-scroll-animation 25s linear infinite;
-  font-family: "poppinsbold";
-  text-align: center;
-  -webkit-text-stroke: 1px purple;
-}
-
-.last-scroll-text:hover {
-  animation-play-state: paused;
-  -webkit-text-stroke: 1px white;
-  -webkit-text-fill-color: transparent;
-}
-
-@keyframes last-scroll-animation {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
 
 .marquee-w {
     position: relative;
@@ -118,16 +62,17 @@ html {
     padding-left: 100%;
     font-family: 'poppinsbold';
     text-align: center;
-    -webkit-text-stroke: 1px pink;
+    color: white;
+    -webkit-text-stroke: 1.2px purple;
     white-space: nowrap;
     min-width: 100%;
     height: 100%;
     line-height: 140px;
-    font-size: 85px;
-    animation: marquee 10s linear infinite;
+  
+    animation: marquee 12s linear infinite;
 }
 .marquee2 span {
-    animation-delay: 5s;
+    animation-delay: 6s;
 }
 @keyframes marquee {
     0% {
@@ -137,3 +82,4 @@ html {
         transform: translate(-100%, 0);
     }
 }
+
