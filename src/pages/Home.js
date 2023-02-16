@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Mixes from "../components/Mixes";
 import Events from "../components/Events";
 import Merch from "../components/Merch";
+import Stepper from "../components/Stepper";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Events />
       <Mixes />
       <Merch />
+      <Stepper />
      
       <Footer />
     </div>
