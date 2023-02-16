@@ -28,9 +28,9 @@ const Events = () => {
               {" "}
               THIS WEEKS' EVENT SCHEDULE
             </h2>
-            <ul className="flex flex-col bg-[#9d6ef4] p-4 rounded-lg mt-4 ">
+            <ul className="flex flex-col bg-[#9d6ef4] p-4 mx-2 rounded-lg my-4 ">
               {events.map((event) => (
-                <li className="border-gray-400 flex flex-row mb-2 h-[50px]">
+                <li className="border-gray-400 flex flex-row mb-2 md:h-[50px] h-[100px]">
                   <div className="select-none cursor-pointer text-white bg-black  flex flex-1 items-center p-2  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
                     <div className="flex flex-col rounded-md w-8 h-8 bg-[#9d6ef4] p-2 justify-center items-center mr-4">
                       <ImMusic className="text-2xl text-white" />
@@ -44,7 +44,7 @@ const Events = () => {
                         {moment(event.date).format("MMM Do YYYY")}{" "}
                       </div>
                     </div>
-                    <div className=" text-3xl">{event.location} </div>
+                    <div className="text-md md:text-3xl">{event.location} </div>
                   </div>
                 </li>
               ))}

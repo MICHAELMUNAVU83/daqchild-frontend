@@ -15,14 +15,14 @@ const Footer = () => {
       <section className="w-full md:w-full  flex-wrap flex bg-dark   justify-center items-center ">
         <a
           href="https://www.instagram.com/"
-          className=" md:p-4 p-2 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
+          className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
           style={{border: "1px solid white"}}
         >
           <AiFillInstagram className="text-4xl  group-hover:text-black hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
         <a
           href="https://www.instagram.com/"
-          className=" md:p-4 p-2 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
+          className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
           style={{border: "1px solid white"}}
         >
           <FaFacebookF className="text-4xl group-hover:text-black   group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
@@ -30,42 +30,42 @@ const Footer = () => {
         <a
           href="https://www.instagram.com/"
           style={{border: "1px solid white"}}
-          className=" md:p-4 p-2 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
+          className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
         >
           <AiFillTwitterCircle className="text-4xl  group-hover:text-black group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
         <a
           href="https://www.instagram.com/"
           style={{border: "1px solid white"}}
-          className=" md:p-4 p-2 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
+          className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
         >
           <IoLogoTiktok className="text-4xl  group-hover:text-black  group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
         <a
           href="https://www.instagram.com/"
           style={{border: "1px solid white"}}
-          className=" md:p-4 p-2 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
+          className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
         >
           <BsApple className="text-4xl group-hover:text-black   group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
         <a
           href="https://www.instagram.com/"
           style={{border: "1px solid white"}}
-          className=" md:p-4 p-2 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
+          className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
         >
           <BsSpotify className="text-4xl group-hover:text-black  group-hover:scale-110 duration-300  mx-2 cursor-pointer " />
         </a>
         <a
           href="https://www.instagram.com/"
           style={{border: "1px solid white"}}
-          className=" md:p-4 p-2 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
+          className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
         >
           <BsSnapchat className="text-4xl group-hover:text-black group-hover:scale-110 duration-300 mx-2 cursor-pointer" />
         </a>
         <a
           href="https://www.instagram.com/"
           style={{border: "1px solid white"}}
-          className=" md:p-4 p-2 group hover:bg-white duration-300  ease-in-out  cursor-pointer   "
+          className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
         >
           <SiTwitch className="text-4xl group-hover:text-black   group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
