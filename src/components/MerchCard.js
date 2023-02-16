@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const MerchCard = ({ product }) => {
   return (
-    <div className="container hover:shadow-lg hover:scale-105 transform transition duration-500 ease-in-out">
+    <div className="container hover:shadow-lg ">
       <div className=" bg-black shadow-lg rounded-xl p-4 ">
         <div className="flex flex-col ">
           <div className="">

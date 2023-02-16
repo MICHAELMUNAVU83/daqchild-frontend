@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ImCross, ImPlus } from "react-icons/im";
-
+import { BsFillCartFill } from "react-icons/bs";
 import J6 from "./images/J6.jpg";
 import J11 from "./images/J11.jpg";
 import V1 from "./images/v1.jpg";
@@ -45,30 +45,40 @@ const NavBar = () => {
           <ImPlus className="text-3xl" />
         </div>
 
-        <div
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
-          className="flex group cursor-pointer"
-        >
-          <div>
-            <p
-              style={{ backgroundColor: `${textColor}` }}
-              className="md:h-3 h-2 md:w-10 w-8 my-1 group-hover:rotate-90  duration-500 ease-in-out"
-            />
-            <p
-              style={{ backgroundColor: `${textColor}` }}
-              className="md:h-3 h-2 md:w-10 w-8  group-hover:absolute top-5  duration-500 ease-in-out"
-            />
+        <div className="flex">
+          <div
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+            className="flex group cursor-pointer"
+          >
+            <div>
+              <p
+                style={{ backgroundColor: `${textColor}` }}
+                className="md:h-3 h-2 md:w-10 w-8 my-1 group-hover:rotate-90  duration-500 ease-in-out"
+              />
+              <p
+                style={{ backgroundColor: `${textColor}` }}
+                className="md:h-3 h-2 md:w-10 w-8  group-hover:absolute top-5  duration-500 ease-in-out"
+              />
+            </div>
+            <div>
+              <p
+                style={{ color: `${textColor}` }}
+                className="md:text-3xl text-xl  font-bold mx-2 "
+              >
+                MENU
+              </p>
+            </div>
           </div>
-          <div>
-            <p
-              style={{ color: `${textColor}` }}
-              className="md:text-3xl text-xl  font-bold mx-2 "
-            >
-              MENU
-            </p>
-          </div>
+          <Link to="/cart">
+            <div className=" flex items-center">
+              <BsFillCartFill className="text-3xl mx-2 text-white" />
+              <p className=" rounded-full  text-center text-sm h-6 w-6 bg-gray-100">
+                1
+              </p>
+            </div>
+          </Link>
         </div>
         <div
           className={

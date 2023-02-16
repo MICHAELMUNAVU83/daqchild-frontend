@@ -6,7 +6,7 @@ import AddMix from "./components/AddMix";
 import AddEvents from "./components/AddEvents";
 import AddMerch from "./components/AddMerch";
 import Product from "./components/Product";
-
+import Cart from "./pages/Cart";
 function App() {
   return (
     <>
@@ -18,6 +18,7 @@ function App() {
           <Route path="/add-events" element={<AddEvents />} />
           <Route path="/add-merch" element={<AddMerch />} />
           <Route path="/products/:id" element={<Product />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </Router>
     </>
