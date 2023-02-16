@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState ,useRef } from "react";
 
 const AddEvents = () => {
+  const reference = useRef();
+  console.log(reference);
   const [poster, setPoster] = useState("");
   const [location, setLocation] = useState("");
   const [date, setDate] = useState("");
@@ -48,7 +50,7 @@ const AddEvents = () => {
                 <div>
                   <label
                     for="about"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium te/xt-gray-700"
                   >
                     Location
                   </label>
@@ -106,7 +108,7 @@ const AddEvents = () => {
                           stroke-linejoin="round"
                         />
                       </svg>
-                      <div className="text-sm text-gray-600">
+                      <div className="text-sm text-gray-600" ref={reference}>
                         <label
                           for="file-upload"
                           className="relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500"

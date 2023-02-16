@@ -41,7 +41,7 @@ const Events = () => {
               </div>
             ))}
           </div>
-          <div className="md:w-1/2 pl-32">
+          <div className="md:w-1/2 md:pl-32">
             <Splide
               options={{
                 perPage: 1,

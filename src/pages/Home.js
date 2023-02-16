@@ -12,6 +12,7 @@ const Home = () => {
       <Events />
       <Mixes />
       <Merch />
+     
       <Footer />
     </div>
   );

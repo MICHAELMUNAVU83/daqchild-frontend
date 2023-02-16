@@ -8,6 +8,7 @@ import V2 from "./images/v2.jpg";
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [current, setCurrent] = useState(0);
@@ -19,19 +20,22 @@ const NavBar = () => {
       setCurrent(current === images.length - 1 ? 0 : current + 1);
     }, 500);
   };
+  const location = useLocation();
 
   useEffect(() => {
-    const changeBackground = () => {
-      if (window.scrollY >= 200) {
-        setBackgroundColor("pink");
-        setTextColor("black");
-      } else {
-        setBackgroundColor("transparent");
-        setTextColor("white");
-      }
-    };
-    window.addEventListener("scroll", changeBackground);
-  }, []);
+    if (window.scrollY >= 200 && location.pathname === "/") {
+      setBackgroundColor("pink");
+      setTextColor("black");
+    } else if (location.pathname !== "/") {
+      setBackgroundColor("pink");
+      setTextColor("black");
+    } else if (location.pathname === "/" && window.scrollY < 200) {
+      setBackgroundColor("transparent");
+      setTextColor("white");
+    }
+
+    
+  }, [location.pathname, window.scrollY]);
 
   return (
     <div
