@@ -1,6 +1,9 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import { RoomContext } from "../context";
 const Cart = () => {
+  const { saved, removeFromArray, totalPrice, addTotalPrice } =
+      useContext(RoomContext);
+    console.log(saved);
   return (
     <div className="">
       <div className="py-20">
@@ -50,8 +53,6 @@ const Cart = () => {
                   </div>
                   <div className="flex justify-between items-center mt-6 pt-6">
                     <div className="flex  items-center">
-                     
-
                       <div className="flex flex-col ml-3">
                         <span className="md:text-md font-medium">
                           Chicken momo

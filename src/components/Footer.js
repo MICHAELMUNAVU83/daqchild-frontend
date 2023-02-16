@@ -79,7 +79,7 @@ const Footer = () => {
           <p className="text-center p-1  text-gray-400  ">Live Mixes</p>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <p className="text-center p-3 text-4xl">Mercandise</p>
+          <p className="text-center p-3 text-4xl">Merchandise</p>
           <p className="text-center p-1  text-gray-400  ">T-Shirts</p>
           <p className="text-center p-1  text-gray-400  ">Hoodies</p>
           <p className="text-center p-1  text-gray-400  ">Caps</p>

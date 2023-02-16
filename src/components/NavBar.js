@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { ImCross, ImPlus } from "react-icons/im";
 import { BsFillCartFill } from "react-icons/bs";
 import J6 from "./images/J6.jpg";
 import J11 from "./images/J11.jpg";
 import V1 from "./images/v1.jpg";
 import V2 from "./images/v2.jpg";
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { RoomContext } from "../context";
 const NavBar = () => {
+  const { saved } = useContext(RoomContext);
   const [isOpen, setIsOpen] = useState(false);
   const [current, setCurrent] = useState(0);
   const images = [J6, J11, V1, V2, J6];
@@ -74,9 +75,11 @@ const NavBar = () => {
           <Link to="/cart">
             <div className=" flex items-center">
               <BsFillCartFill className="text-3xl mx-2 text-white" />
-              <p className=" rounded-full  text-center text-sm h-6 w-6 bg-gray-100">
-                1
-              </p>
+              {saved.length > 0 && (
+                <p className=" rounded-full  text-center text-sm h-6 w-6 bg-gray-100">
+                  {saved.length}
+                </p>
+              )}
             </div>
           </Link>
         </div>

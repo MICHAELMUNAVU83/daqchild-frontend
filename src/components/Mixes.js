@@ -27,17 +27,17 @@ const Mixes = () => {
           <img
             src={mix.poster}
             alt=" random imgee"
-            className="rounded-lg ml-2 shadow-md"
+            className="rounded-lg md:ml-2 shadow-md"
             style={{ width: "400px", height: "300px" }}
           />
 
           <div className="relative px-4 -mt-16  ">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
+            <div className="bg-white p-6 rounded-lg shadow-lg ">
               <div className="flex items-baseline">
                 <span className="bg-[#9d6ef4] text-white text-xs px-2  inline-block rounded-full  uppercase font-semibold tracking-wide">
                   {mix.genre}
                 </span>
-                <div className="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
+                <div className="ml-2 text-gray-600 uppercase text-sm font-semibold tracking-wider">
                   {mix.likes} likes &bull; {mix.plays}{" "}
                   {mix.plays > 1 ? "plays" : "play"} &bull;
                   {mix.downloads} downloads

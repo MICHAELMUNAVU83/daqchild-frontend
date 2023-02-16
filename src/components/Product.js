@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { AiFillInstagram, AiFillTwitterCircle } from "react-icons/ai";
 import { RiWhatsappFill } from "react-icons/ri";
+import { RoomContext } from "../context";
 const Product = () => {
+  const { addCart, saved, removeFromArray } = useContext(RoomContext);
   const { id } = useParams();
   const [product, setProduct] = useState({});
   useEffect(() => {
@@ -13,6 +15,7 @@ const Product = () => {
         console.log(data);
       });
   }, [id]);
+  console.log(saved.length);
 
   return (
     <section className="text-gray-700  body-font overflow-hidden bg-white">
@@ -114,21 +117,21 @@ const Product = () => {
             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
               <div className="flex">
                 <span className="mr-1">Colors:</span>
-                {product.colors && product.colors.map((color) => (
-                  <button
-                    className="border-2 border-gray-300 rounded-full md:w-6 md:h-6  w-8  h-8 focus:outline-none"
-                    style={{ backgroundColor: color.name }}
-                  ></button>
-                ))}
+                {product.colors &&
+                  product.colors.map((color) => (
+                    <button
+                      className="border-2 border-gray-300 rounded-full md:w-6 md:h-6  w-8  h-8 focus:outline-none"
+                      style={{ backgroundColor: color.name }}
+                    ></button>
+                  ))}
               </div>
               <div className="flex ml-6 items-center">
                 <span className="mr-3">Sizes :</span>
                 <div className="relative">
                   <select className="rounded border appearance-none border-gray-400 py-2 focus:outline-none focus:border-purple-500 text-base pl-3 pr-10">
                     <option selected>See Sizes</option>
-                    {product.sizes && product.sizes.map((size) => (
-                      <option>{size.name}</option>
-                    ))}
+                    {product.sizes &&
+                      product.sizes.map((size) => <option>{size.name}</option>)}
                   </select>
                   <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
                     <svg
@@ -150,9 +153,44 @@ const Product = () => {
               <span className="title-font font-medium text-2xl text-gray-900">
                 KSH {product.price}
               </span>
-              <button className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:scale-110 duration-300 ease-in-out rounded">
-                Add to Cart
-              </button>
+              {saved.length > 0 &&
+                saved.map(
+                  (item) =>
+                    item.name === product.name && (
+                      <button
+                        className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:scale-110 duration-300 ease-in-out rounded"
+                        onClick={() => removeFromArray(product.id)}
+                      >
+                        Remove from Cart
+                      </button>
+                    )
+                )}
+              {saved.map(
+                (item) =>
+                  item.name !== product.name && (
+                    <button
+                      className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:scale-110 duration-300 ease-in-out rounded"
+                      onClick={() => addCart(product)}
+                    >
+                      Add to Cart
+                    </button>
+                  )
+              )}
+              {saved.length === 0 && (
+                <button
+                  className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:scale-110 duration-300 ease-in-out rounded"
+                  onClick={() => addCart(product)}
+                >
+                  Add to Cart
+                </button>
+              )}
+
+              {/* <button
+                    className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:scale-110 duration-300 ease-in-out rounded"
+                    onClick={() => addCart(product)}
+                  >
+                    Add to Cart
+                  </button> */}
             </div>
           </div>
         </div>
