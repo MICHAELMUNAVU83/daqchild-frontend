@@ -27,18 +27,18 @@ const Mixes = () => {
           <img
             src={mix.poster}
             alt=" random imgee"
-            className="rounded-lg shadow-md"
+            className="rounded-lg ml-2 shadow-md"
             style={{ width: "400px", height: "300px" }}
           />
 
           <div className="relative px-4 -mt-16  ">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="flex items-baseline">
-                <span className="bg-pink-500 text-white text-xs px-2  inline-block rounded-full  uppercase font-semibold tracking-wide">
+                <span className="bg-[#9d6ef4] text-white text-xs px-2  inline-block rounded-full  uppercase font-semibold tracking-wide">
                   {mix.genre}
                 </span>
                 <div className="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
-                  {mix.likes} likes &bull; {mix.plays} plays &bull;{" "}
+                  {mix.likes} likes &bull; {mix.plays} {mix.plays>1 ? "plays" : "play"} &bull;
                   {mix.downloads} downloads
                 </div>
               </div>
@@ -69,13 +69,13 @@ const Mixes = () => {
                 </div>
                 <div className="flex gap-2 items-center">
                   <p> {mix.plays} </p>
-                  <p>Plays</p>
+                  <p> {mix.plays>1 ? "plays" : "play"}</p>
                 </div>
               </div>
               <div className="mt-4">
                 <audio
                   controls
-                  className="flex justify-center  p-2 rounded-lg shadow-lg shadow-pink-500 overflow-hidden w-[95%]"
+                  className="flex justify-center  p-2 rounded-lg shadow-xl shadow-[#af88fd] overflow-hidden w-[95%]"
                   onPlay={() => {
                     fetch(`http://localhost:3000/mixes/${mix.id}`, {
                       method: "PATCH",
@@ -96,7 +96,7 @@ const Mixes = () => {
 
               <div className="flex place-content-center mt-4">
                 <button
-                  className="bg-pink-500 text-white font-bold py-2 px-4 rounded"
+                  className="bg-[#9d6ef4] text-white font-bold py-2 px-4 rounded"
                   onClick={() => {
                     handleDownload(mix.audio_mp3, mix.name);
                     fetch(`http://localhost:3000/mixes/${mix.id}`, {

@@ -26,7 +26,7 @@ const Merch = () => {
           autoplay: true,
           gap: "2rem",
           arrows: false,
-          pagination: true,
+          pagination: false,
           breakpoints: {
             640: {
               perPage: 1,
