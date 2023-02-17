@@ -22,9 +22,7 @@ const Events = () => {
           <div>
             <h2 className="text-6xl   font-bold">KING OF GOOD TIMES </h2>
 
-            <h2 className="text-3xl text-gray-900  font-bold underline "
-              
-            >
+            <h2 className="text-3xl text-gray-900  font-bold underline ">
               {" "}
               THIS WEEKS' EVENT SCHEDULE
             </h2>
@@ -49,6 +47,12 @@ const Events = () => {
                 </li>
               ))}
             </ul>
+
+            <div className="text-center">
+              <button className="px-4 py-2 bg-[#9d6ef4]  text-white hover:scale-110 transition duration-500 ease-in-out ">
+                BOOK THE DAQCHILD
+              </button>
+            </div>
           </div>
           <div className="md:w-1/2 md:pl-32">
             <Splide
