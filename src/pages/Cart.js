@@ -1,10 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { RoomContext } from "../context";
 import mpesa from "./mpesa.png";
 const Cart = () => {
-  const { saved, removeFromArray, totalPrice, addTotalPrice } =
-    useContext(RoomContext);
+  const { saved, removeFromArray } = useContext(RoomContext);
   console.log(saved);
+
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    if (saved.length > 0) {
+      let total = 0;
+      saved.forEach((product) => {
+        total += Number(product.price);
+      });
+      setTotalPrice(total);
+    }
+  }, [saved]);
 
   const savedItems =
     saved.length > 0 &&
@@ -66,6 +77,14 @@ const Cart = () => {
             </select>
           </div>
         </div>
+        <div className="text-center  ">
+          <button
+            className="bg-red-500 text-white px-4 py-2 rounded-md"
+            onClick={() => removeFromArray(item.id)}
+          >
+            Remove
+          </button>
+        </div>
       </div>
     ));
   return (
@@ -104,7 +123,7 @@ const Cart = () => {
                       </span>
                       <span className="text-lg font-bold text-gray-800 ">
                         {" "}
-                        $24.90
+                        KSh {totalPrice}
                       </span>
                     </div>
                   </div>
