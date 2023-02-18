@@ -5,7 +5,7 @@ const Cart = () => {
     useContext(RoomContext);
   console.log(saved);
 
-  const savedItems = saved.map((item) => (
+  const savedItems = saved.length >0 && saved.map((item) => (
     <div className="flex flex-col gap-4">
       <div className="flex justify-between items-center pt-6 mt-6 border-t">
         <div className="flex  items-center">
@@ -39,7 +39,7 @@ const Cart = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center pt-6 mt-6 ">
+      <div className="flex justify-between items-center pt-2 mt-2 ">
         <div>
           <p>Select color</p>
           <select className="bg-gray-100 border h-6 w-24 rounded text-sm px-2 mx-2">
@@ -73,8 +73,16 @@ const Cart = () => {
                 <div className="col-span-2 p-5">
                   <h1 className="text-xl font-medium ">Shopping Cart</h1>
                   {/* Each cart */}
-                  {savedItems}
-
+                  {saved.length > 0 ? (
+                    savedItems
+                  ) : (
+                    <div className="flex justify-center items-center">
+                      <span className="text-md font-medium text-gray-400">
+                        Your cart is empty
+                      </span>
+                      </div>
+                  )}
+              
                   {/* Each cart */}
 
                   <div className="flex justify-between items-center mt-6 pt-6 border-t">
