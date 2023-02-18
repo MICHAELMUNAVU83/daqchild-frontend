@@ -4,6 +4,65 @@ const Cart = () => {
   const { saved, removeFromArray, totalPrice, addTotalPrice } =
     useContext(RoomContext);
   console.log(saved);
+
+  const savedItems = saved.map((item) => (
+    <div className="flex flex-col gap-4">
+      <div className="flex justify-between items-center pt-6 mt-6 border-t">
+        <div className="flex  items-center">
+          <img src={item.product_image} width="60" className="rounded-full " alt="product " />
+
+          <div className="flex flex-col ml-3 ">
+            <span className="text-md font-medium w-auto">{item.name}</span>
+            <span className="text-xs font-light text-gray-400">
+              Daqchild Merchandise
+            </span>
+          </div>
+        </div>
+
+        <div className="flex justify-center items-center">
+          <div className="pr-8 flex">
+            <span className="font-semibold">-</span>
+            <input
+              type="text"
+              className="focus:outline-none bg-gray-100 border h-6 w-8 rounded text-sm px-2 mx-2"
+              value="1"
+            />
+            <span className="font-semibold">+</span>
+          </div>
+
+          <div className="pr-8">
+            <span className="text-xs font-medium">KSh {item.price}</span>
+          </div>
+          <div>
+            <i className="fa fa-close text-xs font-medium"></i>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-between items-center pt-6 mt-6 ">
+        <div>
+          <p>Select color</p>
+          <select className="bg-gray-100 border h-6 w-24 rounded text-sm px-2 mx-2">
+            {item.colors.map((color) => (
+              <option value={color.name}>{color.name}</option>
+            ))}
+          </select>
+
+        </div>
+
+
+        <div>
+          <p>Select Size</p>
+          <select className="bg-gray-100 border h-6 w-24 rounded text-sm px-2 mx-2">
+            {item.sizes.map((size) => (
+              <option value={size.name}>{size.name}</option>
+            ))}
+          </select>
+
+        </div>
+      </div>
+    </div>
+  ));
   return (
     <div className="">
       <div className="py-20">
@@ -13,46 +72,10 @@ const Cart = () => {
               <div className="md:grid md:grid-cols-3 gap-2 ">
                 <div className="col-span-2 p-5">
                   <h1 className="text-xl font-medium ">Shopping Cart</h1>
+                  {/* Each cart */}
+                  {savedItems}
 
-                  <div className="flex justify-between items-center pt-6 mt-6 border-t">
-                    <div className="flex  items-center">
-                      <img
-                        src="https://i.imgur.com/Uv2Yqzo.jpg"
-                        width="60"
-                        className="rounded-full "
-                      />
-
-                      <div className="flex flex-col ml-3 ">
-                        <span className="text-md font-medium w-auto">
-                          Spicy Mexican potatoes
-                        </span>
-                        <span className="text-xs font-light text-gray-400">
-                          #66999
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="flex justify-center items-center">
-                      <div className="pr-8 flex">
-                        <span className="font-semibold">-</span>
-                        <input
-                          type="text"
-                          className="focus:outline-none bg-gray-100 border h-6 w-8 rounded text-sm px-2 mx-2"
-                          value="1"
-                        />
-                        <span className="font-semibold">+</span>
-                      </div>
-
-                      <div className="pr-8">
-                        <span className="text-xs font-medium">$10.50</span>
-                      </div>
-                      <div>
-                        <i className="fa fa-close text-xs font-medium"></i>
-                      </div>
-                    </div>
-                    
-                  </div>
-               
+                  {/* Each cart */}
 
                   <div className="flex justify-between items-center mt-6 pt-6 border-t">
                     <div className="flex items-center">
