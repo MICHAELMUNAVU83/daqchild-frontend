@@ -17,6 +17,9 @@ const Product = () => {
   }, [id]);
   console.log(saved.length);
 
+  const isInCart = saved.some((item) => item.id === product.id);
+  console.log(isInCart);
+
   return (
     <section className="text-gray-700  body-font overflow-hidden bg-white">
       <div className="container px-5 py-20 mx-auto">
@@ -153,30 +156,14 @@ const Product = () => {
               <span className="title-font font-medium text-2xl text-gray-900">
                 KSH {product.price}
               </span>
-              {saved.length > 0 &&
-                saved.map(
-                  (item) =>
-                    item.name === product.name && (
-                      <button
-                        className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:scale-110 duration-300 ease-in-out rounded"
-                        onClick={() => removeFromArray(product.id)}
-                      >
-                        Remove from Cart
-                      </button>
-                    )
-                )}
-              {saved.map(
-                (item) =>
-                  item.name !== product.name && (
-                    <button
-                      className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:scale-110 duration-300 ease-in-out rounded"
-                      onClick={() => addCart(product)}
-                    >
-                      Add to Cart
-                    </button>
-                  )
-              )}
-              {saved.length === 0 && (
+              {isInCart ? (
+                <button
+                  className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:scale-110 duration-300 ease-in-out rounded"
+                  onClick={() => removeFromArray(product.id)}
+                >
+                  Remove from Cart
+                </button>
+              ) : (
                 <button
                   className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:scale-110 duration-300 ease-in-out rounded"
                   onClick={() => addCart(product)}
