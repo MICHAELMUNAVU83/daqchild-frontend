@@ -61,18 +61,18 @@ const Cart = () => {
         </div>
 
         <div className="flex justify-between items-center pt-2 mt-2 ">
-          <div>
+          <div className="w-1/2">
             <p>Select color</p>
-            <select className="bg-gray-100 border h-6 w-24 rounded text-sm px-2 mx-2">
+            <select className="bg-gray-100 border  w-56 p-4  rounded text-sm  mx-2">
               {item.colors.map((color) => (
                 <option value={color.name}>{color.name}</option>
               ))}
             </select>
           </div>
 
-          <div>
+          <div className="w-1/2">
             <p>Select Size</p>
-            <select className="bg-gray-100 border h-6 w-24 rounded text-sm px-2 mx-2">
+            <select className="bg-gray-100 border  w-56 p-4  rounded text-sm  mx-2">
               {item.sizes.map((size) => (
                 <option value={size.name}>{size.name}</option>
               ))}
@@ -81,7 +81,7 @@ const Cart = () => {
         </div>
         <div className="text-center  ">
           <button
-            className="bg-red-500 text-white px-4 py-2 rounded-md"
+            className="bg-red-600 text-white px-4 py-2 rounded-md"
             onClick={() => removeFromArray(item.id)}
           >
             Remove From Cart
@@ -120,7 +120,7 @@ const Cart = () => {
                     </div>
 
                     <div className="flex justify-center items-end">
-                      <span className="text-sm font-medium text-gray-400 mr-1">
+                      <span className="text-lg font-medium text-gray-400 mr-1">
                         Subtotal:
                       </span>
                       <span className="text-lg font-bold text-gray-800 ">
