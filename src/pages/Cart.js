@@ -14,8 +14,10 @@ const Cart = () => {
         total += Number(product.price);
       });
       setTotalPrice(total);
+    } else {
+      setTotalPrice(0);
     }
-  }, [saved]);
+  }, [saved.length]);
 
   const savedItems =
     saved.length > 0 &&
@@ -82,7 +84,7 @@ const Cart = () => {
             className="bg-red-500 text-white px-4 py-2 rounded-md"
             onClick={() => removeFromArray(item.id)}
           >
-            Remove
+            Remove From Cart
           </button>
         </div>
       </div>
