@@ -2,26 +2,32 @@ import React, { useContext, useState, useEffect } from "react";
 import { RoomContext } from "../context";
 import mpesa from "./mpesa.png";
 const Cart = () => {
-  const { saved, removeFromArray } = useContext(RoomContext);
-  console.log(saved);
+  const { saved, removeFromArray, ItemsInCart, addQuant } =
+    useContext(RoomContext);
+  console.log(ItemsInCart);
 
   const [totalPrice, setTotalPrice] = useState(0);
+  const [carts, setCarts] = useState([]);
 
   useEffect(() => {
-    if (saved.length > 0) {
+    if (ItemsInCart.length > 0) {
       let total = 0;
-      saved.forEach((product) => {
-        total += Number(product.price);
+      ItemsInCart.forEach((product) => {
+        total += Number(product.price) * Number(product.quantity);
       });
       setTotalPrice(total);
     } else {
       setTotalPrice(0);
     }
-  }, [saved.length]);
+  });
+
+  useEffect(() => {
+    setCarts(ItemsInCart);
+  }, [ItemsInCart]);
 
   const savedItems =
-    saved.length > 0 &&
-    saved.map((item) => (
+    carts.length > 0 &&
+    carts.map((item) => (
       <div className="flex flex-col gap-4">
         <div className="flex justify-between items-center pt-6 mt-6 border-t">
           <div className="flex  items-center">
@@ -43,12 +49,17 @@ const Cart = () => {
           <div className="flex justify-center items-center">
             <div className="pr-8 flex">
               <span className="font-semibold">-</span>
-              <input
-                type="text"
-                className="focus:outline-none bg-gray-100 border h-6 w-8 rounded text-sm px-2 mx-2"
-                value="1"
-              />
-              <span className="font-semibold">+</span>
+              <p>{item.quantity}</p>
+              <span
+                className="font-semibold"
+                onClick={() => {
+                  addQuant(item.id);
+                  setCarts(ItemsInCart);
+                  console.log(ItemsInCart);
+                }}
+              >
+                +
+              </span>
             </div>
 
             <div className="pr-8">
@@ -60,8 +71,8 @@ const Cart = () => {
           </div>
         </div>
 
-        <div className="flex justify-between items-center pt-2 mt-2 ">
-          <div className="w-1/2">
+        <div className="flex flex-col md:flex-row justify-between items-center pt-2 mt-2 ">
+          <div className="md:w-1/2">
             <p>Select color</p>
             <select className="bg-gray-100 border  w-56 p-4  rounded text-sm  mx-2">
               {item.colors.map((color) => (
@@ -70,7 +81,7 @@ const Cart = () => {
             </select>
           </div>
 
-          <div className="w-1/2">
+          <div className="md:-1/2">
             <p>Select Size</p>
             <select className="bg-gray-100 border  w-56 p-4  rounded text-sm  mx-2">
               {item.sizes.map((size) => (
