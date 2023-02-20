@@ -2,18 +2,16 @@ import React, { useContext, useState, useEffect } from "react";
 import { RoomContext } from "../context";
 import mpesa from "./mpesa.png";
 const Cart = () => {
-  const { saved, removeFromArray, ItemsInCart, addQuant } =
-    useContext(RoomContext);
-  console.log(ItemsInCart);
+  const { saved, removeFromArray } = useContext(RoomContext);
+ 
 
   const [totalPrice, setTotalPrice] = useState(0);
-  const [carts, setCarts] = useState([]);
 
   useEffect(() => {
-    if (ItemsInCart.length > 0) {
+    if (saved.length > 0) {
       let total = 0;
-      ItemsInCart.forEach((product) => {
-        total += Number(product.price) * Number(product.quantity);
+      saved.forEach((product) => {
+        total += Number(product.price)
       });
       setTotalPrice(total);
     } else {
@@ -21,13 +19,9 @@ const Cart = () => {
     }
   });
 
-  useEffect(() => {
-    setCarts(ItemsInCart);
-  }, [ItemsInCart]);
-
   const savedItems =
-    carts.length > 0 &&
-    carts.map((item) => (
+    saved.length > 0 &&
+    saved.map((item) => (
       <div className="flex flex-col gap-4">
         <div className="flex justify-between items-center pt-6 mt-6 border-t">
           <div className="flex  items-center">
@@ -49,17 +43,8 @@ const Cart = () => {
           <div className="flex justify-center items-center">
             <div className="pr-8 flex">
               <span className="font-semibold">-</span>
-              <p>{item.quantity}</p>
-              <span
-                className="font-semibold"
-                onClick={() => {
-                  addQuant(item.id);
-                  setCarts(ItemsInCart);
-                  console.log(ItemsInCart);
-                }}
-              >
-                +
-              </span>
+              <p>1</p>
+              <span className="font-semibold">+</span>
             </div>
 
             <div className="pr-8">
