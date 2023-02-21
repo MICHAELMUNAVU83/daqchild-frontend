@@ -15,7 +15,7 @@ const Hero = () => {
           >
             GIBBZ THA DAQCHILD
           </h1>
-          <p className="text-2xl md:text-4xl text-white font-bold carter">
+          <p className="text-2xl md:text-4xl text-white font-bold krona ">
             KING OF GOOD TIMES
           </p>
 

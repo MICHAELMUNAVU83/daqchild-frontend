@@ -20,11 +20,11 @@ const Events = () => {
       {events.length > 0 && (
         <div className="flex flex-col md:flex-row justify-around pt-10">
           <div>
-            <h2 className="text-6xl   font-bold">KING OF GOOD TIMES </h2>
+            <h2 className="text-5xl krona  font-bold">KING OF GOOD TIMES </h2>
 
-            <h2 className="text-3xl text-gray-900  font-bold underline ">
+            <h2 className="md:text-4xl text-3xl text-gray-900  font-bold bebas ">
               {" "}
-              THIS WEEKS' EVENT SCHEDULE
+              This week's events
             </h2>
             <ul className="flex flex-col bg-[#9d6ef4] p-4 mx-2 rounded-lg my-4 ">
               {events.map((event) => (
@@ -34,22 +34,24 @@ const Events = () => {
                       <ImMusic className="text-2xl text-white" />
                     </div>
                     <div className="flex-1 pl-1 mr-16">
-                      <div className="font-medium">
+                      <div className="font-bold text-2xl dancing">
                         {" "}
                         {moment(event.date).format("dddd")}{" "}
                       </div>
-                      <div className=" text-sm">
+                      <div className=" text-sm inter ">
                         {moment(event.date).format("MMM Do YYYY")}{" "}
                       </div>
                     </div>
-                    <div className="text-md md:text-3xl">{event.location} </div>
+                    <div className="text-md md:text-3xl bebas">
+                      {event.location}{" "}
+                    </div>
                   </div>
                 </li>
               ))}
             </ul>
 
             <div className="text-center">
-              <button className="px-4 py-2 bg-[#9d6ef4] my-16  text-white hover:scale-110 transition duration-500 ease-in-out ">
+              <button className="px-4 py-2 bg-[#9d6ef4] my-16  md:my-0 text-white hover:scale-110 transition duration-500 font-bold krona ease-in-out ">
                 BOOK THE DAQCHILD
               </button>
             </div>
