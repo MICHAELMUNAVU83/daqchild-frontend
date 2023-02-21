@@ -20,7 +20,7 @@ const Events = () => {
       {events.length > 0 && (
         <div className="flex flex-col md:flex-row justify-around pt-10">
           <div>
-            <h2 className="text-5xl krona  font-bold">KING OF GOOD TIMES </h2>
+            <h2 className="md:text-5xl krona text-2xl  font-bold">KING OF GOOD TIMES </h2>
 
             <h2 className="md:text-4xl text-3xl text-gray-900  font-bold bebas ">
               {" "}
@@ -42,7 +42,7 @@ const Events = () => {
                         {moment(event.date).format("MMM Do YYYY")}{" "}
                       </div>
                     </div>
-                    <div className="text-md md:text-3xl bebas">
+                    <div className="text-2xl md:text-3xl bebas">
                       {event.location}{" "}
                     </div>
                   </div>
