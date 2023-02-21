@@ -7,3 +7,58 @@ html{
   scroll-behavior: smooth!important;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arimo&family=Bebas+Neue&family=Carter+One&family=Combo&family=Comfortaa&family=Dancing+Script:wght@500&family=Delius&family=Inter:wght@300&family=Kanit:wght@200&family=Krona+One&family=Merienda&family=Playfair+Display:ital@1&family=Roboto+Serif:opsz,wght@8..144,600&display=swap");
+
+
+.bebas{
+  font-family: 'Bebas Neue', cursive;
+}
+
+.alfa{
+  font-family: 'Alfa Slab One', cursive;
+}
+
+.carter{
+  font-family: 'Carter One', cursive;
+}
+
+.combo{
+  font-family: 'Combo', cursive;
+}
+
+.comfortaa{
+  font-family: 'Comfortaa', cursive;
+}
+
+.dancing{
+  font-family: 'Dancing Script', cursive;
+}
+
+.delius{
+  font-family: 'Delius', cursive;
+}
+
+.inter{
+  font-family: 'Inter', sans-serif;
+}
+
+.kanit{
+  font-family: 'Kanit', sans-serif;
+}
+
+.krona{
+  font-family: 'Krona One', sans-serif;
+}
+
+.merienda{
+  font-family: 'Merienda', cursive;
+}
+
+.playfair{
+  font-family: 'Playfair Display', serif;
+}
+
+.roboto{
+  font-family: 'Roboto Serif', serif;
+}
+

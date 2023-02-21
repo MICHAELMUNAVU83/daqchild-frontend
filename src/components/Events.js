@@ -49,7 +49,7 @@ const Events = () => {
             </ul>
 
             <div className="text-center">
-              <button className="px-4 py-2 bg-[#9d6ef4]  text-white hover:scale-110 transition duration-500 ease-in-out ">
+              <button className="px-4 py-2 bg-[#9d6ef4] my-16  text-white hover:scale-110 transition duration-500 ease-in-out ">
                 BOOK THE DAQCHILD
               </button>
             </div>

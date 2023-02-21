@@ -28,12 +28,25 @@ const NavBar = () => {
         setBackgroundColor("#9d6ef4 ");
         setTextColor("white");
       } else {
-        setBackgroundColor("#9d6ef4");
+        setBackgroundColor("transparent");
         setTextColor("white");
       }
     };
     window.addEventListener("scroll", changeBackground);
   }, []);
+
+  useEffect(() => {
+    const changeBackgroundOnLocation = () => {
+      if (location.pathname === "/") {
+        setBackgroundColor("transparent");
+        setTextColor("white");
+      } else {
+        setBackgroundColor("#9d6ef4 ");
+        setTextColor("white");
+      }
+    };
+    changeBackgroundOnLocation();
+  }, [location]);
 
   return (
     <div
