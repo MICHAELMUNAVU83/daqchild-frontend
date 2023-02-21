@@ -3,7 +3,6 @@ import { RoomContext } from "../context";
 import mpesa from "./mpesa.png";
 const Cart = () => {
   const { saved, removeFromArray } = useContext(RoomContext);
- 
 
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -11,7 +10,7 @@ const Cart = () => {
     if (saved.length > 0) {
       let total = 0;
       saved.forEach((product) => {
-        total += Number(product.price)
+        total += Number(product.price);
       });
       setTotalPrice(total);
     } else {

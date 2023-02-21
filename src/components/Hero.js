@@ -13,7 +13,7 @@ const Hero = () => {
               textShadow: "0 0 10",
             }}
           >
-            GIBBZ THE DAQCHILD
+            GIBBZ THA DAQCHILD
           </h1>
           <p className="text-2xl text-white font-bold">KING OF GOOD TIMES</p>
 

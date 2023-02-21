@@ -41,10 +41,10 @@ const NavBar = () => {
       style={{ backgroundColor: `${backgroundColor}` }}
     >
       <section className="flex justify-between ">
-        <div className="flex  " style={{ color: `${textColor}` }}>
+        <Link className="flex  " style={{ color: `${textColor}` }} to="/">
           <ImCross className="text-3xl mx-2" />
           <ImPlus className="text-3xl" />
-        </div>
+        </Link>
 
         <div className="flex">
           <div
