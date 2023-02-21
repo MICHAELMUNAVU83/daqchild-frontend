@@ -24,10 +24,10 @@ const NavBar = () => {
   const location = useLocation();
   useEffect(() => {
     const changeBackground = () => {
-      if (window.scrollY >= 200) {
+      if (window.scrollY >= 200 && location.pathname === "/") {
         setBackgroundColor("#9d6ef4 ");
         setTextColor("white");
-      } else {
+      } else if (window.scrollY <= 200 && location.pathname === "/") {
         setBackgroundColor("transparent");
         setTextColor("white");
       }

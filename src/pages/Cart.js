@@ -87,7 +87,7 @@ const Cart = () => {
   return (
     <div className="">
       <div className="py-20">
-        <div className="max-w-md mx-auto bg-gray-100 shadow-lg rounded-lg  md:max-w-5xl">
+        <div className="max-w-md mx-auto bg-gray-100 shadow-purple-500  shadow-lg rounded-lg  md:max-w-5xl">
           <div className="md:flex ">
             <div className="w-full p-4 px-5 py-5">
               <div className="md:grid md:grid-cols-3 gap-2 ">
