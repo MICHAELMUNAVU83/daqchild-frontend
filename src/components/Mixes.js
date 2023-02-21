@@ -115,7 +115,7 @@ const Mixes = () => {
       <h1 className="text-7xl krona text-white font-bold text-start ml-6 mt-10">
         Mixes
       </h1>
-      <p className="text-2xl delius text-[#9d6ef4] text-start ml-6 my-4">
+      <p className="md:text-2xl  tetx-sm delius text-[#9d6ef4] text-start ml-6 my-4">
         Enjoy the best audio mixes from the Daqchild ranging from amapiano mixes
         , afrobeat mixes and hiphop mixes. Download and enjoy
       </p>

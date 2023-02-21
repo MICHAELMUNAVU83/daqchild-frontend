@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Mixes from "../components/Mixes";
 import Events from "../components/Events";
+import Photos from "../components/Photos";
 import Merch from "../components/Merch";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <Events />
       <Mixes />
       <Merch />
+      <Photos />
       <Footer />
     </div>
   );
