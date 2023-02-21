@@ -87,7 +87,7 @@ const NavBar = () => {
           </div>
           <Link to="/cart">
             <div className=" flex items-center">
-              <BsFillCartFill className="text-3xl mx-2 text-white" />
+              <BsFillCartFill className="md:text-3xl text-xl md:mx-2 text-white" />
               {saved.length > 0 && (
                 <p className=" rounded-full  text-center text-sm h-6 w-6 bg-gray-100">
                   {saved.length}
