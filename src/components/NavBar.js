@@ -55,8 +55,8 @@ const NavBar = () => {
     >
       <section className="flex justify-between ">
         <Link className="flex  " style={{ color: `${textColor}` }} to="/">
-          <ImCross className="text-3xl mx-2" />
-          <ImPlus className="text-3xl" />
+          <ImCross className="text-3xl mx-2 animate-bounce" />
+          <ImPlus className="text-3xl  animate-bounce" />
         </Link>
 
         <div className="flex">
@@ -79,7 +79,7 @@ const NavBar = () => {
             <div>
               <p
                 style={{ color: `${textColor}` }}
-                className="md:text-3xl text-xl  font-bold mx-2 "
+                className="md:text-3xl text-xl krona font-bold mx-2 "
               >
                 MENU
               </p>

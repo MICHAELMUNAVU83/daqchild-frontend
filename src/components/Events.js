@@ -52,7 +52,7 @@ const Events = () => {
 
             <div className="text-center">
               <button className="px-4 py-2 bg-[#9d6ef4] my-16  md:my-0 text-white hover:scale-110 transition duration-500 font-bold krona ease-in-out ">
-                BOOK THE DAQCHILD
+                BOOK NOW
               </button>
             </div>
           </div>

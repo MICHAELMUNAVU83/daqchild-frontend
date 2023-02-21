@@ -44,11 +44,11 @@ const Mixes = () => {
                 </div>
               </div>
 
-              <h4 className="mt-1 text-xl font-semibold uppercase leading-tight truncate">
+              <h4 className="mt-1 text-4xl font-semibold bebas  uppercase leading-tight truncate">
                 {mix.name}
               </h4>
 
-              <div className="flex justify-between mt-3">
+              <div className="flex justify-between delius mt-3">
                 <div className="flex items-center gap-2">
                   <p>{mix.likes}</p>
                   <AiFillHeart
@@ -80,11 +80,7 @@ const Mixes = () => {
                         "Content-Type": "application/json",
                       },
                       body: JSON.stringify({ plays: mix.plays + 1 }),
-                    })
-                      .then((response) => response.json())
-                      .then((data) => {
-                        console.log(data);
-                      });
+                    }).then((response) => response.json());
                   }}
                 >
                   <source src={mix.audio_mp3} type="audio/mp3" />
@@ -93,7 +89,7 @@ const Mixes = () => {
 
               <div className="flex place-content-center mt-4">
                 <button
-                  className="bg-[#9d6ef4] text-white font-bold py-2 px-4 rounded"
+                  className="bg-[#9d6ef4] krona text-white font-bold py-2 px-4 rounded"
                   onClick={() => {
                     handleDownload(mix.audio_mp3, mix.name);
                     fetch(`http://localhost:3000/mixes/${mix.id}`, {
@@ -102,11 +98,7 @@ const Mixes = () => {
                         "Content-Type": "application/json",
                       },
                       body: JSON.stringify({ downloads: mix.downloads + 1 }),
-                    })
-                      .then((response) => response.json())
-                      .then((data) => {
-                        console.log(data);
-                      });
+                    });
                   }}
                 >
                   Download
@@ -120,10 +112,10 @@ const Mixes = () => {
 
   return (
     <div className="bg-black py-6 text-white">
-      <h1 className="text-7xl text-white font-bold text-start ml-6 mt-10">
+      <h1 className="text-7xl krona text-white font-bold text-start ml-6 mt-10">
         Mixes
       </h1>
-      <p className="text-2xl text-white text-start ml-6 my-4">
+      <p className="text-2xl delius text-[#9d6ef4] text-start ml-6 my-4">
         Enjoy the best audio mixes from the Daqchild ranging from amapiano mixes
         , afrobeat mixes and hiphop mixes. Download and enjoy
       </p>
