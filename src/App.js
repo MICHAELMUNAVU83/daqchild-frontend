@@ -7,6 +7,7 @@ import AddEvents from "./components/AddEvents";
 import AddMerch from "./components/AddMerch";
 import Product from "./components/Product";
 import Cart from "./pages/Cart";
+import Mixes from "./pages/Mixes";
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
           <Route path="/add-merch" element={<AddMerch />} />
           <Route path="/products/:id" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/mixes" element={<Mixes />} />
         </Routes>
       </Router>
     </>
