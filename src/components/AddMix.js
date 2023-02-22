@@ -136,6 +136,7 @@ function AddMix() {
                             <input
                               type="file"
                               className="sr-only"
+                              accept="audio/*"
                               onChange={(e) => uploadAudio(e.target.files)}
                             />
                           </label>
@@ -175,6 +176,7 @@ function AddMix() {
                             <input
                               type="file"
                               className="sr-only"
+                              accept="image/*"
                               onChange={(e) => uploadImage(e.target.files)}
                             />
                           </label>

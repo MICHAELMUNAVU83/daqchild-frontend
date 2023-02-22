@@ -1,4 +1,4 @@
-import React, { useState ,useRef } from "react";
+import React, { useState, useRef } from "react";
 
 const AddEvents = () => {
   const reference = useRef();
@@ -117,12 +117,12 @@ const AddEvents = () => {
                           <input
                             id="file-upload"
                             name="file-upload"
+                            accept="image/*"
                             type="file"
                             className="sr-only"
                             onChange={(e) => uploadPoster(e.target.files)}
                           />
                         </label>
-                       
                       </div>
                       <p className="text-xs text-gray-500">
                         PNG, JPG, GIF up to 10MB
@@ -132,7 +132,7 @@ const AddEvents = () => {
                 </div>
               </div>
 
-              {poster && location && date  ? (
+              {poster && location && date ? (
                 <div className="bg-gray-50 flex justify-center px-4 py-3 text-right sm:px-6">
                   <button
                     type="submit"

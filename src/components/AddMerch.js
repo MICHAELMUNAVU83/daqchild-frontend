@@ -140,6 +140,7 @@ const AddMerch = () => {
                           <input
                             id="file-upload"
                             name="file-upload"
+                            accept="image/*"
                             type="file"
                             className="sr-only"
                             onChange={(e) => uploadImage(e.target.files)}
