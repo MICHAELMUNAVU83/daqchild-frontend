@@ -36,7 +36,7 @@ const MerchCard = ({ product }) => {
                   <h2 className="text-2xl bebas mr-auto cursor-pointer text-gray-200 hover:text-purple-500 truncate ">
                     {product.name}
                   </h2>
-                  <div className="flex carter items-center font-bold bg-green-400/80 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                  <div className="flex bakbak items-center font-bold bg-green-400/80 text-white text-xs px-2 py-1 ml-3 rounded-lg">
                     INSTOCK
                   </div>
                 </div>
