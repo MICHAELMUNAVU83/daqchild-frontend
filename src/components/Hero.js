@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="bg-black/30  h-full">
         <div className="flex pt-20 flex-col justify-center text-center items-center h-full">
           <h1
-            className="md:text-8xl text-5xl text-white bebas font-bold"
+            className="md:text-8xl text-5xl text-white bakbak font-bold"
             style={{
               WebkitTextStroke: "2px white",
               WebkitTextFillColor: "transparent",
@@ -19,10 +19,10 @@ const Hero = () => {
             KING OF GOOD TIMES
           </p>
 
-          <div className="marquee-w text-3xl carter  md:text-7xl text-white font-bold">
+          <div className="marquee-w text-3xl bebas  md:text-8xl text-white font-bold">
             <div className="marquee">
               <span>
-                DEEJAY GIBBZ THA DAQCHILD , AFRICA'S&nbsp;&nbsp;&nbsp;
+                DEEJAY GIBBZ THA DAQCHILD , AFRICA'S&nbsp;&nbsp;
               </span>
             </div>
             <div className="marquee marquee2">
