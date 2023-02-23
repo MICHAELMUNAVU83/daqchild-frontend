@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { RoomContext } from "../context";
-const NavBar = () => {
+const AdminNavBar = () => {
   const { saved } = useContext(RoomContext);
   const [isOpen, setIsOpen] = useState(false);
   const [current, setCurrent] = useState(0);
@@ -58,6 +58,16 @@ const NavBar = () => {
           <ImCross className="text-3xl mx-2 animate-bounce" />
           <ImPlus className="text-3xl  animate-bounce" />
         </Link>
+
+        <button>
+          <Link
+            style={{ color: `${textColor}` }}
+            className="text-xl font-bold"
+            to="/login"
+          >
+            Login
+          </Link>
+        </button>
 
         <div className="flex">
           <div
@@ -192,24 +202,6 @@ const NavBar = () => {
                   </small>
                 </div>
               </li>
-
-              <li
-                onMouseEnter={changeImage}
-                className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
-              >
-                <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <button className="flex ">
-                    <Link to="/login">
-                      <p className="md:text-3xl text-xl font-bold uppercase">
-                        Login
-                      </p>
-                    </Link>
-                    <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
-                      login as admin
-                    </small>
-                  </button>
-                </div>
-              </li>
             </ol>
 
             <motion.div
@@ -231,4 +223,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default AdminNavBar;

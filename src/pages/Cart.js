@@ -16,7 +16,7 @@ const Cart = () => {
     } else {
       setTotalPrice(0);
     }
-  });
+  }, [saved]);
 
   const savedItems =
     saved.length > 0 &&
@@ -135,6 +135,7 @@ const Cart = () => {
                       <img
                         src={mpesa}
                         className="relative w-[100%] h-[100%] object-contain"
+                        alt="mpesa"
                       />
                       <span className="text-xs font-medium text-gray-200 bottom-2 text-center">
                         Pay with Mpesa
@@ -153,7 +154,10 @@ const Cart = () => {
                     />
                   </div>
 
-                  <button className="h-12 mt-12 w-full bg-blue-500 rounded focus:outline-none text-white hover:bg-blue-600">
+                  <button
+                    className="h-12 mt-12 w-full bg-blue-500 rounded focus:outline-none text-white hover:bg-blue-600"
+                    
+                  >
                     Check Out
                   </button>
                 </div>
