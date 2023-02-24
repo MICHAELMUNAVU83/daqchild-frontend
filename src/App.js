@@ -1,7 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import Home from "./pages/Home";
-import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AddMix from "./components/AddMix";
 import AddEvents from "./components/AddEvents";
@@ -10,7 +9,7 @@ import Product from "./components/Product";
 import Cart from "./pages/Cart";
 import Mixes from "./pages/Mixes";
 import Login from "./pages/Login";
-import AdminNavbar from "./components/AdminNavbar";
+
 function App() {
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
   useEffect(() => {
@@ -19,16 +18,64 @@ function App() {
   return (
     <>
       <Router>
-        {storedToken ? <AdminNavbar setStoredToken={setStoredToken} /> : <NavBar />}
-
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/add-mix" element={<AddMix />} />
-          <Route path="/add-events" element={<AddEvents />} />
-          <Route path="/add-merch" element={<AddMerch />} />
-          <Route path="/products/:id" element={<Product />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/mixes" element={<Mixes />} />
+          <Route
+            path="/"
+            element={
+              <Home setStoredToken={setStoredToken} storedToken={storedToken} />
+            }
+          />
+          <Route
+            path="/add-mix"
+            element={
+              <AddMix
+                setStoredToken={setStoredToken}
+                storedToken={storedToken}
+              />
+            }
+          />
+          <Route
+            path="/add-events"
+            element={
+              <AddEvents
+                setStoredToken={setStoredToken}
+                storedToken={storedToken}
+              />
+            }
+          />
+          <Route
+            path="/add-merch"
+            element={
+              <AddMerch
+                setStoredToken={setStoredToken}
+                storedToken={storedToken}
+              />
+            }
+          />
+          <Route
+            path="/products/:id"
+            element={
+              <Product
+                setStoredToken={setStoredToken}
+                storedToken={storedToken}
+              />
+            }
+          />
+          <Route
+            path="/cart"
+            element={
+              <Cart setStoredToken={setStoredToken} storedToken={storedToken} />
+            }
+          />
+          <Route
+            path="/mixes"
+            element={
+              <Mixes
+                setStoredToken={setStoredToken}
+                storedToken={storedToken}
+              />
+            }
+          />
           <Route
             path="/login"
             element={<Login setStoredToken={setStoredToken} />}

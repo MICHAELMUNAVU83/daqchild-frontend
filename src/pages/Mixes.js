@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { AiFillHeart } from "react-icons/ai";
-
-const Mixes = () => {
+import ExtraNavbar from "../components/ExtraNavbar";
+import AdminNavbar from "../components/AdminNavbar";
+const Mixes = ({ setStoredToken, storedToken }) => {
   const [mixes, setMixes] = useState([]);
   useEffect(() => {
     fetch("http://localhost:3000/mixes")
@@ -112,14 +113,21 @@ const Mixes = () => {
     ));
 
   return (
-    <div className="bg-black min-h-[100vh] pt-20 text-white">
-      <div className="flex justify-center">
-        <div className="grid md:grid-cols-2 md:gap-20 gap-10 grid-cols-1">
-          {mixDisplay}
+    <>
+      {storedToken ? (
+        <AdminNavbar setStoredToken={setStoredToken} />
+      ) : (
+        <ExtraNavbar />
+      )}
+      <div className="bg-black min-h-[100vh] pt-20 text-white">
+        <div className="flex justify-center">
+          <div className="grid md:grid-cols-2 md:gap-20 gap-10 grid-cols-1">
+            {mixDisplay}
+          </div>
         </div>
+        <div className="flex justify-center mt-10"></div>
       </div>
-      <div className="flex justify-center mt-10"></div>
-    </div>
+    </>
   );
 };
 

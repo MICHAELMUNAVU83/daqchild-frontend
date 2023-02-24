@@ -12,7 +12,7 @@ const MerchCard = ({ product }) => {
                 <img
                   src={product.product_image}
                   alt="Just a flower"
-                  className=" object-cover md:mr-2  object-fill  rounded-2xl h-[250px] w-[300px]"
+                  className="  md:mr-2  object-fill  rounded-2xl h-[250px] w-[300px]"
                 />
               </div>
             </div>

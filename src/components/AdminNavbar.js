@@ -51,13 +51,13 @@ const AdminNavBar = ({ setStoredToken }) => {
 
   return (
     <div
-      className="fixed left-0 top-0 w-full z-10 ease-in duration-300  p-4 "
+      className="fixed left-0 top-0 w-full z-10 ease-in duration-300  py-2 "
       style={{ backgroundColor: `${backgroundColor}` }}
     >
       <section className="flex justify-between ">
         <Link className="flex  " style={{ color: `${textColor}` }} to="/">
-          <ImCross className="text-3xl mx-2 animate-bounce" />
-          <ImPlus className="text-3xl  animate-bounce" />
+          <ImCross className="text-xl mx-2 animate-bounce" />
+          <ImPlus className="text-xl  animate-bounce" />
         </Link>
 
         <div className="flex">
@@ -70,17 +70,17 @@ const AdminNavBar = ({ setStoredToken }) => {
             <div>
               <p
                 style={{ backgroundColor: `${textColor}` }}
-                className="md:h-3 h-2 md:w-10 w-8 my-1 group-hover:rotate-90  duration-500 ease-in-out"
+                className="h-2 md:w-10 w-8 my-1 group-hover:rotate-90  duration-500 ease-in-out"
               />
               <p
                 style={{ backgroundColor: `${textColor}` }}
-                className="md:h-3 h-2 md:w-10 w-8  group-hover:absolute top-5  duration-500 ease-in-out"
+                className="h-2 md:w-10 w-8  group-hover:absolute top-3  duration-500 ease-in-out"
               />
             </div>
             <div>
               <p
                 style={{ color: `${textColor}` }}
-                className="md:text-3xl text-xl krona font-bold mx-2 "
+                className=" text-xl krona font-bold mx-2 "
               >
                 MENU
               </p>

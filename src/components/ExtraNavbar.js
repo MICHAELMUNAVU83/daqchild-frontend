@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { ImCross, ImPlus } from "react-icons/im";
 import { BsFillCartFill } from "react-icons/bs";
 import J6 from "./images/J6.jpg";
@@ -7,66 +7,24 @@ import V1 from "./images/v1.jpg";
 import V2 from "./images/v2.jpg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+
 import { RoomContext } from "../context";
-const NavBar = () => {
+const ExtraNavBar = () => {
   const { saved } = useContext(RoomContext);
   const [isOpen, setIsOpen] = useState(false);
   const [current, setCurrent] = useState(0);
   const images = [J6, J11, V1, V2, J6];
-  const [backgroundColor, setBackgroundColor] = useState("transparent");
-  const [textColor, setTextColor] = useState("white");
+
   const changeImage = () => {
     setTimeout(() => {
       setCurrent(current === images.length - 1 ? 0 : current + 1);
     }, 500);
   };
-  const location = useLocation();
-  useEffect(() => {
-    const changeBackground = () => {
-      if (window.scrollY >= 200 && location.pathname === "/") {
-        setBackgroundColor("#9d6ef4 ");
-        setTextColor("white");
-      } else if (window.scrollY <= 200 && location.pathname === "/") {
-        setBackgroundColor("transparent");
-        setTextColor("white");
-      }
-    };
-    window.addEventListener("scroll", changeBackground);
-  }, [location.pathname]);
-  useEffect(() => {
-    const changeBackground = () => {
-      if (window.scrollY >= 200 && location.pathname === "/") {
-        setBackgroundColor("#9d6ef4 ");
-        setTextColor("white");
-      } else if (window.scrollY <= 200 && location.pathname === "/") {
-        setBackgroundColor("transparent");
-        setTextColor("white");
-      }
-    };
-    window.addEventListener("scroll", changeBackground);
-  }, [location.pathname]);
-
-  useEffect(() => {
-    const changeBackgroundOnLocation = () => {
-      if (location.pathname === "/") {
-        setBackgroundColor("transparent");
-        setTextColor("white");
-      } else {
-        setBackgroundColor("#9d6ef4");
-        setTextColor("white");
-      }
-    };
-    changeBackgroundOnLocation();
-  }, [location.pathname]);
 
   return (
-    <div
-      className="fixed left-0 top-0 w-full z-10 ease-in duration-300  py-2 "
-      style={{ backgroundColor: `${backgroundColor}` }}
-    >
+    <div className="fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-[#9d6ef4]  py-2 ">
       <section className="flex justify-between ">
-        <Link className="flex  " style={{ color: `${textColor}` }} to="/">
+        <Link className="flex  text-white" to="/">
           <ImCross className="text-xl mx-2 animate-bounce" />
           <ImPlus className="text-xl  animate-bounce" />
         </Link>
@@ -79,28 +37,17 @@ const NavBar = () => {
             className="flex group cursor-pointer"
           >
             <div>
-              <p
-                style={{ backgroundColor: `${textColor}` }}
-                className="h-2 md:w-10 w-8 my-1 group-hover:rotate-90  duration-500 ease-in-out"
-              />
-              <p
-                style={{ backgroundColor: `${textColor}` }}
-                className="h-2 md:w-10 w-8  group-hover:absolute top-3  duration-500 ease-in-out"
-              />
+              <p className="h-2 md:w-10 w-8  bg-white my-1 group-hover:rotate-90  duration-500 ease-in-out" />
+              <p className="h-2 md:w-10 w-8   bg-white group-hover:absolute top-3  duration-500 ease-in-out" />
             </div>
             <div>
-              <p
-                style={{ color: `${textColor}` }}
-                className=" text-xl krona font-bold mx-2 "
-              >
-                MENU
-              </p>
+              <p className=" text-xl krona font-bold mx-2 text-white ">MENU</p>
             </div>
           </div>
           {saved.length > 0 && (
             <Link to="/cart">
               <div className=" flex items-center">
-                <BsFillCartFill className="text-md md:mx-2 text-white" />
+                <BsFillCartFill className="md:text-3xl text-xl md:mx-2 text-white" />
 
                 <p className=" rounded-full  text-center text-sm h-6 w-6 bg-gray-100">
                   {saved.length}
@@ -230,4 +177,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default ExtraNavBar;
