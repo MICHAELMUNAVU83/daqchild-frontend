@@ -122,7 +122,7 @@ const NavBar = () => {
                 onMouseEnter={changeImage}
               >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <Link to="/" className="flex ">
+                  <a href="/" className="flex ">
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Home
                     </p>
@@ -130,7 +130,7 @@ const NavBar = () => {
                     <small className="font-normal text-sm md:mt-3 mt-2  ml-2">
                       homepage
                     </small>
-                  </Link>
+                  </a>
                 </div>
               </li>
               <li
@@ -138,14 +138,14 @@ const NavBar = () => {
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <Link to="/add-mix" className="flex ">
+                  <a href="#events" className="flex ">
                     <p className="md:text-3xl text-xl font-bold uppercase">
-                      Add Mix
+                      Events
                     </p>
                     <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
-                      homepage
+                      This week's events
                     </small>
-                  </Link>
+                  </a>
                 </div>
               </li>
               <li
@@ -153,14 +153,14 @@ const NavBar = () => {
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <Link to="/add-events" className="flex ">
+                  <a href="#mixes" className="flex ">
                     <p className="md:text-3xl text-xl font-bold uppercase">
-                      Add Events
+                      Mixes
                     </p>
                     <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
-                      events
+                      listen to mixes
                     </small>
-                  </Link>
+                  </a>
                 </div>
               </li>
               <li
@@ -168,28 +168,15 @@ const NavBar = () => {
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <Link to="/add-merch" className="flex ">
+                  <a href="#merch" className="flex ">
                     <p className="md:text-3xl text-xl font-bold uppercase">
-                      Add Merch
+                      Merch
                     </p>
 
                     <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
-                      add merchandises
+                      shop merch
                     </small>
-                  </Link>
-                </div>
-              </li>
-              <li
-                onMouseEnter={changeImage}
-                className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
-              >
-                <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <p className="md:text-3xl text-xl font-bold uppercase">
-                    Home
-                  </p>
-                  <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
-                    homepage
-                  </small>
+                  </a>
                 </div>
               </li>
 

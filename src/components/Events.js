@@ -16,7 +16,7 @@ const Events = () => {
   }, []);
 
   return (
-    <div className="py-8  ">
+    <div id="events" className="py-8  ">
       {events.length > 0 && (
         <div className="flex flex-col md:flex-row justify-around pt-10">
           <div>
@@ -30,7 +30,7 @@ const Events = () => {
             </h2>
             <ul className="flex flex-col p-4 mx-2 rounded-lg my-4 ">
               {events.map((event) => (
-                <li className="border-gray-400  h-[70px] flex flex-row mb-2  md:h-[70px] h-[160px]">
+                <li className="border-gray-400 flex flex-row mb-2  md:h-[70px] h-[70px]">
                   <div className="select-none cursor-pointer p-2  md:p-4 rounded-2xl text-white bg-black  flex flex-1 items-center  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
                     <div className="flex flex-col rounded-md w-8 h-8 bg-[#9d6ef4] p-2 justify-center items-center mr-4">
                       <ImMusic className="text-2xl text-white" />
@@ -53,7 +53,7 @@ const Events = () => {
             </ul>
 
             <div className="text-center">
-              <button className="px-4 py-2 bg-[#9d6ef4] md:my-16 my-8  md:my-0 text-white hover:scale-110 transition duration-500 font-bold krona ease-in-out ">
+              <button className="px-4 py-2 bg-[#9d6ef4] md:my-16 my-8  text-white hover:scale-110 transition duration-500 font-bold krona ease-in-out ">
                 BOOK NOW
               </button>
             </div>

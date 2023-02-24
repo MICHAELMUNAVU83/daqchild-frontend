@@ -7,15 +7,16 @@ import V1 from "./images/v1.jpg";
 import V2 from "./images/v2.jpg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { RoomContext } from "../context";
-const AdminNavBar = () => {
+const AdminNavBar = ({ setStoredToken }) => {
   const { saved } = useContext(RoomContext);
   const [isOpen, setIsOpen] = useState(false);
   const [current, setCurrent] = useState(0);
   const images = [J6, J11, V1, V2, J6];
   const [backgroundColor, setBackgroundColor] = useState("transparent");
   const [textColor, setTextColor] = useState("white");
+  const navigate = useNavigate();
   const changeImage = () => {
     setTimeout(() => {
       setCurrent(current === images.length - 1 ? 0 : current + 1);
@@ -58,16 +59,6 @@ const AdminNavBar = () => {
           <ImCross className="text-3xl mx-2 animate-bounce" />
           <ImPlus className="text-3xl  animate-bounce" />
         </Link>
-
-        <button>
-          <Link
-            style={{ color: `${textColor}` }}
-            className="text-xl font-bold"
-            to="/login"
-          >
-            Login
-          </Link>
-        </button>
 
         <div className="flex">
           <div
@@ -194,11 +185,18 @@ const AdminNavBar = () => {
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <p className="md:text-3xl text-xl font-bold uppercase">
-                    Home
-                  </p>
+                  <button
+                    onClick={() => {
+                      localStorage.setItem("token", "");
+                      setStoredToken("");
+                      navigate("/");
+                    }}
+                    className="md:text-3xl text-xl font-bold uppercase"
+                  >
+                    Log out
+                  </button>
                   <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
-                    homepage
+                    logout
                   </small>
                 </div>
               </li>

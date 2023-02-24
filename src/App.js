@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <Router>
-        {storedToken ? <AdminNavbar /> : <NavBar />}
+        {storedToken ? <AdminNavbar setStoredToken={setStoredToken} /> : <NavBar />}
 
         <Routes>
           <Route path="/" element={<Home />} />
