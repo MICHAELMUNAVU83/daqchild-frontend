@@ -3,6 +3,7 @@ import { RoomContext } from "../context";
 import mpesa from "./mpesa.png";
 import AdminNavbar from "../components/AdminNavbar";
 import ExtraNavbar from "../components/ExtraNavbar";
+import {Link} from 'react-router-dom'
 const Cart = ({ setStoredToken, storedToken }) => {
   const { saved, removeFromArray } = useContext(RoomContext);
 
@@ -119,7 +120,9 @@ const Cart = ({ setStoredToken, storedToken }) => {
                       <div className="flex items-center">
                         <i className="fa fa-arrow-left text-sm pr-2"></i>
                         <span className="text-md  font-medium text-blue-500">
-                          Continue Shopping
+                          <Link to="/">
+                            Continue Shopping
+                          </Link>
                         </span>
                       </div>
 
@@ -134,7 +137,7 @@ const Cart = ({ setStoredToken, storedToken }) => {
                       </div>
                     </div>
                   </div>
-                  <div className=" p-5 bg-gray-800 rounded overflow-visible">
+                  <div className=" p-5 bg-black rounded overflow-visible">
                     <span className="text-xl font-medium text-gray-100 block pb-3">
                       Lipa na Mpesa
                     </span>
@@ -146,7 +149,7 @@ const Cart = ({ setStoredToken, storedToken }) => {
                           className="relative w-[100%] h-[100%] object-contain"
                           alt="mpesa"
                         />
-                        <span className="text-xs font-medium text-gray-200 bottom-2 text-center">
+                        <span className="text-xs font-medium text-[#9d6ef4] bottom-2 text-center">
                           Pay with Mpesa
                         </span>
                       </div>
@@ -158,12 +161,12 @@ const Cart = ({ setStoredToken, storedToken }) => {
                       </label>
                       <input
                         type="text"
-                        className="focus:outline-none w-full h-6 bg-gray-800 text-white placeholder-gray-300 text-sm border-b border-gray-600 py-4"
+                        className="focus:outline-none w-full h-6 bg-black text-white placeholder-gray-300 text-sm border-b border-gray-600 py-4"
                         placeholder="+254 700 000 000"
                       />
                     </div>
 
-                    <button className="h-12 mt-12 w-full bg-blue-500 rounded focus:outline-none text-white hover:bg-blue-600">
+                    <button className="h-12 mt-12 w-full  bg-[#9d6ef4] rounded focus:outline-none text-white hover:bg-purple-500">
                       Check Out
                     </button>
                   </div>

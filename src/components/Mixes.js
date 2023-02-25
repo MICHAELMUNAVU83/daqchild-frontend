@@ -112,7 +112,7 @@ const Mixes = () => {
     ));
 
   return (
-    <div id="merch" className="bg-black py-6 text-whit">
+    <div id="mixes" className="bg-black py-6 text-whit">
       <h1 className="text-7xl krona text-white font-bold text-start ml-6 mt-10 pb-2">
         Latest Mixes
       </h1>
