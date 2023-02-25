@@ -22,7 +22,7 @@ const ExtraNavBar = () => {
   };
 
   return (
-    <div className="fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-[#9d6ef4]  py-2 ">
+    <div className="fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-black  py-2 ">
       <section className="flex justify-between ">
         <Link className="flex  text-white" to="/">
           <ImCross className="text-xl mx-2 animate-bounce" />

@@ -53,7 +53,7 @@ const NavBar = () => {
         setBackgroundColor("transparent");
         setTextColor("white");
       } else {
-        setBackgroundColor("#9d6ef4");
+        setBackgroundColor("black");
         setTextColor("white");
       }
     };

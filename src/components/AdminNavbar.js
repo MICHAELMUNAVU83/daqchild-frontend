@@ -26,7 +26,7 @@ const AdminNavBar = ({ setStoredToken }) => {
   useEffect(() => {
     const changeBackground = () => {
       if (window.scrollY >= 200 && location.pathname === "/") {
-        setBackgroundColor("#9d6ef4 ");
+        setBackgroundColor("black");
         setTextColor("white");
       } else if (window.scrollY <= 200 && location.pathname === "/") {
         setBackgroundColor("transparent");
