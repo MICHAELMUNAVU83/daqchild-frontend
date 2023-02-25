@@ -19,7 +19,8 @@ const Hero = () => {
             KING OF GOOD TIMES
           </p>
 
-          <div className="marquee-w text-3xl bebas  md:text-8xl text-white font-bold">
+          <div className="marquee-w text-3xl bakbak
+            md:text-8xl text-white font-bold">
             <div className="marquee">
               <span>
                 DEEJAY GIBBZ THA DAQCHILD , AFRICA'S&nbsp;&nbsp;
