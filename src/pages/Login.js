@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import AdminNavbar from "../components/AdminNavbar";
 import ExtraNavbar from "../components/ExtraNavbar";
 import ma from "../components/images/ma.jpg";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 function Login({ setStoredToken, storedToken }) {
   const [username, setUsername] = useState("");
   const navigate = useNavigate();
@@ -29,7 +32,16 @@ function Login({ setStoredToken, storedToken }) {
           setStoredToken(data.jwt);
           navigate("/");
         } else {
-          alert(data.error);
+          toast.error("Invalid username or password", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
         }
       });
 
@@ -120,6 +132,7 @@ function Login({ setStoredToken, storedToken }) {
                   Sign in
                 </button>
               </form>
+              <ToastContainer />
             </div>
           </div>
         </div>

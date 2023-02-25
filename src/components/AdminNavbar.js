@@ -25,28 +25,15 @@ const AdminNavBar = ({ setStoredToken }) => {
   const location = useLocation();
   useEffect(() => {
     const changeBackground = () => {
-      if (window.scrollY >= 200 && location.pathname === "/") {
+      if (window.scrollY > 200) {
         setBackgroundColor("black");
         setTextColor("white");
-      } else if (window.scrollY <= 200 && location.pathname === "/") {
+      } else {
         setBackgroundColor("transparent");
         setTextColor("white");
       }
     };
     window.addEventListener("scroll", changeBackground);
-  }, [location.pathname]);
-
-  useEffect(() => {
-    const changeBackgroundOnLocation = () => {
-      if (location.pathname === "/") {
-        setBackgroundColor("transparent");
-        setTextColor("white");
-      } else {
-        setBackgroundColor("#9d6ef4 ");
-        setTextColor("white");
-      }
-    };
-    changeBackgroundOnLocation();
   }, [location.pathname]);
 
   return (

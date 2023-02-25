@@ -4,7 +4,7 @@ import { AiFillInstagram, AiFillTwitterCircle } from "react-icons/ai";
 import { RiWhatsappFill } from "react-icons/ri";
 import { RoomContext } from "../context";
 import ExtraNavbar from "../components/ExtraNavbar";
-import AdminNavbar from "../components/AdminNavbar";
+import ExtraAdminNavbar from "../components/ExtraAdminNavbar";
 const Product = ({ setStoredToken, storedToken }) => {
   const { addCart, saved, removeFromArray } = useContext(RoomContext);
   const { id } = useParams();
@@ -25,7 +25,7 @@ const Product = ({ setStoredToken, storedToken }) => {
   return (
     <>
       {storedToken ? (
-        <AdminNavbar setStoredToken={setStoredToken} />
+        <ExtraAdminNavbar setStoredToken={setStoredToken} />
       ) : (
         <ExtraNavbar />
       )}
