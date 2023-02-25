@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import AdminNavbar from "./AdminNavbar";
+import ExtrAdminNavBar from "./ExtraAdminNavbar";
 import ExtraNavbar from "./ExtraNavbar";
 
 const AddEvents = ({ setStoredToken, storedToken }) => {
@@ -44,8 +44,8 @@ const AddEvents = ({ setStoredToken, storedToken }) => {
 
   return (
     <>
-      {storedToken ? (
-        <AdminNavbar setStoredToken={setStoredToken} />
+    {storedToken ? (
+        <ExtrAdminNavBar setStoredToken={setStoredToken} />
       ) : (
         <ExtraNavbar />
       )}

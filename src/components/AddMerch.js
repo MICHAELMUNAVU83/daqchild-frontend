@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ExtraNavbar from "./ExtraNavbar";
-import AdminNavbar from "./AdminNavbar";
+import ExtrAdminNavBar from "./ExtraAdminNavbar";
 
 const AddMerch = ({ setStoredToken, storedToken }) => {
   const [name, setName] = useState("");
@@ -45,7 +45,7 @@ const AddMerch = ({ setStoredToken, storedToken }) => {
   return (
     <>
       {storedToken ? (
-        <AdminNavbar setStoredToken={setStoredToken} />
+        <ExtrAdminNavBar setStoredToken={setStoredToken} />
       ) : (
         <ExtraNavbar />
       )}

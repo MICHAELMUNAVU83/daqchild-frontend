@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiTwotoneAudio } from "react-icons/ai";
 import ExtraNavbar from "./ExtraNavbar";
-import AdminNavbar from "./AdminNavbar";
+import ExtrAdminNavBar from "./ExtraAdminNavbar";
 function AddMix({ setStoredToken, storedToken }) {
   const [audio, setAudio] = useState("");
   const [poster, setPoster] = useState("");
@@ -60,8 +60,8 @@ function AddMix({ setStoredToken, storedToken }) {
 
   return (
     <>
-      {storedToken ? (
-        <AdminNavbar setStoredToken={setStoredToken} />
+     {storedToken ? (
+        <ExtrAdminNavBar setStoredToken={setStoredToken} />
       ) : (
         <ExtraNavbar />
       )}

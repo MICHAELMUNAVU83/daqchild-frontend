@@ -9,6 +9,7 @@ import Product from "./components/Product";
 import Cart from "./pages/Cart";
 import Mixes from "./pages/Mixes";
 import Login from "./pages/Login";
+import DashBoard from "./pages/DashBoard";
 
 function App() {
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
@@ -47,6 +48,15 @@ function App() {
             path="/add-merch"
             element={
               <AddMerch
+                setStoredToken={setStoredToken}
+                storedToken={storedToken}
+              />
+            }
+          />
+          <Route
+            path="/dashboard"
+            element={
+              <DashBoard
                 setStoredToken={setStoredToken}
                 storedToken={storedToken}
               />
