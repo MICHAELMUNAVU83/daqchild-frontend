@@ -78,7 +78,7 @@ const AdminNavBar = ({ setStoredToken }) => {
               <div className=" flex items-center">
                 <BsFillCartFill className="md:text-3xl text-xl md:mx-2 text-white" />
 
-                <p className=" rounded-full  text-center text-sm h-6 w-6 bg-gray-100">
+                <p className=" rounded-full  text-center text-xs md:text-sm md:h-6 md:w-6 h-4 w-4  bg-gray-100">
                   {saved.length}
                 </p>
               </div>

@@ -78,7 +78,7 @@ const Events = () => {
                   <img
                     src={event.poster}
                     alt="event poster"
-                    className="w-[100%] rounded-2xl md:px-0 px-4 h-[500px] "
+                    className="md:w-[100%] w-full md:rounded-2xl  rounded-3xl md:px-0 px-2 h-[350px] md:h-[500px] "
                   />
                 </SplideSlide>
               ))}
