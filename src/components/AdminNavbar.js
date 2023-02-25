@@ -56,12 +56,12 @@ const AdminNavBar = ({ setStoredToken }) => {
           >
             <div>
               <p
+                className="h-2 md:w-8 w-6  my-1 group-hover:rotate-90  duration-500 ease-in-out"
                 style={{ backgroundColor: `${textColor}` }}
-                className="h-2 md:w-10 w-8 my-1 group-hover:rotate-90  duration-500 ease-in-out"
               />
               <p
+                className="h-2 md:w-8 w-6    group-hover:absolute top-3  duration-500 ease-in-out"
                 style={{ backgroundColor: `${textColor}` }}
-                className="h-2 md:w-10 w-8  group-hover:absolute top-3  duration-500 ease-in-out"
               />
             </div>
             <div>

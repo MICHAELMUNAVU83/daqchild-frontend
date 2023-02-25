@@ -37,8 +37,8 @@ const ExtraNavBar = () => {
             className="flex group cursor-pointer"
           >
             <div>
-              <p className="h-2 md:w-10 w-8  bg-white my-1 group-hover:rotate-90  duration-500 ease-in-out" />
-              <p className="h-2 md:w-10 w-8   bg-white group-hover:absolute top-3  duration-500 ease-in-out" />
+              <p className="h-2 md:w-8 w-6  bg-white my-1 group-hover:rotate-90  duration-500 ease-in-out" />
+              <p className="h-2 md:w-8 w-6   bg-white group-hover:absolute top-3  duration-500 ease-in-out" />
             </div>
             <div>
               <p className=" text-xl krona font-bold mx-2 text-white ">MENU</p>

@@ -24,17 +24,16 @@ const NavBar = () => {
   const location = useLocation();
   useEffect(() => {
     const changeBackground = () => {
-      if (window.scrollY >= 200 ) {
+      if (window.scrollY >= 200) {
         setBackgroundColor("black ");
         setTextColor("white");
-      } else if (window.scrollY <= 200 ) {
+      } else if (window.scrollY <= 200) {
         setBackgroundColor("transparent");
         setTextColor("white");
       }
     };
     window.addEventListener("scroll", changeBackground);
   }, [location.pathname]);
- 
 
   return (
     <div
@@ -56,12 +55,12 @@ const NavBar = () => {
           >
             <div>
               <p
+                className="h-2 md:w-8 w-6  my-1 group-hover:rotate-90  duration-500 ease-in-out"
                 style={{ backgroundColor: `${textColor}` }}
-                className="h-2 md:w-10 w-8 my-1 group-hover:rotate-90  duration-500 ease-in-out"
               />
               <p
+                className="h-2 md:w-8 w-6    group-hover:absolute top-3  duration-500 ease-in-out"
                 style={{ backgroundColor: `${textColor}` }}
-                className="h-2 md:w-10 w-8  group-hover:absolute top-3  duration-500 ease-in-out"
               />
             </div>
             <div>
