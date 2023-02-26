@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import ExtraNavbar from "./ExtraNavbar";
 import ExtrAdminNavBar from "./ExtraAdminNavbar";
+import { ToastContainer, toast } from "react-toastify";
 
+import "react-toastify/dist/ReactToastify.css";
 const AddMerch = ({ setStoredToken, storedToken }) => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -176,6 +178,18 @@ const AddMerch = ({ setStoredToken, storedToken }) => {
                     <button
                       type="button"
                       className=" text-center rounded-md border border-transparent bg-black py-2 px-4  font-bold text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      onClick={() => {
+                        toast.error("Input all the details to add the merch", {
+                          position: "top-center",
+                          autoClose: 5000,
+                          hideProgressBar: false,
+                          closeOnClick: true,
+                          pauseOnHover: true,
+                          draggable: true,
+                          progress: undefined,
+                          theme: "light",
+                        });
+                      }}
                     >
                       Add Your Merchandise Details
                     </button>
@@ -183,6 +197,7 @@ const AddMerch = ({ setStoredToken, storedToken }) => {
                 )}
               </div>
             </form>
+            <ToastContainer />
           </div>
         </div>
       </div>

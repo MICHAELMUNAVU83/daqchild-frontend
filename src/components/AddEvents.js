@@ -1,6 +1,9 @@
 import React, { useState, useRef } from "react";
 import ExtrAdminNavBar from "./ExtraAdminNavbar";
 import ExtraNavbar from "./ExtraNavbar";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const AddEvents = ({ setStoredToken, storedToken }) => {
   const reference = useRef();
@@ -44,7 +47,7 @@ const AddEvents = ({ setStoredToken, storedToken }) => {
 
   return (
     <>
-    {storedToken ? (
+      {storedToken ? (
         <ExtrAdminNavBar setStoredToken={setStoredToken} />
       ) : (
         <ExtraNavbar />
@@ -155,6 +158,18 @@ const AddEvents = ({ setStoredToken, storedToken }) => {
                     <button
                       type="button"
                       className=" text-center rounded-md border border-transparent bg-black  py-2 px-4  font-bold text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      onClick={() => {
+                        toast.error("Input all the details to add the event", {
+                          position: "top-center",
+                          autoClose: 5000,
+                          hideProgressBar: false,
+                          closeOnClick: true,
+                          pauseOnHover: true,
+                          draggable: true,
+                          progress: undefined,
+                          theme: "light",
+                        });
+                      }}
                     >
                       Add Your Event Details
                     </button>
@@ -162,6 +177,7 @@ const AddEvents = ({ setStoredToken, storedToken }) => {
                 )}
               </div>
             </form>
+            <ToastContainer />
           </div>
         </div>
       </div>
