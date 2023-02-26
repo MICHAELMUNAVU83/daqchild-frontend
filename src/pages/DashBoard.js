@@ -13,8 +13,13 @@ const DashBoard = ({ storedToken, setStoredToken }) => {
         <ExtraNavbar />
       )}
       <div className="mt-20">
-        <h1 className="text-2xl font-bold">DashBoard</h1>
+        <h1 className="text-center">
+          <span className="text-7xl my-2 text-center font-bold">Events</span>
+        </h1>
         <Events />
+        <h1 className="text-center">
+          <span className="text-7xl my-2 text-center font-bold">Mixes</span>
+        </h1>
         <Mixes />
       </div>
     </>
