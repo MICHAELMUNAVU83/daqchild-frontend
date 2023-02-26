@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { AiFillInstagram, AiFillTwitterCircle } from "react-icons/ai";
 import { RiWhatsappFill } from "react-icons/ri";
 import { RoomContext } from "../context";
@@ -20,7 +20,6 @@ const Product = ({ setStoredToken, storedToken }) => {
   console.log(saved.length);
 
   const isInCart = saved.some((item) => item.id === product.id);
-  console.log(isInCart);
 
   return (
     <>
@@ -129,21 +128,21 @@ const Product = ({ setStoredToken, storedToken }) => {
                 </span>
               </div>
               <p className="leading-relaxed">{product.description}</p>
-              <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
-                <div className="flex">
-                  <span className="mr-1">Colors:</span>
+              <div className="flex flex-col md:flex-row mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
+                <div className="flex my-4">
+                  <span className="text-2xl md:text-md">Colors:</span>
                   {product.colors &&
                     product.colors.map((color) => (
                       <button
-                        className="border-2 border-gray-300 rounded-full md:w-6 md:h-6  w-8  h-8 focus:outline-none"
+                        className="border-2 md:mx-0 mx-1 border-gray-300 md:mt-2 rounded-full md:w-6 md:h-6  w-8  h-8 focus:outline-none"
                         style={{ backgroundColor: color.name }}
                       ></button>
                     ))}
                 </div>
                 <div className="flex ml-6 items-center">
-                  <span className="mr-3">Sizes :</span>
+                  <span className="text-2xl  md:text-md">Sizes :</span>
                   <div className="relative">
-                    <select className="rounded border appearance-none border-gray-400 py-2 focus:outline-none focus:border-purple-500 text-base pl-3 pr-10">
+                    <select className="rounded mx-2 md:mx-0 w-[200px] md:w-full border appearance-none border-gray-400 py-2 focus:outline-none focus:border-purple-500 text-base pl-3 pr-10">
                       <option selected>See Sizes</option>
                       {product.sizes &&
                         product.sizes.map((size) => (
@@ -186,16 +185,21 @@ const Product = ({ setStoredToken, storedToken }) => {
                   </button>
                 )}
 
-                {/* <button
-                    className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:scale-110 duration-300 ease-in-out rounded"
-                    onClick={() => addCart(product)}
-                  >
-                    Add to Cart
-                  </button> */}
+                
               </div>
             </div>
           </div>
         </div>
+
+        {storedToken && (
+          <div className="flex flex-col text-center w-full mb-16 ">
+            <Link to={`/add-colors-and-sizes/${product.id}`}>
+              <button className="flex mx-auto mt-4 text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg">
+                Add Colors and Sizes
+              </button>
+            </Link>
+          </div>
+        )}
       </section>
     </>
   );

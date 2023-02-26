@@ -10,6 +10,7 @@ import Cart from "./pages/Cart";
 import Mixes from "./pages/Mixes";
 import Login from "./pages/Login";
 import DashBoard from "./pages/DashBoard";
+import AddColorsAndSizes from "./pages/AddColorsAndSizes";
 
 function App() {
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
@@ -70,6 +71,10 @@ function App() {
                 storedToken={storedToken}
               />
             }
+          />
+          <Route
+            path="/add-colors-and-sizes/:id"
+            element={<AddColorsAndSizes setStoredToken={setStoredToken}  storedToken={storedToken} />}
           />
           <Route
             path="/cart"
