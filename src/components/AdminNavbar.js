@@ -13,7 +13,7 @@ const AdminNavBar = ({ setStoredToken }) => {
   const { saved } = useContext(RoomContext);
   const [isOpen, setIsOpen] = useState(false);
   const [current, setCurrent] = useState(0);
-  const images = [J6, J11, V1, V2, J6];
+  const images = [J6, J11, V1, V2, J6, V1];
   const [backgroundColor, setBackgroundColor] = useState("transparent");
   const [textColor, setTextColor] = useState("white");
   const navigate = useNavigate();
@@ -109,8 +109,8 @@ const AdminNavBar = ({ setStoredToken }) => {
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
                 onMouseEnter={changeImage}
               >
-                <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <Link to="/" className="flex ">
+                <Link to="/" className="flex ">
+                  <div className="flex align-baseline text-gray-300 hover:text-white">
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Home
                     </p>
@@ -118,45 +118,45 @@ const AdminNavBar = ({ setStoredToken }) => {
                     <small className="font-normal text-sm md:mt-3 mt-2  ml-2">
                       homepage
                     </small>
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               </li>
               <li
                 onMouseEnter={changeImage}
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
-                <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <Link to="/add-mix" className="flex ">
+                <Link to="/add-mix" className="flex ">
+                  <div className="flex align-baseline text-gray-300 hover:text-white">
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Add Mix
                     </p>
                     <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
                       homepage
                     </small>
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               </li>
               <li
                 onMouseEnter={changeImage}
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
-                <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <Link to="/add-events" className="flex ">
+                <Link to="/add-events" className="flex ">
+                  <div className="flex align-baseline text-gray-300 hover:text-white">
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Add Events
                     </p>
                     <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
                       events
                     </small>
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               </li>
               <li
                 onMouseEnter={changeImage}
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
-                <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <Link to="/add-merch" className="flex ">
+                <Link to="/add-merch" className="flex ">
+                  <div className="flex align-baseline text-gray-300 hover:text-white">
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Add Merch
                     </p>
@@ -164,9 +164,27 @@ const AdminNavBar = ({ setStoredToken }) => {
                     <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
                       add merchandises
                     </small>
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               </li>
+
+              <li
+                className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
+                onMouseEnter={changeImage}
+              >
+                <Link to="/" className="flex ">
+                  <div className="flex align-baseline text-gray-300 hover:text-white">
+                    <p className="md:text-3xl text-xl font-bold uppercase">
+                      Dashboard
+                    </p>
+
+                    <small className="font-normal text-sm md:mt-3 mt-2  ml-2">
+                      manage your site
+                    </small>
+                  </div>
+                </Link>
+              </li>
+
               <li
                 onMouseEnter={changeImage}
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
