@@ -10,7 +10,7 @@ const Events = () => {
     fetch("http://localhost:3000/events")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        
         setEvents(data);
       });
   }, []);

@@ -9,7 +9,7 @@ const Mixes = () => {
       .then((data) => {
         setMixes(data);
       });
-  }, [mixes]);
+  }, [ mixes]);
   const handleDownload = async (audiofile, name) => {
     const response = await fetch(audiofile);
     const blob = await response.blob();
@@ -116,7 +116,7 @@ const Mixes = () => {
       <h1 className="text-7xl krona text-white font-bold text-start ml-6 mt-10 pb-2">
         Latest Mixes
       </h1>
-    
+
       <div className="flex justify-center">
         <div className="grid md:grid-cols-2 md:gap-20 gap-10 grid-cols-1">
           {mixDisplay}
