@@ -8,7 +8,7 @@ import { IoLogoTiktok } from "react-icons/io5";
 const Footer = () => {
   return (
     <div className="bg-black h-full text-white md:p-4 p-2 z-0 ">
-      <p className="text-center p-3 text-[#9d6ef4] text-4xl">FOLLOW ME</p>
+      <p className="text-center p-3 krona text-[#9d6ef4] text-4xl">FOLLOW ME</p>
       <section className="w-full md:w-full  flex-wrap flex bg-dark   justify-center items-center ">
         <a
           href="https://www.instagram.com/"
@@ -70,20 +70,24 @@ const Footer = () => {
 
       <section className="flex flex-col mt-10 md:gap-24 gap-10 md:flex-row justify-center my-4 items-center">
         <div className="flex flex-col justify-center items-center ">
-          <p className="text-center p-3 text-[#9d6ef4] text-4xl">MIXES</p>
+          <p className="text-center p-3 text-[#9d6ef4] text-4xl krona">MIXES</p>
           <p className="text-center p-1  text-gray-400 ">Video Mixes</p>
           <p className="text-center p-1  text-gray-400  ">Audio Mixes</p>
           <p className="text-center p-1  text-gray-400  ">Live Mixes</p>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <p className="text-center p-3 text-[#9d6ef4] text-4xl">Merchandise</p>
+          <p className="text-center p-3 text-[#9d6ef4] krona text-4xl">
+            Merchandise
+          </p>
           <p className="text-center p-1  text-gray-400  ">T-Shirts</p>
           <p className="text-center p-1  text-gray-400  ">Hoodies</p>
           <p className="text-center p-1  text-gray-400  ">Caps</p>
         </div>
 
         <div className="flex flex-col justify-center items-center">
-          <p className="text-center p-3 text-[#9d6ef4] text-4xl">Contact</p>
+          <p className="text-center p-3 text-[#9d6ef4] krona text-4xl">
+            Contact
+          </p>
           <p className="text-center p-1  text-gray-400 ">daqchild@gmail.com </p>
           <p className="text-center p-1  text-gray-400  ">+234 803 000 0000</p>
           <p className="text-center p-1  text-gray-400  ">@daqchild</p>

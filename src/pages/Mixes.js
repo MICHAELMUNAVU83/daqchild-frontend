@@ -35,7 +35,7 @@ const Mixes = ({ setStoredToken, storedToken }) => {
           />
 
           <div className="relative px-4 -mt-16  ">
-            <div className="bg-white p-2 md:ml-2 rounded-lg shadow-lg ">
+            <div className="bg-white p-2 md:ml-2 rounded-lg shadow-lg h-[280px]  ">
               <div className="flex items-baseline">
                 <span className="bg-[#9d6ef4] text-white text-xs px-2  inline-block rounded-full  uppercase font-semibold tracking-wide">
                   {mix.genre}
@@ -46,8 +46,7 @@ const Mixes = ({ setStoredToken, storedToken }) => {
                   {mix.downloads} downloads
                 </div>
               </div>
-
-              <h4 className="mt-1 text-4xl font-semibold bebas  uppercase leading-tight truncate">
+              <h4 className="mt-1 text-center text-xl font-semibold bebas w-[300px]  uppercase ml-4 ">
                 {mix.name}
               </h4>
 

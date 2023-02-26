@@ -2,10 +2,11 @@ import React, { useState, useRef } from "react";
 import ExtrAdminNavBar from "./ExtraAdminNavbar";
 import ExtraNavbar from "./ExtraNavbar";
 import { ToastContainer, toast } from "react-toastify";
-
+import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 
 const AddEvents = ({ setStoredToken, storedToken }) => {
+  const navigate = useNavigate();
   const reference = useRef();
   console.log(reference);
   const [poster, setPoster] = useState("");
@@ -43,6 +44,10 @@ const AddEvents = ({ setStoredToken, storedToken }) => {
       .then((data) => {
         console.log(data);
       });
+
+    setTimeout(() => {
+      navigate("/");
+    }, 1000);
   };
 
   return (

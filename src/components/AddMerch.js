@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import ExtraNavbar from "./ExtraNavbar";
 import ExtrAdminNavBar from "./ExtraAdminNavbar";
 import { ToastContainer, toast } from "react-toastify";
-
+import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 const AddMerch = ({ setStoredToken, storedToken }) => {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [productImage, setProductImage] = useState("");
@@ -42,6 +43,10 @@ const AddMerch = ({ setStoredToken, storedToken }) => {
       .then((data) => {
         console.log(data);
       });
+
+    setTimeout(() => {
+      navigate("/");
+    }, 1000);
   };
 
   return (

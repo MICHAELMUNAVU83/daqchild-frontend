@@ -3,15 +3,18 @@ import { AiTwotoneAudio } from "react-icons/ai";
 import ExtraNavbar from "./ExtraNavbar";
 import ExtrAdminNavBar from "./ExtraAdminNavbar";
 import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 import "react-toastify/dist/ReactToastify.css";
 function AddMix({ setStoredToken, storedToken }) {
+  const navigate = useNavigate();
   const [audio, setAudio] = useState("");
   const [poster, setPoster] = useState("");
   const [name, setName] = useState("");
   const [genre, setGenre] = useState("");
 
   const uploadAudio = (files) => {
+
     const formData = new FormData();
 
     formData.append("file", files[0]);
@@ -25,6 +28,8 @@ function AddMix({ setStoredToken, storedToken }) {
         setAudio(data.secure_url);
         console.log(data);
       });
+    
+    
   };
   const uploadImage = (files) => {
     const formData = new FormData();
@@ -59,6 +64,10 @@ function AddMix({ setStoredToken, storedToken }) {
       .then((data) => {
         console.log(data);
       });
+    
+    setTimeout(() => {
+      navigate("/");
+    }, 1000);
   };
 
   return (
@@ -86,7 +95,7 @@ function AddMix({ setStoredToken, storedToken }) {
                       <input
                         type={"text"}
                         className=" border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                        placeholder="Hoodies, T-shirts, etc."
+                        placeholder="Afrobeat Mix"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                       />
@@ -123,6 +132,7 @@ function AddMix({ setStoredToken, storedToken }) {
                         <option value="Bongo">Bongo</option>
                         <option value="Hip Hop">Hip Hop</option>
                         <option value="House">House</option>
+                        <option value="All Genres">All Genres</option>
                         <option value="Amapiano">Amapiano</option>
                         <option value="R&B">R&B</option>
                         <option value="Reggae">Reggae</option>
