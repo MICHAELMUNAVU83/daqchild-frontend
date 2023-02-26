@@ -99,17 +99,18 @@ const AdminNavBar = ({ setStoredToken }) => {
             <ImCross className="text-3xl " />
           </div>
           <div className="flex md:justify-around md:flex-row flex-col items-center gap-10">
-            <ol
-              className=" list-[upper-roman] ml-10"
-              onClick={() => {
-                setIsOpen(!isOpen);
-              }}
-            >
+            <ol className=" list-[upper-roman] ml-10">
               <li
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
                 onMouseEnter={changeImage}
               >
-                <Link to="/" className="flex ">
+                <Link
+                  to="/"
+                  className="flex "
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                  }}
+                >
                   <div className="flex align-baseline text-gray-300 hover:text-white">
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Home
@@ -125,7 +126,13 @@ const AdminNavBar = ({ setStoredToken }) => {
                 onMouseEnter={changeImage}
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
-                <Link to="/add-mix" className="flex ">
+                <Link
+                  to="/add-mix"
+                  className="flex "
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                  }}
+                >
                   <div className="flex align-baseline text-gray-300 hover:text-white">
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Add Mix
@@ -140,7 +147,13 @@ const AdminNavBar = ({ setStoredToken }) => {
                 onMouseEnter={changeImage}
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
-                <Link to="/add-events" className="flex ">
+                <Link
+                  to="/add-events"
+                  className="flex "
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                  }}
+                >
                   <div className="flex align-baseline text-gray-300 hover:text-white">
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Add Events
@@ -155,7 +168,13 @@ const AdminNavBar = ({ setStoredToken }) => {
                 onMouseEnter={changeImage}
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
-                <Link to="/add-merch" className="flex ">
+                <Link
+                  to="/add-merch"
+                  className="flex "
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                  }}
+                >
                   <div className="flex align-baseline text-gray-300 hover:text-white">
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Add Merch
@@ -172,7 +191,13 @@ const AdminNavBar = ({ setStoredToken }) => {
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
                 onMouseEnter={changeImage}
               >
-                <Link to="/dashboard" className="flex ">
+                <Link
+                  to="/dashboard"
+                  className="flex"
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                  }}
+                >
                   <div className="flex align-baseline text-gray-300 hover:text-white">
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Dashboard
@@ -189,7 +214,12 @@ const AdminNavBar = ({ setStoredToken }) => {
                 onMouseEnter={changeImage}
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
-                <div className="flex align-baseline text-gray-300 hover:text-white">
+                <div
+                  className="flex align-baseline text-gray-300 hover:text-white "
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                  }}
+                >
                   <button
                     onClick={() => {
                       localStorage.setItem("token", "");

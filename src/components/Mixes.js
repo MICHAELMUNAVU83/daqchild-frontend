@@ -116,10 +116,7 @@ const Mixes = () => {
       <h1 className="text-7xl krona text-white font-bold text-start ml-6 mt-10 pb-2">
         Latest Mixes
       </h1>
-      {/* <p className="md:text-2xl  tetx-sm delius text-[#9d6ef4] text-start ml-6 my-4">
-        Enjoy the best audio mixes from the Daqchild ranging from amapiano mixes
-        , afrobeat mixes and hiphop mixes. Download and enjoy
-      </p> */}
+    
       <div className="flex justify-center">
         <div className="grid md:grid-cols-2 md:gap-20 gap-10 grid-cols-1">
           {mixDisplay}

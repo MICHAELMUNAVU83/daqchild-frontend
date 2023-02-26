@@ -70,18 +70,19 @@ const ExtraNavBar = () => {
             <ImCross className="text-3xl " />
           </div>
           <div className="flex md:justify-around md:flex-row flex-col items-center gap-10">
-            <ol
-              className=" list-[upper-roman] ml-10"
-              onClick={() => {
-                setIsOpen(!isOpen);
-              }}
-            >
+            <ol className=" list-[upper-roman] ml-10">
               <li
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
                 onMouseEnter={changeImage}
               >
-                <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <a href="/" className="flex ">
+                <a
+                  href="/"
+                  className="flex"
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                  }}
+                >
+                  <div className="flex align-baseline text-gray-300 hover:text-white">
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Home
                     </p>
@@ -89,45 +90,63 @@ const ExtraNavBar = () => {
                     <small className="font-normal text-sm md:mt-3 mt-2  ml-2">
                       homepage
                     </small>
-                  </a>
-                </div>
+                  </div>
+                </a>
               </li>
               <li
                 onMouseEnter={changeImage}
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
-                <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <a href="#events" className="flex ">
+                <a
+                  href="#events"
+                  className="flex "
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                  }}
+                >
+                  <div className="flex align-baseline text-gray-300 hover:text-white">
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Events
                     </p>
                     <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
                       This week's events
                     </small>
-                  </a>
-                </div>
+                  </div>
+                </a>
               </li>
               <li
                 onMouseEnter={changeImage}
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
-                <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <a href="#mixes" className="flex ">
+                <a
+                  href="#mixes"
+                  className="flex "
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                  }}
+                >
+                  <div className="flex align-baseline text-gray-300 hover:text-white">
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Mixes
                     </p>
                     <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
                       listen to mixes
                     </small>
-                  </a>
-                </div>
+                  </div>
+                </a>
               </li>
               <li
                 onMouseEnter={changeImage}
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
-                <div className="flex align-baseline text-gray-300 hover:text-white">
-                  <a href="#merch" className="flex ">
+                <a
+                  href="#merch"
+                  className="flex "
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                  }}
+                >
+                  <div className="flex align-baseline text-gray-300 hover:text-white">
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Merch
                     </p>
@@ -135,8 +154,8 @@ const ExtraNavBar = () => {
                     <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
                       shop merch
                     </small>
-                  </a>
-                </div>
+                  </div>
+                </a>
               </li>
 
               <li
@@ -145,7 +164,12 @@ const ExtraNavBar = () => {
               >
                 <div className="flex align-baseline text-gray-300 hover:text-white">
                   <button className="flex ">
-                    <Link to="/login">
+                    <Link
+                      to="/login"
+                      onClick={() => {
+                        setIsOpen(!isOpen);
+                      }}
+                    >
                       <p className="md:text-3xl text-xl font-bold uppercase">
                         Login
                       </p>
