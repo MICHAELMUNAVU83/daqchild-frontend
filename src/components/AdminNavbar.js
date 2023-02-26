@@ -172,7 +172,7 @@ const AdminNavBar = ({ setStoredToken }) => {
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
                 onMouseEnter={changeImage}
               >
-                <Link to="/" className="flex ">
+                <Link to="/dashboard" className="flex ">
                   <div className="flex align-baseline text-gray-300 hover:text-white">
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Dashboard
