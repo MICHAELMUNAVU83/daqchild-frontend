@@ -66,7 +66,7 @@ const NavBar = () => {
             <div>
               <p
                 style={{ color: `${textColor}` }}
-                className=" text-xl krona font-bold mx-2 "
+                className=" text-xl bangers font-bold mx-2 "
               >
                 MENU
               </p>
@@ -98,7 +98,7 @@ const NavBar = () => {
             <ImCross className="text-3xl " />
           </div>
           <div className="flex md:justify-around md:flex-row flex-col items-center gap-10">
-            <ol className=" list-[upper-roman] ml-10">
+            <ol className=" list-[upper-roman] ml-10 krona">
               <li
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
                 onMouseEnter={changeImage}
@@ -115,7 +115,7 @@ const NavBar = () => {
                       Home
                     </p>
 
-                    <small className="font-normal text-sm md:mt-3 mt-2  ml-2">
+                    <small className="font-normal bangers text-sm md:mt-3 mt-2  ml-2">
                       homepage
                     </small>
                   </div>
@@ -136,7 +136,7 @@ const NavBar = () => {
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Events
                     </p>
-                    <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
+                    <small className="font-normal bangers text-sm md:mt-3 mt-2   ml-2">
                       This week's events
                     </small>
                   </div>
@@ -157,7 +157,7 @@ const NavBar = () => {
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Mixes
                     </p>
-                    <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
+                    <small className="font-normal bangers  text-sm md:mt-3 mt-2   ml-2">
                       listen to mixes
                     </small>
                   </div>
@@ -179,7 +179,7 @@ const NavBar = () => {
                       Merch
                     </p>
 
-                    <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
+                    <small className="font-normal bangers  text-sm md:mt-3 mt-2   ml-2">
                       shop merch
                     </small>
                   </div>
@@ -202,7 +202,7 @@ const NavBar = () => {
                         Login
                       </p>
                     </Link>
-                    <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
+                    <small className="font-normal bangers  text-sm md:mt-3 mt-2   ml-2">
                       login as admin
                     </small>
                   </button>

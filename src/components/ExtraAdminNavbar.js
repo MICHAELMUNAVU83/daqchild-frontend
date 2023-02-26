@@ -42,7 +42,7 @@ const ExtrAdminNavBar = ({ setStoredToken }) => {
               <p className="h-2 md:w-8 w-6   bg-white group-hover:absolute top-3  duration-500 ease-in-out" />
             </div>
             <div>
-              <p className=" text-xl krona font-bold mx-2 text-white ">MENU</p>
+              <p className=" text-xl bangers font-bold mx-2 text-white ">MENU</p>
             </div>
           </div>
           {saved.length > 0 && (
@@ -71,7 +71,7 @@ const ExtrAdminNavBar = ({ setStoredToken }) => {
             <ImCross className="text-3xl " />
           </div>
           <div className="flex md:justify-around md:flex-row flex-col items-center gap-10">
-            <ol className=" list-[upper-roman] ml-10">
+          <ol className=" list-[upper-roman] ml-10 krona">
               <li
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
                 onMouseEnter={changeImage}
@@ -84,11 +84,11 @@ const ExtrAdminNavBar = ({ setStoredToken }) => {
                   }}
                 >
                   <div className="flex align-baseline text-gray-300 hover:text-white">
-                    <p className="md:text-3xl text-xl font-bold uppercase">
+                    <p className="md:text-2xl text-xl font-bold uppercase">
                       Home
                     </p>
 
-                    <small className="font-normal text-sm md:mt-3 mt-2  ml-2">
+                    <small className="font-normal bangers text-sm md:mt-3 mt-2  ml-2">
                       homepage
                     </small>
                   </div>
@@ -96,7 +96,7 @@ const ExtrAdminNavBar = ({ setStoredToken }) => {
               </li>
               <li
                 onMouseEnter={changeImage}
-                className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
+                className="text-2xl border-b-2  hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
                 <Link
                   to="/add-mix"
@@ -106,11 +106,11 @@ const ExtrAdminNavBar = ({ setStoredToken }) => {
                   }}
                 >
                   <div className="flex align-baseline text-gray-300 hover:text-white">
-                    <p className="md:text-3xl text-xl font-bold uppercase">
+                    <p className="md:text-2xl text-xl font-bold uppercase">
                       Add Mix
                     </p>
-                    <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
-                      homepage
+                    <small className="font-normal bangers text-sm md:mt-3 mt-2   ml-2">
+                      add your audio mixes
                     </small>
                   </div>
                 </Link>
@@ -127,11 +127,11 @@ const ExtrAdminNavBar = ({ setStoredToken }) => {
                   }}
                 >
                   <div className="flex align-baseline text-gray-300 hover:text-white">
-                    <p className="md:text-3xl text-xl font-bold uppercase">
+                    <p className="md:text-xl text-xl font-bold uppercase">
                       Add Events
                     </p>
-                    <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
-                      events
+                    <small className="font-normal bangers text-sm md:mt-3 mt-2   ml-2">
+                      add weekly events
                     </small>
                   </div>
                 </Link>
@@ -148,11 +148,11 @@ const ExtrAdminNavBar = ({ setStoredToken }) => {
                   }}
                 >
                   <div className="flex align-baseline text-gray-300 hover:text-white">
-                    <p className="md:text-3xl text-xl font-bold uppercase">
+                    <p className="md:text-xl text-xl font-bold uppercase">
                       Add Merch
                     </p>
 
-                    <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
+                    <small className="font-normal bangers text-sm md:mt-3 mt-2   ml-2">
                       add merchandises
                     </small>
                   </div>
@@ -165,17 +165,17 @@ const ExtrAdminNavBar = ({ setStoredToken }) => {
               >
                 <Link
                   to="/dashboard"
-                  className="flex "
+                  className="flex"
                   onClick={() => {
                     setIsOpen(!isOpen);
                   }}
                 >
                   <div className="flex align-baseline text-gray-300 hover:text-white">
-                    <p className="md:text-3xl text-xl font-bold uppercase">
+                    <p className="md:text-xl text-xl font-bold uppercase">
                       Dashboard
                     </p>
 
-                    <small className="font-normal text-sm md:mt-3 mt-2  ml-2">
+                    <small className="font-normal bangers text-sm md:mt-3 mt-2  ml-2">
                       manage your site
                     </small>
                   </div>
@@ -187,7 +187,7 @@ const ExtrAdminNavBar = ({ setStoredToken }) => {
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
                 <div
-                  className="flex align-baseline text-gray-300 hover:text-white"
+                  className="flex align-baseline text-gray-300 hover:text-white "
                   onClick={() => {
                     setIsOpen(!isOpen);
                   }}
@@ -198,11 +198,11 @@ const ExtrAdminNavBar = ({ setStoredToken }) => {
                       setStoredToken("");
                       navigate("/");
                     }}
-                    className="md:text-3xl text-xl font-bold uppercase"
+                    className="md:text-xl text-xl font-bold uppercase"
                   >
                     Log out
                   </button>
-                  <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
+                  <small className="font-normal bangers text-sm md:mt-3 mt-2   ml-2">
                     logout
                   </small>
                 </div>

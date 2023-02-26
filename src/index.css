@@ -3,15 +3,16 @@
 @tailwind utilities;
 
 
+
+
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arimo&family=Bebas+Neue&family=Carter+One&family=Combo&family=Comfortaa&family=Dancing+Script:wght@500&family=Delius&family=Inter:wght@300&family=Kanit:wght@200&family=Krona+One&family=Merienda&family=Playfair+Display:ital@1&family=Roboto+Serif:opsz,wght@8..144,600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Fjalla+One&family=Italiana&family=Italianno&family=Righteous&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Fjalla+One&family=Italiana&family=Italianno&family=Righteous&family=Sofia+Sans+Semi+Condensed:wght@200&family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Acme&family=Akronim&family=Amita:wght@700&family=Bakbak+One&family=Cinzel+Decorative:wght@700&family=Courgette&family=Fjalla+One&family=Italiana&family=Italianno&family=Londrina+Shadow&family=Philosopher:wght@700&family=Righteous&family=Sofia+Sans+Semi+Condensed:wght@200&family=Tilt+Prism&family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200&display=swap');
 html{
   scroll-behavior: smooth!important;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arimo&family=Bebas+Neue&family=Carter+One&family=Combo&family=Comfortaa&family=Dancing+Script:wght@500&family=Delius&family=Inter:wght@300&family=Kanit:wght@200&family=Krona+One&family=Merienda&family=Playfair+Display:ital@1&family=Roboto+Serif:opsz,wght@8..144,600&display=swap");
-
-
-@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Fjalla+One&family=Italiana&family=Italianno&family=Righteous&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap');
-
 .bebas{
   font-family: 'Bebas Neue', cursive;
 }
@@ -84,6 +85,49 @@ html{
 
 .sofia{
   font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+
+.tilt{
+  font-family: 'Tilt Prism', cursive;
+}
+
+.yanone {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.acme {
+  font-family:'Acme', sans-serif;
+}
+
+.arimo {
+  font-family: 'Arimo', sans-serif;
+}
+
+.bangers {
+  font-family: 'Bangers', cursive;
+}
+
+.philosopher {
+  font-family: 'Philosopher', sans-serif;
+}
+
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+.Londrina {
+  font-family: 'Londrina Shadow', cursive;
+}
+
+.cinzel-decorative {
+  font-family: 'Cinzel Decorative', cursive;
+}
+.akonim {
+  font-family: 'Akronim', cursive;
 }
 
 @media (min-width: 640px) {

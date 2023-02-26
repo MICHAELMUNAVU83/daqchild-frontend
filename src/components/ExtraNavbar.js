@@ -41,7 +41,7 @@ const ExtraNavBar = () => {
               <p className="h-2 md:w-8 w-6   bg-white group-hover:absolute top-3  duration-500 ease-in-out" />
             </div>
             <div>
-              <p className=" text-xl krona font-bold mx-2 text-white ">MENU</p>
+              <p className=" text-xl bangers font-bold mx-2 text-white ">MENU</p>
             </div>
           </div>
           {saved.length > 0 && (
@@ -70,14 +70,14 @@ const ExtraNavBar = () => {
             <ImCross className="text-3xl " />
           </div>
           <div className="flex md:justify-around md:flex-row flex-col items-center gap-10">
-            <ol className=" list-[upper-roman] ml-10">
+          <ol className=" list-[upper-roman] ml-10 krona">
               <li
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
                 onMouseEnter={changeImage}
               >
                 <a
                   href="/"
-                  className="flex"
+                  className="flex "
                   onClick={() => {
                     setIsOpen(!isOpen);
                   }}
@@ -87,7 +87,7 @@ const ExtraNavBar = () => {
                       Home
                     </p>
 
-                    <small className="font-normal text-sm md:mt-3 mt-2  ml-2">
+                    <small className="font-normal bangers text-sm md:mt-3 mt-2  ml-2">
                       homepage
                     </small>
                   </div>
@@ -108,7 +108,7 @@ const ExtraNavBar = () => {
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Events
                     </p>
-                    <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
+                    <small className="font-normal bangers text-sm md:mt-3 mt-2   ml-2">
                       This week's events
                     </small>
                   </div>
@@ -129,7 +129,7 @@ const ExtraNavBar = () => {
                     <p className="md:text-3xl text-xl font-bold uppercase">
                       Mixes
                     </p>
-                    <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
+                    <small className="font-normal bangers  text-sm md:mt-3 mt-2   ml-2">
                       listen to mixes
                     </small>
                   </div>
@@ -151,7 +151,7 @@ const ExtraNavBar = () => {
                       Merch
                     </p>
 
-                    <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
+                    <small className="font-normal bangers  text-sm md:mt-3 mt-2   ml-2">
                       shop merch
                     </small>
                   </div>
@@ -162,26 +162,25 @@ const ExtraNavBar = () => {
                 onMouseEnter={changeImage}
                 className="text-2xl border-b-2 hover:border-white duration-600 ease-in-out border-gray-600 w-72 md:w-96 p-4 cursor-pointer"
               >
-                <div className="flex align-baseline text-gray-300 hover:text-white">
+                <div
+                  className="flex align-baseline text-gray-300 hover:text-white"
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                  }}
+                >
                   <button className="flex ">
-                    <Link
-                      to="/login"
-                      onClick={() => {
-                        setIsOpen(!isOpen);
-                      }}
-                    >
+                    <Link to="/login">
                       <p className="md:text-3xl text-xl font-bold uppercase">
                         Login
                       </p>
                     </Link>
-                    <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
+                    <small className="font-normal bangers  text-sm md:mt-3 mt-2   ml-2">
                       login as admin
                     </small>
                   </button>
                 </div>
               </li>
             </ol>
-
             <motion.div
               className="text-white"
               initial={{ scaleX: 0 }}

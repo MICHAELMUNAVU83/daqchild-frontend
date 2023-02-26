@@ -15,18 +15,18 @@ const Hero = () => {
           >
             GIBBZ THA DAQCHILD
           </h1>
-          <p className="text-2xl md:text-4xl text-white font-bold krona ">
+          <p className="text-2xl md:text-4xl text-white font-bold  bangers ">
             KING OF GOOD TIMES
           </p>
 
-          <div className="marquee-w text-3xl bakbak
-            md:text-8xl text-white font-bold">
-            <div className="marquee">
-              <span>
-                DEEJAY GIBBZ THA DAQCHILD , AFRICA'S&nbsp;&nbsp;
-              </span>
+          <div
+            className="marquee-w text-3xl bakbak
+            md:text-8xl text-white font-bold"
+          >
+            <div className="marquee text-white">
+              <span>DEEJAY GIBBZ THA DAQCHILD , AFRICA'S&nbsp;&nbsp;</span>
             </div>
-            <div className="marquee marquee2">
+            <div className="marquee marquee2 text-white">
               <span>
                 &nbsp; NUMBER ONE KING OF GOOD TIMES &nbsp;&nbsp;&nbsp;
               </span>
