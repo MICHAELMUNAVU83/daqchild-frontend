@@ -138,7 +138,7 @@ const AdminNavBar = ({ setStoredToken }) => {
                       Add Mix
                     </p>
                     <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
-                      homepage
+                      add your audio mixes
                     </small>
                   </div>
                 </Link>
@@ -159,7 +159,7 @@ const AdminNavBar = ({ setStoredToken }) => {
                       Add Events
                     </p>
                     <small className="font-normal text-sm md:mt-3 mt-2   ml-2">
-                      events
+                      add weekly events
                     </small>
                   </div>
                 </Link>

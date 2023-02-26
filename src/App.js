@@ -27,42 +27,55 @@ function App() {
               <Home setStoredToken={setStoredToken} storedToken={storedToken} />
             }
           />
-          <Route
-            path="/add-mix"
-            element={
-              <AddMix
-                setStoredToken={setStoredToken}
-                storedToken={storedToken}
+          {storedToken && (
+            <>
+              <Route
+                path="/add-mix"
+                element={
+                  <AddMix
+                    setStoredToken={setStoredToken}
+                    storedToken={storedToken}
+                  />
+                }
               />
-            }
-          />
-          <Route
-            path="/add-events"
-            element={
-              <AddEvents
-                setStoredToken={setStoredToken}
-                storedToken={storedToken}
+              <Route
+                path="/add-events"
+                element={
+                  <AddEvents
+                    setStoredToken={setStoredToken}
+                    storedToken={storedToken}
+                  />
+                }
               />
-            }
-          />
-          <Route
-            path="/add-merch"
-            element={
-              <AddMerch
-                setStoredToken={setStoredToken}
-                storedToken={storedToken}
+              <Route
+                path="/add-merch"
+                element={
+                  <AddMerch
+                    setStoredToken={setStoredToken}
+                    storedToken={storedToken}
+                  />
+                }
               />
-            }
-          />
-          <Route
-            path="/dashboard"
-            element={
-              <DashBoard
-                setStoredToken={setStoredToken}
-                storedToken={storedToken}
+              <Route
+                path="/dashboard"
+                element={
+                  <DashBoard
+                    setStoredToken={setStoredToken}
+                    storedToken={storedToken}
+                  />
+                }
               />
-            }
-          />
+              <Route
+                path="/add-colors-and-sizes/:id"
+                element={
+                  <AddColorsAndSizes
+                    setStoredToken={setStoredToken}
+                    storedToken={storedToken}
+                  />
+                }
+              />
+            </>
+          )}
           <Route
             path="/products/:id"
             element={
@@ -72,10 +85,7 @@ function App() {
               />
             }
           />
-          <Route
-            path="/add-colors-and-sizes/:id"
-            element={<AddColorsAndSizes setStoredToken={setStoredToken}  storedToken={storedToken} />}
-          />
+
           <Route
             path="/cart"
             element={
@@ -95,6 +105,8 @@ function App() {
             path="/login"
             element={<Login setStoredToken={setStoredToken} />}
           />
+
+          <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
       </Router>
     </>
