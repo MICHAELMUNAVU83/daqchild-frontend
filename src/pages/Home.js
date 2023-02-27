@@ -8,6 +8,7 @@ import Merch from "../components/Merch";
 import NavBar from "../components/NavBar";
 import AdminNavbar from "../components/AdminNavbar";
 
+
 const Home = ({ setStoredToken, storedToken }) => {
   const [mixes, setMixes] = useState([]);
   const [events, setEvents] = useState([]);
@@ -44,10 +45,11 @@ const Home = ({ setStoredToken, storedToken }) => {
       )}
       <Hero />
       {events.length > 0 && <Events />}
-      {mixes.length > 0 && <Mixes  />}
-      {products.length > 0 && <Merch  />}
+      {mixes.length > 0 && <Mixes />}
+      {products.length > 0 && <Merch />}
 
       <Photos />
+     
       <Footer />
     </div>
   );
