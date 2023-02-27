@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const MerchCard = ({ product }) => {
+
   return (
     <div className="container hover:shadow-lg ">
       <div className=" bg-black shadow-lg rounded-xl p-4 ">
@@ -30,7 +31,9 @@ const MerchCard = ({ product }) => {
                   <span className="text-gray-400 krona whitespace-nowrap mr-3">
                     Daqchild Merch
                   </span>
-                  <span className="mr-2 comfortaa roboto text-gray-400">Kenya</span>
+                  <span className="mr-2 comfortaa roboto text-gray-400">
+                    Kenya
+                  </span>
                 </div>
                 <div className="flex items-center w-full justify-between min-w-0 ">
                   <h2 className="text-2xl bebas mr-auto cursor-pointer text-gray-200 hover:text-purple-500 truncate ">
@@ -45,7 +48,7 @@ const MerchCard = ({ product }) => {
                 Ksh {product.price}
               </div>
 
-              <div className="flex space-x-2 kanit text-sm font-bold my-2 justify-center">
+              <div className="flex space-x-2 bakbak text-sm font-bold my-2 justify-center">
                 <button className="transition ease-in duration-300 inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-purple-500 px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-full hover:bg-purple-600 ">
                   <Link to={`/products/${product.id}`}>
                     View {product.name}

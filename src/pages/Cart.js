@@ -1,11 +1,12 @@
 import React, { useContext, useState, useEffect } from "react";
 import { RoomContext } from "../context";
 import mpesa from "./mpesa.png";
-import AdminNavbar from "../components/AdminNavbar";
 import ExtraNavbar from "../components/ExtraNavbar";
-import {Link} from 'react-router-dom'
+import ExtrAdminNavBar from "../components/ExtraAdminNavbar";
+import { Link } from "react-router-dom";
+import CartItem from "../components/CartItem";
 const Cart = ({ setStoredToken, storedToken }) => {
-  const { saved, removeFromArray } = useContext(RoomContext);
+  const { saved, removeFromArray, addQuantity } = useContext(RoomContext);
 
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -24,77 +25,21 @@ const Cart = ({ setStoredToken, storedToken }) => {
   const savedItems =
     saved.length > 0 &&
     saved.map((item) => (
-      <div className="flex flex-col gap-4">
-        <div className="flex justify-between items-center pt-6 mt-6 border-t">
-          <div className="flex  items-center">
-            <img
-              src={item.product_image}
-              width="60"
-              className="rounded-full "
-              alt="product "
-            />
-
-            <div className="flex flex-col ml-3 ">
-              <span className="text-md font-medium w-auto">{item.name}</span>
-              <span className="text-xs font-light text-gray-400">
-                Daqchild Merchandise
-              </span>
-            </div>
-          </div>
-
-          <div className="flex justify-center items-center">
-            <div className="pr-8 flex">
-              <span className="font-semibold">-</span>
-              <p>1</p>
-              <span className="font-semibold">+</span>
-            </div>
-
-            <div className="pr-8">
-              <span className="text-xs font-medium">KSh {item.price}</span>
-            </div>
-            <div>
-              <i className="fa fa-close text-xs font-medium"></i>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col md:flex-row justify-between items-center pt-2 mt-2 ">
-          <div className="md:w-1/2">
-            <p>Select color</p>
-            <select className="bg-gray-100 border  w-56 p-4  rounded text-sm  mx-2">
-              {item.colors.map((color) => (
-                <option value={color.name}>{color.name}</option>
-              ))}
-            </select>
-          </div>
-
-          <div className="md:-1/2">
-            <p>Select Size</p>
-            <select className="bg-gray-100 border  w-56 p-4  rounded text-sm  mx-2">
-              {item.sizes.map((size) => (
-                <option value={size.name}>{size.name}</option>
-              ))}
-            </select>
-          </div>
-        </div>
-        <div className="text-center  ">
-          <button
-            className="bg-red-600 text-white px-4 py-2 rounded-md"
-            onClick={() => removeFromArray(item.id)}
-          >
-            Remove From Cart
-          </button>
-        </div>
-      </div>
+      <CartItem
+        key={item.id}
+        item={item}
+        removeFromArray={removeFromArray}
+        saved={saved}
+        addQuantity={addQuantity}
+      />
     ));
   return (
     <>
       {storedToken ? (
-        <AdminNavbar setStoredToken={setStoredToken} />
+        <ExtrAdminNavBar setStoredToken={setStoredToken} />
       ) : (
         <ExtraNavbar />
       )}
-
       <div className="">
         <div className="py-20">
           <div className="max-w-md mx-auto bg-gray-100 shadow-purple-500  shadow-lg rounded-lg  md:max-w-5xl">
@@ -120,9 +65,7 @@ const Cart = ({ setStoredToken, storedToken }) => {
                       <div className="flex items-center">
                         <i className="fa fa-arrow-left text-sm pr-2"></i>
                         <span className="text-md  font-medium text-blue-500">
-                          <Link to="/">
-                            Continue Shopping
-                          </Link>
+                          <Link to="/">Continue Shopping</Link>
                         </span>
                       </div>
 

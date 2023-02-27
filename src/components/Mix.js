@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { AiFillHeart } from "react-icons/ai";
-import { Link } from "react-router-dom";
 import Slider from "./slider/Slider";
 import ControlPanel from "./controls/ControlPanel";
 import { BiCloudDownload } from "react-icons/bi";
@@ -67,9 +66,11 @@ const Mix = ({ mix }) => {
         {mix.genre}
       </span>
       <div className="ml-2 text-gray-600 uppercase text-sm font-semibold tracking-wider">
-        {mix.likes} likes &bull; {mix.plays} {mix.plays > 1 ? "plays" : "play"}{" "}
-        &bull;
-        {mix.downloads} downloads
+        {mix.likes}
+        {mix.likes === 1 ? "like" : "likes"} &bull; {mix.plays}{" "}
+        {mix.plays === 1 ? "play" : "plays"} &bull;{""}
+        {mix.downloads} {""} 
+        {mix.downloads === 1 ? "download" : "downloads"}{" "}
       </div>
       <h4 className="mt-1 text-center text-xl  bebas w-[300px]    uppercase ml-4 ">
         {mix.name}
@@ -94,7 +95,11 @@ const Mix = ({ mix }) => {
             />
           </div>
           <div>
-            <Slider percentage={percentage} onChange={onChange} className="w-[100%]" />
+            <Slider
+              percentage={percentage}
+              onChange={onChange}
+              className="w-[100%]"
+            />
           </div>
           <div className="flex items-center kanit font-bold gap-2">
             <p>{mix.likes}</p>
