@@ -38,10 +38,10 @@ const Product = ({ setStoredToken, storedToken }) => {
               src={product.product_image}
             />
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 className="text-sm title-font text-gray-500 tracking-widest">
+              <h2 className="text-xl bebas  text-gray-500 tracking-widest">
                 DAQCHILD MERCHANIDSE
               </h2>
-              <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
+              <h1 className="text-gray-900 krona text-3xl title-font font-medium mb-1">
                 {product.name}
               </h1>
               <div className="flex mb-4">
@@ -130,7 +130,7 @@ const Product = ({ setStoredToken, storedToken }) => {
               <p className="leading-relaxed">{product.description}</p>
               <div className="flex flex-col md:flex-row mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
                 <div className="flex my-4">
-                  <span className="text-2xl md:text-md">Colors:</span>
+                  <span className="text-2xl bakbak md:mt-1 md:text-md">Colors:</span>
                   {product.colors &&
                     product.colors.map((color) => (
                       <button
@@ -140,7 +140,7 @@ const Product = ({ setStoredToken, storedToken }) => {
                     ))}
                 </div>
                 <div className="flex ml-6 items-center">
-                  <span className="text-2xl  md:text-md">Sizes :</span>
+                  <span className="text-2xl bakbak  md:text-md">Sizes : </span>
                   <div className="relative">
                     <select className="rounded mx-2 md:mx-0 w-[200px] md:w-full border appearance-none border-gray-400 py-2 focus:outline-none focus:border-purple-500 text-base pl-3 pr-10">
                       <option selected>See Sizes</option>
@@ -166,7 +166,7 @@ const Product = ({ setStoredToken, storedToken }) => {
                 </div>
               </div>
               <div className="flex">
-                <span className="title-font font-medium text-2xl text-gray-900">
+                <span className="title-font font-medium krona text-2xl text-gray-900">
                   KSH {product.price}
                 </span>
                 {isInCart ? (
@@ -184,8 +184,6 @@ const Product = ({ setStoredToken, storedToken }) => {
                     Add to Cart
                   </button>
                 )}
-
-                
               </div>
             </div>
           </div>

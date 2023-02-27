@@ -29,7 +29,7 @@ const Mixes = () => {
             src={mix.poster}
             alt=" random imgee"
             className="rounded-lg md:ml-2 shadow-md"
-            style={{ width: "400px", height: "300px" }}
+            style={{ width: "400px", height: "250px" }}
           />
 
           <div className="relative px-4 -mt-16  ">
@@ -45,7 +45,7 @@ const Mixes = () => {
                 </div>
               </div>
 
-              <h4 className="mt-1 text-center text-xl font-semibold bebas w-[300px]  uppercase ml-4 ">
+              <h4 className="mt-1 text-center text-2xl  bebas w-[300px]  uppercase ml-4 ">
                 {mix.name}
               </h4>
 

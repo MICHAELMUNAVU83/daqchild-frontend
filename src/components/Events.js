@@ -10,7 +10,6 @@ const Events = () => {
     fetch("http://localhost:3000/events")
       .then((response) => response.json())
       .then((data) => {
-        
         setEvents(data);
       });
   }, []);
@@ -54,7 +53,9 @@ const Events = () => {
 
             <div className="text-center">
               <button className="px-4 py-2 bg-[#9d6ef4] md:my-16 my-8  text-white hover:scale-110 transition duration-500 font-bold krona ease-in-out ">
-                BOOK NOW
+                <a rel="noopener noreferrer" href="tel:0740769596">
+                  BOOK NOW
+                </a>
               </button>
             </div>
           </div>
