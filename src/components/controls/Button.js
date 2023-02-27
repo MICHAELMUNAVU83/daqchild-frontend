@@ -1,11 +1,21 @@
-import React from 'react'
-import './button.css'
+import React from "react";
+import "./button.css";
+import { FaPlay } from "react-icons/fa";
+import { FaPause } from "react-icons/fa";
 
 function Button({ play, isPlaying }) {
   return (
-    <div className='btn-container'>
-      <div onClick={play} className={isPlaying ? 'btn-stop' : 'btn-play'}></div>
+    <div className="  text-[#9d6ef4]">
+      {isPlaying ? (
+        <button className="btn" onClick={play}>
+          <FaPause size={20} />
+        </button>
+      ) : (
+        <button className="btn" onClick={play}>
+          <FaPlay size={20} />
+        </button>
+      )}
     </div>
-  )
+  );
 }
-export default Button
+export default Button;

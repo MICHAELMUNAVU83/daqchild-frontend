@@ -9,9 +9,9 @@
 
 /* Background */
 .slider-container::before {
-  content: '';
-  background-color: white;
-  width: 99%;
+  content: "";
+  background-color: black;
+  width: 100%;
   height: calc(var(--progress-bar-height) - 1px);
   display: block;
   position: absolute;
@@ -24,7 +24,7 @@
 
 /* Custom Progress Bar */
 .progress-bar-cover {
-  background-color: rgb(218, 55, 145);
+  background-color: #9d6ef4;
   width: 0%;
   height: var(--progress-bar-height);
   display: block;
