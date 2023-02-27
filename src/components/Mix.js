@@ -54,34 +54,33 @@ const Mix = ({ mix }) => {
   };
 
   return (
-    <div className=" flex flex-col items-center bg-white shadow-lg w-[300px] rounded-lg">
-      <span className="bg-[#9d6ef4] text-white text-xs px-2  inline-block rounded-full  uppercase font-semibold tracking-wide">
-        {mix.genre}
-      </span>
+    <div className=" flex flex-col items-center shadow-[#9d6ef4]  bg-white shadow-lg w-[350px] rounded-lg h-full py-4">
       <div>
         <img
           src={mix.poster}
           alt=" random imgee"
           className="rounded-full  md:ml-2 shadow-md"
-          style={{ width: "100px", height: "100px" }}
+          style={{ width: "200px", height: "200px" }}
         />
       </div>
+      <span className="bg-[#9d6ef4] my-2 text-white text-xs px-2  text-end rounded-full  uppercase font-semibold tracking-wide">
+        {mix.genre}
+      </span>
       <div className="ml-2 text-gray-600 uppercase text-sm font-semibold tracking-wider">
         {mix.likes} likes &bull; {mix.plays} {mix.plays > 1 ? "plays" : "play"}{" "}
         &bull;
         {mix.downloads} downloads
       </div>
-      <h4 className="mt-1 text-center text-xl  bebas w-[200px]    uppercase ml-4 ">
+      <h4 className="mt-1 text-center text-xl  bebas w-[300px]    uppercase ml-4 ">
         {mix.name}
       </h4>
-   
 
       <div className="mt-4 w-full px-4">
         <div className="flex justify-between">
           <div>
             <BiCloudDownload
-              size={20}
-              className="cursor-pointer mx-2 text-[#9d6ef4]"
+              size={25}
+              className="cursor-pointer mx-1 text-[#9d6ef4]"
               onClick={() => {
                 handleDownload(mix.audio_mp3, mix.name);
                 fetch(`http://localhost:3000/mixes/${mix.id}`, {
@@ -95,12 +94,12 @@ const Mix = ({ mix }) => {
             />
           </div>
           <div>
-            <Slider percentage={percentage} onChange={onChange} />
+            <Slider percentage={percentage} onChange={onChange} className="w-[100%]" />
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center kanit font-bold gap-2">
             <p>{mix.likes}</p>
             <AiFillHeart
-              className="text-2xl hover:text-red-500 cursor-pointer"
+              className="text-2xl text-[#9d6ef4] hover:text-red-500 cursor-pointer "
               onClick={() => {
                 fetch(`http://localhost:3000/mixes/${mix.id}`, {
                   method: "PATCH",
@@ -115,6 +114,7 @@ const Mix = ({ mix }) => {
         </div>
         <audio
           ref={audioRef}
+          className="mt-2"
           onTimeUpdate={getCurrDuration}
           onLoadedData={(e) => {
             setDuration(e.currentTarget.duration.toFixed(2));
