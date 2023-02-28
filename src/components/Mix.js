@@ -53,7 +53,7 @@ const Mix = ({ mix }) => {
   };
 
   return (
-    <div className=" flex flex-col items-center shadow-[#9d6ef4]  bg-white shadow-lg w-[350px] rounded-lg h-full py-4">
+    <div className=" flex flex-col items-center shadow-[#9d6ef4] px-4 md:px-0  bg-white shadow-lg w-[350px] rounded-lg h-full py-4">
       <div>
         <img
           src={mix.poster}
