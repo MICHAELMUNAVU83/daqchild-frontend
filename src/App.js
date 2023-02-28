@@ -11,6 +11,7 @@ import Mixes from "./pages/Mixes";
 import Login from "./pages/Login";
 import DashBoard from "./pages/DashBoard";
 import AddColorsAndSizes from "./pages/AddColorsAndSizes";
+import Error from "./pages/Error";
 
 function App() {
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
@@ -106,7 +107,7 @@ function App() {
             element={<Login setStoredToken={setStoredToken} />}
           />
 
-          <Route path="*" element={<h1>404 Not Found</h1>} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </Router>
     </>

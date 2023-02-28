@@ -1,12 +1,18 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
     <div className="hero-background md:h-[100vh] h-[50vh] bg-top    bg-fixed bg-no-repeat bg-cover ">
       <div className="bg-black/30  h-full">
-        <div className="flex pt-20 flex-col justify-center text-center items-center h-full">
+        <motion.div
+          className="flex pt-20 flex-col justify-center text-center items-center h-full"
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          transition={{ duration: 2 }}
+        >
           <h1
-            className="md:text-8xl text-5xl text-white bakbak font-bold"
+            className="md:text-8xl text-4xl text-white bakbak font-bold"
             style={{
               WebkitTextStroke: "2px white",
               WebkitTextFillColor: "transparent",
@@ -18,7 +24,7 @@ const Hero = () => {
           <p className="text-2xl md:text-4xl text-white font-bold  bangers ">
             KING OF GOOD TIMES
           </p>
-{/* 
+          {/* 
           <div
             className="marquee-w text-3xl bakbak
             md:text-8xl text-white font-bold"
@@ -32,7 +38,7 @@ const Hero = () => {
               </span>
             </div>
           </div> */}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
