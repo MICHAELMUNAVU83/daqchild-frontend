@@ -158,7 +158,7 @@ const AdminNavBar = ({ setStoredToken }) => {
                     <p className="md:text-xl text-sm font-bold uppercase">
                       Add Events
                     </p>
-                    <small className="font-normal bangers text-sm md:mt-3 mt-2   ml-2">
+                    <small className="font-normal bangers md:text-sm text-xs md:mt-3 mt-2   ml-2">
                       add weekly events
                     </small>
                   </div>

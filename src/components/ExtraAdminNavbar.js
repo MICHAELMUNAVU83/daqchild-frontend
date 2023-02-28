@@ -127,10 +127,10 @@ const ExtrAdminNavBar = ({ setStoredToken }) => {
                   }}
                 >
                   <div className="flex align-baseline text-gray-300 hover:text-white">
-                    <p className="md:text-xl text-md font-bold uppercase">
+                    <p className="md:text-xl text-sm font-bold uppercase">
                       Add Events
                     </p>
-                    <small className="font-normal bangers text-sm md:mt-3 mt-2   ml-2">
+                    <small className="font-normal bangers text-xs md:text-sm md:mt-3 mt-2   ml-2">
                       add weekly events
                     </small>
                   </div>
