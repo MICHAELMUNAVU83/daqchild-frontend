@@ -31,7 +31,7 @@ const MerchCard = ({ product }) => {
                   <span className="text-gray-400 krona whitespace-nowrap mr-3">
                     Daqchild Merch
                   </span>
-                  <span className="mr-2 comfortaa roboto text-gray-400">
+                  <span className="mr-2 roboto text-gray-400">
                     Kenya
                   </span>
                 </div>

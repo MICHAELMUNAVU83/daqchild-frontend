@@ -26,7 +26,7 @@ const Mixes = () => {
           Latest Mixes
         </span>
       </h1>
-      <p className="text-white bangers text-md mb-2">
+      <p className="text-white roboto text-md mb-2">
         Listen to Daqchild's latest mixes including live sets, sets from the
         lockdown sessions and more.
       </p>

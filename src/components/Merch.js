@@ -21,7 +21,7 @@ const Merch = () => {
       <h1 className="mt-4 ">
         <span className="text-4xl font-bold krona">Daqchild Merch </span>
       </h1>
-      <p className="text-gray-500 bangers  text-md">
+      <p className="text-gray-500 roboto  text-md">
         Daqchild Merch is a collection of Daqchild's merchandise. Shop now for
         Daqchild's latest merch.
       </p>
