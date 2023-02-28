@@ -72,7 +72,7 @@ const Mix = ({ mix }) => {
         {mix.downloads} {""}
         {mix.downloads === 1 ? "download" : "downloads"}{" "}
       </div>
-      <h4 className="mt-1 text-center text-xl  bebas w-[300px]    uppercase ml-4 ">
+      <h4 className="mt-1 text-center text-xl  bebas w-[280px] md:w-[300px]   uppercase ml-4 ">
         {mix.name}
       </h4>
 
