@@ -10,7 +10,7 @@ const Product = ({ setStoredToken, storedToken }) => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:3000/products/${id}`)
+    fetch(`https://gibbzthadaqchild-backend.onrender.com/products/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setProduct(data);

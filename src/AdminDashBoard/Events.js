@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 const Events = () => {
   const [events, setEvents] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/events")
+    fetch("https://gibbzthadaqchild-backend.onrender.com/events")
       .then((response) => response.json())
       .then((data) => setEvents(data));
   }, [events]);
 
   const deleteEvent = (id) => {
-    fetch(`http://localhost:3000/events/${id}`, {
+    fetch(`https://gibbzthadaqchild-backend.onrender.com/events/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())

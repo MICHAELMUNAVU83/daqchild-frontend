@@ -48,7 +48,7 @@ function AddMix({ setStoredToken, storedToken }) {
 
   const addMixFunctionality = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3000/mixes", {
+    fetch("https://gibbzthadaqchild-backend.onrender.com/mixes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

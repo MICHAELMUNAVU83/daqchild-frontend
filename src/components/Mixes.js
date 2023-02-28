@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Mixes = () => {
   const [mixes, setMixes] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/latest_mixes")
+    fetch("https://gibbzthadaqchild-backend.onrender.com/latest_mixes")
       .then((response) => response.json())
       .then((data) => {
         setMixes(data);

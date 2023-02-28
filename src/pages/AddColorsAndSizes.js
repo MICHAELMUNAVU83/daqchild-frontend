@@ -13,7 +13,7 @@ const AddColorsAndSizes = ({ storedToken, setStoredToken }) => {
 
   const addColor = () => {
     if (color !== "") {
-      fetch("http://localhost:3000/colors", {
+      fetch("https://gibbzthadaqchild-backend.onrender.com/colors", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -45,7 +45,7 @@ const AddColorsAndSizes = ({ storedToken, setStoredToken }) => {
 
   const addSize = () => {
     if (size !== "") {
-      fetch("http://localhost:3000/sizes", {
+      fetch("https://gibbzthadaqchild-backend.onrender.com/sizes", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

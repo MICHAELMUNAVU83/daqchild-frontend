@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 const Merch = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetch("https://gibbzthadaqchild-backend.onrender.com/products")
       .then((response) => response.json())
       .then((data) => setProducts(data));
   }, [products]);
 
   const deleteProduct = (id) => {
-    fetch(`http://localhost:3000/products/${id}`, {
+    fetch(`https://gibbzthadaqchild-backend.onrender.com/products/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())

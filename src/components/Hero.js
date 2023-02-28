@@ -18,7 +18,7 @@ const Hero = () => {
           <p className="text-2xl md:text-4xl text-white font-bold  bangers ">
             KING OF GOOD TIMES
           </p>
-
+{/* 
           <div
             className="marquee-w text-3xl bakbak
             md:text-8xl text-white font-bold"
@@ -31,7 +31,7 @@ const Hero = () => {
                 &nbsp; NUMBER ONE KING OF GOOD TIMES &nbsp;&nbsp;&nbsp;
               </span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

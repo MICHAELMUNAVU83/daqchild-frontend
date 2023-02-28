@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 const Mixes = () => {
   const [mixes, setMixes] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/mixes")
+    fetch("https://gibbzthadaqchild-backend.onrender.com/mixes")
       .then((response) => response.json())
       .then((data) => setMixes(data));
   }, [mixes]);
 
   const deleteMix = (id) => {
-    fetch(`http://localhost:3000/mixes/${id}`, {
+    fetch(`https://gibbzthadaqchild-backend.onrender.com/mixes/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())

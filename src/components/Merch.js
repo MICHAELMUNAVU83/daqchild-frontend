@@ -6,7 +6,7 @@ import "swiper/css";
 const Merch = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetch("https://gibbzthadaqchild-backend.onrender.com/products")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

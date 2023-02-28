@@ -14,14 +14,14 @@ const Home = ({ setStoredToken, storedToken }) => {
   const [events, setEvents] = useState([]);
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/mixes")
+    fetch("https://gibbzthadaqchild-backend.onrender.com/mixes")
       .then((response) => response.json())
       .then((data) => {
         setMixes(data);
       });
   }, []);
   useEffect(() => {
-    fetch("http://localhost:3000/events")
+    fetch("https://gibbzthadaqchild-backend.onrender.com/events")
       .then((response) => response.json())
       .then((data) => {
         setEvents(data);
@@ -29,7 +29,7 @@ const Home = ({ setStoredToken, storedToken }) => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetch("https://gibbzthadaqchild-backend.onrender.com/products")
       .then((response) => response.json())
       .then((data) => {
         setProducts(data);

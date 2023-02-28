@@ -29,7 +29,7 @@ const AddEvents = ({ setStoredToken, storedToken }) => {
 
   const addEventFunctionality = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3000/events", {
+    fetch("https://gibbzthadaqchild-backend.onrender.com/events", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
