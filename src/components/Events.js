@@ -17,13 +17,13 @@ const Events = () => {
   return (
     <div id="events" className="py-8  ">
       {events.length > 0 && (
-        <div className="flex flex-col md:flex-row justify-around pt-10">
+        <div className="flex flex-col-reverse md:flex-row justify-around pt-10">
           <div>
-            <h2 className="md:text-4xl krona text-2xl  font-bold">
+            <h2 className="md:text-4xl ml-2 hidden md:block krona text-2xl  font-bold">
               KING OF GOOD TIMES{" "}
             </h2>
 
-            <h2 className="md:text-5xl text-3xl text-gray-900  font-bold bebas ">
+            <h2 className="md:text-5xl ml-2 hidden md:block text-3xl text-gray-900  font-bold bebas ">
               {" "}
               This week's events
             </h2>
@@ -52,7 +52,7 @@ const Events = () => {
             </ul>
 
             <div className="text-center">
-              <button className="px-4 py-2 bg-[#9d6ef4] md:my-16 my-8  text-white hover:scale-110 transition duration-500 font-bold krona ease-in-out ">
+              <button className="px-4 py-2 bg-[#9d6ef4] md:my-8 my-4  text-white hover:scale-110 transition duration-500 font-bold krona ease-in-out ">
                 <a rel="noopener noreferrer" href="tel:0740769596">
                   BOOK NOW
                 </a>
@@ -60,6 +60,15 @@ const Events = () => {
             </div>
           </div>
           <div className="md:w-1/2 md:pl-32">
+            <h2 className="md:text-4xl ml-2 md:hidden block krona text-2xl  font-bold">
+              KING OF GOOD TIMES{" "}
+            </h2>
+
+            <h2 className="md:text-5xl ml-2 md:hidden block text-3xl text-gray-900  font-bold bebas ">
+              {" "}
+              This week's events
+            </h2>
+
             <Splide
               options={{
                 perPage: 1,

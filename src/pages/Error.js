@@ -105,12 +105,12 @@ const Error = () => {
         </div>
       </center>
       <center className="mt-6 cursor-pointer">
-        <a
+        <p
           onClick={() => navigate("/")}
           className="text-gray-500 cursor-pointer font-mono text-xl bg-gray-200 p-3 rounded-md hover:shadow-md"
         >
           Go back{" "}
-        </a>
+        </p>
       </center>
     </div>
   );
