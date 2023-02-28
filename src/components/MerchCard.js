@@ -9,7 +9,7 @@ const MerchCard = ({ product }) => {
         <div className="flex flex-col ">
           <div className="">
             <div className="h-62 w-full mb-3">
-              <div className="flex  flex-col place-content-center ml-2 md:ml-0 justify-center  bg-gradient-to-b  from-purple-600 via  overflow-hidden rounded-md md:w-[350px] md:h-[300px] w-[310px] h-[270px]">
+              <div className="flex  flex-col place-content-center mx-auto md:ml-0 justify-center  bg-gradient-to-b  from-purple-600 via  overflow-hidden rounded-md md:w-[350px] md:h-[300px] w-[290px] h-[270px]">
                 <img
                   src={product.product_image}
                   alt="Just a flower"
