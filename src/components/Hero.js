@@ -9,7 +9,7 @@ const Hero = () => {
           className="flex pt-20 flex-col justify-center text-center items-center h-full"
           animate={{ opacity: 1 }}
           initial={{ opacity: 0 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1 }}
         >
           <h1
             className="md:text-8xl text-4xl text-white bakbak font-bold"

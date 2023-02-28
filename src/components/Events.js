@@ -19,7 +19,7 @@ const Events = () => {
       {events.length > 0 && (
         <div className="flex flex-col md:flex-row justify-around pt-10">
           <div>
-            <h2 className="md:text-5xl krona text-2xl  font-bold">
+            <h2 className="md:text-4xl krona text-2xl  font-bold">
               KING OF GOOD TIMES{" "}
             </h2>
 

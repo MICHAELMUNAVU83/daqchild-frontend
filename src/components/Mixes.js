@@ -20,19 +20,20 @@ const Mixes = () => {
     ));
 
   return (
-    <div id="mixes" className="bg-black py-6 ">
-      <h1 className="mt-4 ">
+    <div id="mixes" className="bg-black  py-6 ">
+      
+      <h1 className="mt-4 ml-2 ">
         <span className="text-4xl text-[#9d6ef4] font-bold krona">
           Latest Mixes
         </span>
       </h1>
-      <p className="text-white roboto text-md mb-2">
+      <p className="text-white ml-2 text-sm  roboto md:text-md mb-2">
         Listen to Daqchild's latest mixes including live sets, sets from the
         lockdown sessions and more.
       </p>
 
-      <div className="flex bakbak justify-center">
-        <div className="grid md:grid-cols-2 md:gap-20 gap-10 grid-cols-1">
+      <div className="flex bakbak  justify-center">
+        <div className="grid mt-4  md:grid-cols-2 md:gap-20 gap-10 grid-cols-1">
           {mixDisplay}
         </div>
       </div>

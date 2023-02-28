@@ -53,7 +53,7 @@ const Mix = ({ mix }) => {
   };
 
   return (
-    <div className=" flex flex-col items-center shadow-[#9d6ef4] px-4 md:px-0  bg-white shadow-lg md:w-[350px] w-[300px] rounded-lg h-full py-4">
+    <div className=" flex flex-col items-center shadow-[#9d6ef4] px-4 md:px-0  bg-white shadow-xl md:w-[350px] w-[300px] rounded-lg h-full py-4">
       <div>
         <img
           src={mix.poster}
@@ -125,7 +125,7 @@ const Mix = ({ mix }) => {
         </div>
         <audio
           ref={audioRef}
-          className="mt-2"
+          className="my-4"
           onTimeUpdate={getCurrDuration}
           onLoadedData={(e) => {
             setDuration(e.currentTarget.duration.toFixed(2));
@@ -147,6 +147,7 @@ const Mix = ({ mix }) => {
         ></audio>
         <ControlPanel
           play={play}
+          className="my-2"
           isPlaying={isPlaying}
           duration={duration}
           currentTime={currentTime}
