@@ -12,7 +12,7 @@ const Hero = () => {
           transition={{ duration: 1 }}
         >
           <h1
-            className="md:text-8xl text-4xl text-white tilt font-bold"
+            className="md:text-8xl text-4xl text-white bakbak font-bold"
             style={{
               WebkitTextStroke: "2px white",
               WebkitTextFillColor: "transparent",
