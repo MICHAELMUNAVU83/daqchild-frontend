@@ -21,11 +21,17 @@ const Mixes = () => {
 
   return (
     <div id="mixes" className="bg-black py-6 ">
-      <h1 className="text-7xl krona text-white font-bold text-start ml-6 mt-10 pb-2">
-        Latest Mixes
+      <h1 className="mt-4 ">
+        <span className="text-4xl text-[#9d6ef4] font-bold krona">
+          Latest Mixes
+        </span>
       </h1>
+      <p className="text-white bangers text-md mb-2">
+        Listen to Daqchild's latest mixes including live sets, sets from the
+        lockdown sessions and more.
+      </p>
 
-      <div className="flex justify-center">
+      <div className="flex bakbak justify-center">
         <div className="grid md:grid-cols-2 md:gap-20 gap-10 grid-cols-1">
           {mixDisplay}
         </div>
