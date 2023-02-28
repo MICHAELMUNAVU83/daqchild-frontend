@@ -69,7 +69,7 @@ const Mix = ({ mix }) => {
         {mix.likes}
         {mix.likes === 1 ? "like" : "likes"} &bull; {mix.plays}{" "}
         {mix.plays === 1 ? "play" : "plays"} &bull;{""}
-        {mix.downloads} {""} 
+        {mix.downloads} {""}
         {mix.downloads === 1 ? "download" : "downloads"}{" "}
       </div>
       <h4 className="mt-1 text-center text-xl  bebas w-[300px]    uppercase ml-4 ">
@@ -84,13 +84,16 @@ const Mix = ({ mix }) => {
               className="cursor-pointer mx-1 text-[#9d6ef4]"
               onClick={() => {
                 handleDownload(mix.audio_mp3, mix.name);
-                fetch(`http://localhost:3000/mixes/${mix.id}`, {
-                  method: "PATCH",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify({ downloads: mix.downloads + 1 }),
-                });
+                fetch(
+                  `https://gibbzthadaqchild-backend.onrender.com/mixes/${mix.id}`,
+                  {
+                    method: "PATCH",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ downloads: mix.downloads + 1 }),
+                  }
+                );
               }}
             />
           </div>
@@ -106,13 +109,16 @@ const Mix = ({ mix }) => {
             <AiFillHeart
               className="text-2xl text-[#9d6ef4] hover:text-red-500 cursor-pointer "
               onClick={() => {
-                fetch(`http://localhost:3000/mixes/${mix.id}`, {
-                  method: "PATCH",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify({ likes: mix.likes + 1 }),
-                });
+                fetch(
+                  `https://gibbzthadaqchild-backend.onrender.com/mixes/${mix.id}`,
+                  {
+                    method: "PATCH",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ likes: mix.likes + 1 }),
+                  }
+                );
               }}
             />
           </div>
@@ -123,6 +129,18 @@ const Mix = ({ mix }) => {
           onTimeUpdate={getCurrDuration}
           onLoadedData={(e) => {
             setDuration(e.currentTarget.duration.toFixed(2));
+          }}
+          onPlay={() => {
+            fetch(
+              `https://gibbzthadaqchild-backend.onrender.com/mixes/${mix.id}`,
+              {
+                method: "PATCH",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ plays: mix.plays + 1 }),
+              }
+            );
           }}
           src={mix.audio_mp3}
           volume="1.0"
