@@ -12,22 +12,34 @@ import Login from "./pages/Login";
 import DashBoard from "./pages/DashBoard";
 import AddColorsAndSizes from "./pages/AddColorsAndSizes";
 import Error from "./pages/Error";
+import Loader from "./pages/Loader";
 
 function App() {
+  const [loading, setLoading] = useState(true);
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
   useEffect(() => {
-    console.log(storedToken);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
   }, [storedToken]);
   return (
     <>
       <Router>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <Home setStoredToken={setStoredToken} storedToken={storedToken} />
-            }
-          />
+          {loading ? (
+            <Route path="/" element={<Loader />} />
+          ) : (
+            <Route
+              path="/"
+              element={
+                <Home
+                  setStoredToken={setStoredToken}
+                  storedToken={storedToken}
+                />
+              }
+            />
+          )}
+
           {storedToken && (
             <>
               <Route
