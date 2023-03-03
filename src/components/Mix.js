@@ -66,10 +66,9 @@ const Mix = ({ mix }) => {
         {mix.genre}
       </span>
       <div className="ml-2 text-gray-600 uppercase text-sm font-semibold tracking-wider">
-        {mix.likes}
-        {mix.likes === 1 ? "like" : "likes"} &bull; {mix.plays}{" "}
+        {mix.likes} {mix.likes === 1 ? "like" : "likes"} &bull; {mix.plays}{" "}
         {mix.plays === 1 ? "play" : "plays"} &bull;{""}
-        {mix.downloads} {""}
+        {""} {mix.downloads} {""}
         {mix.downloads === 1 ? "download" : "downloads"}{" "}
       </div>
       <h4 className="mt-1 text-center text-xl  bebas w-[280px] md:w-[300px]   uppercase ml-4 ">
@@ -143,7 +142,7 @@ const Mix = ({ mix }) => {
             );
           }}
           src={mix.audio_mp3}
-          volume="1.0"
+          volume="0.1"
         ></audio>
         <ControlPanel
           play={play}

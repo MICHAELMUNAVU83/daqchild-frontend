@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Slider from "../components/slider/Slider";
-import ControlPanel from "../components/controls/ControlPanel";
+import MixAudio from "./MixAudio";
 
 const Mixes = () => {
   const [mixes, setMixes] = useState([]);
@@ -33,7 +32,7 @@ const Mixes = () => {
                 )}
 
                 <th className="p-3 text-left">Title</th>
-                <th className="p-3 text-left md:h-auto h-[80px]">Audio</th>
+                <th className="p-3 text-left md:h-auto h-[100px]">Audio</th>
                 <th className="p-3 text-left" width="110px">
                   Actions
                 </th>
@@ -52,13 +51,11 @@ const Mixes = () => {
                     />
                   </td>
                 )}
-                <td className="border-grey-light border hover:bg-gray-100 p-3">
+                <td className="border-grey-light border text-xs md:text-md hover:bg-gray-100 p-3">
                   {mix.name}
                 </td>
                 <td className="border-grey-light border  p-3 truncate">
-                  <audio controls>
-                    <source src={mix.audio_mp3} type="audio/mp3" />
-                  </audio>
+                  <MixAudio mix={mix} />
                 </td>
                 <td
                   className="border-grey-light border hover:bg-gray-100 p-3 text-red-400 hover:text-red-600 hover:font-medium cursor-pointer"

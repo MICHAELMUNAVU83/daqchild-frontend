@@ -1,96 +1,117 @@
 import React from "react";
 import { AiFillInstagram, AiFillTwitterCircle } from "react-icons/ai";
-import { BsSnapchat, BsSpotify, BsApple } from "react-icons/bs";
-import { SiTwitch } from "react-icons/si";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaMixcloud } from "react-icons/fa";
 import { ImPlus, ImCross } from "react-icons/im";
 import { FaFacebookF } from "react-icons/fa";
 import { IoLogoTiktok } from "react-icons/io5";
+import { FiPhoneCall } from "react-icons/fi";
 const Footer = () => {
   return (
     <div className="bg-black h-full text-white md:p-4 p-2 z-0 ">
       <p className="text-center p-3 krona text-[#9d6ef4] text-4xl">FOLLOW ME</p>
       <section className="w-full md:w-full  flex-wrap flex bg-dark   justify-center items-center ">
         <a
-          href="https://www.instagram.com/"
+          href="https://www.instagram.com/tha_daqchild/"
+          rel="noopener noreferrer"
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
           style={{ border: "1px solid white" }}
         >
           <AiFillInstagram className="text-4xl  group-hover:text-black hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
         <a
-          href="https://www.instagram.com/"
+          href="https://www.facebook.com/darkchild.mudoga/"
+          rel="noopener noreferrer"
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
           style={{ border: "1px solid white" }}
         >
           <FaFacebookF className="text-4xl group-hover:text-black   group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
         <a
-          href="https://www.instagram.com/"
+          href="https://twitter.com/thadaqchild"
+          rel="noopener noreferrer"
           style={{ border: "1px solid white" }}
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
         >
           <AiFillTwitterCircle className="text-4xl  group-hover:text-black group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
         <a
-          href="https://www.instagram.com/"
+          href="https://www.tiktok.com/@gibbzthadaqchild"
+          rel="noopener noreferrer"
           style={{ border: "1px solid white" }}
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
         >
           <IoLogoTiktok className="text-4xl  group-hover:text-black  group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
+
         <a
-          href="https://www.instagram.com/"
+          href="tel:0720038150"
+          rel="noopener noreferrer"
           style={{ border: "1px solid white" }}
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
         >
-          <BsApple className="text-4xl group-hover:text-black   group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
+          <FiPhoneCall className="text-4xl group-hover:text-black group-hover:scale-110 duration-300 mx-2 cursor-pointer" />
         </a>
         <a
-          href="https://www.instagram.com/"
+          href="tel:0720038150"
+          rel="noopener noreferrer"
           style={{ border: "1px solid white" }}
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
         >
-          <BsSpotify className="text-4xl group-hover:text-black  group-hover:scale-110 duration-300  mx-2 cursor-pointer " />
+          <FaWhatsapp className="text-4xl group-hover:text-black group-hover:scale-110 duration-300 mx-2 cursor-pointer" />
         </a>
         <a
-          href="https://www.instagram.com/"
+          href="https://www.mixcloud.com/Thadaqchild/"
           style={{ border: "1px solid white" }}
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
         >
-          <BsSnapchat className="text-4xl group-hover:text-black group-hover:scale-110 duration-300 mx-2 cursor-pointer" />
-        </a>
-        <a
-          href="https://www.instagram.com/"
-          style={{ border: "1px solid white" }}
-          className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
-        >
-          <SiTwitch className="text-4xl group-hover:text-black   group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
+          <FaMixcloud className="text-4xl group-hover:text-black   group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
         </a>
       </section>
 
       <section className="flex flex-col mt-10 md:gap-24 gap-10 md:flex-row justify-center my-4 items-center">
         <div className="flex flex-col group justify-center items-center ">
-          <p className="text-center p-3  text-[#9d6ef4] text-4xl krona">MIXES</p>
-          <p className="text-center p-1 group-hover:text-white text-gray-400 ">Video Mixes</p>
-          <p className="text-center p-1 group-hover:text-white text-gray-400  ">Audio Mixes</p>
-          <p className="text-center p-1 group-hover:text-white text-gray-400  ">Live Mixes</p>
+          <p className="text-center p-3  text-[#9d6ef4] text-4xl krona">
+            MIXES
+          </p>
+          <p className="text-center p-1 group-hover:text-white text-gray-400 ">
+            Video Mixes
+          </p>
+          <p className="text-center p-1 group-hover:text-white text-gray-400  ">
+            Audio Mixes
+          </p>
+          <p className="text-center p-1 group-hover:text-white text-gray-400  ">
+            Live Mixes
+          </p>
         </div>
         <div className="flex flex-col group justify-center items-center">
           <p className="text-center p-3 text-[#9d6ef4] krona text-4xl">
             Merchandise
           </p>
-          <p className="text-center p-1 group-hover:text-white  text-gray-400  ">T-Shirts</p>
-          <p className="text-center p-1 group-hover:text-white  text-gray-400  ">Hoodies</p>
-          <p className="text-center p-1 group-hover:text-white text-gray-400  ">Caps</p>
+          <p className="text-center p-1 group-hover:text-white  text-gray-400  ">
+            T-Shirts
+          </p>
+          <p className="text-center p-1 group-hover:text-white  text-gray-400  ">
+            Hoodies
+          </p>
+          <p className="text-center p-1 group-hover:text-white text-gray-400  ">
+            Caps
+          </p>
         </div>
 
         <div className="flex flex-col group justify-center items-center">
           <p className="text-center p-3 text-[#9d6ef4] krona text-4xl">
             Contact
           </p>
-          <p className="text-center p-1 group-hover:text-white text-gray-400 ">daqchild@gmail.com </p>
-          <p className="text-center p-1 group-hover:text-white  text-gray-400  ">+234 803 000 0000</p>
-          <p className="text-center p-1  group-hover:text-white text-gray-400  ">@daqchild</p>
+          <p className="text-center p-1 group-hover:text-white text-gray-400 ">
+            gibbzmudoga@gmail.com {""}
+          </p>
+          <p className="text-center p-1 group-hover:text-white  text-gray-400  ">
+            + 254 720 038 150
+          </p>
+          <p className="text-center p-1  group-hover:text-white text-gray-400  ">
+            @the_daqchild
+          </p>
         </div>
       </section>
 
