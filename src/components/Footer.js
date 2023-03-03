@@ -14,6 +14,7 @@ const Footer = () => {
         <a
           href="https://www.instagram.com/tha_daqchild/"
           rel="noopener noreferrer"
+          target="_blank"
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
           style={{ border: "1px solid white" }}
         >
@@ -22,6 +23,8 @@ const Footer = () => {
         <a
           href="https://www.facebook.com/darkchild.mudoga/"
           rel="noopener noreferrer"
+
+          target="_blank"
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
           style={{ border: "1px solid white" }}
         >
@@ -30,6 +33,7 @@ const Footer = () => {
         <a
           href="https://twitter.com/thadaqchild"
           rel="noopener noreferrer"
+          target="_blank"
           style={{ border: "1px solid white" }}
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
         >
@@ -47,6 +51,7 @@ const Footer = () => {
         <a
           href="tel:0720038150"
           rel="noopener noreferrer"
+          target="_blank"
           style={{ border: "1px solid white" }}
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
         >
@@ -55,6 +60,7 @@ const Footer = () => {
         <a
           href="tel:0720038150"
           rel="noopener noreferrer"
+          target="_blank"
           style={{ border: "1px solid white" }}
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
         >
@@ -63,6 +69,7 @@ const Footer = () => {
         <a
           href="https://www.mixcloud.com/Thadaqchild/"
           style={{ border: "1px solid white" }}
+          target="_blank"
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
         >
           <FaMixcloud className="text-4xl group-hover:text-black   group-hover:scale-110 duration-300 mx-2 cursor-pointer " />
@@ -128,6 +135,7 @@ const Footer = () => {
               className="text-white"
               href="https://michael-munavu.vercel.app/"
               rel="noopener noreferrer"
+              target="_blank"
             >
               Michael Munavu
             </a>

@@ -15,7 +15,7 @@ const Events = () => {
   }, []);
 
   return (
-    <div id="events" className="py-8  ">
+    <div id="events" className="py-4  ">
       {events.length > 0 && (
         <div className="flex flex-col-reverse md:flex-row justify-around pt-10">
           <div>
@@ -53,7 +53,7 @@ const Events = () => {
 
             <div className="text-center">
               <button className="px-4 py-2 bg-[#9d6ef4] md:my-8 my-4  text-white hover:scale-110 transition duration-500 font-bold krona ease-in-out ">
-                <a rel="noopener noreferrer"  href="tel:0720038150">
+                <a rel="noopener noreferrer" href="tel:0720038150">
                   BOOK NOW
                 </a>
               </button>
