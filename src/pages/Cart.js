@@ -73,7 +73,7 @@ const Cart = ({ setStoredToken, storedToken }) => {
                         <span className="text-lg font-medium text-gray-400 mr-1">
                           Subtotal:
                         </span>
-                        <span className="text-lg font-bold text-gray-800 ">
+                        <span className="md:text-lg text-md font-bold text-gray-800 ">
                           {" "}
                           KSh {totalPrice}
                         </span>

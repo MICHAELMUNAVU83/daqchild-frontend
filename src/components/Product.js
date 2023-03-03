@@ -170,15 +170,15 @@ const Product = ({ setStoredToken, storedToken }) => {
                   KSH {product.price}
                 </span>
                 {isInCart ? (
-                  <button
-                    className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:scale-110 duration-300 ease-in-out rounded"
+                  <button 
+                    className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-2 md:px-4 md:px-6 text-sm focus:outline-none  duration-300 ease-in-out rounded"
                     onClick={() => removeFromArray(product.id)}
                   >
                     Remove from Cart
                   </button>
                 ) : (
                   <button
-                    className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:scale-110 duration-300 ease-in-out rounded"
+                    className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none  duration-300 ease-in-out rounded"
                     onClick={() => addCart(product)}
                   >
                     Add to Cart
