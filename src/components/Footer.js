@@ -122,7 +122,16 @@ const Footer = () => {
         </div>
         <div className="flex  flex-col mx-2 items-start md:flex-row">
           <p className="text-center p-1  text-gray-400  ">© 2023</p>
-          <p className="text-center p-1  text-gray-400  ">daqchild ent </p>
+          <p className="text-center p-1 flex flex-col align-start md:flex-row gap-2  text-gray-400  ">
+            Developed by{" "}
+            <a
+              className="text-white"
+              href="https://michael-munavu.vercel.app/"
+              rel="noopener noreferrer"
+            >
+              Michael Munavu
+            </a>
+          </p>
           <p className="text-center p-1  text-gray-400  ">
             All rights reserved
           </p>
