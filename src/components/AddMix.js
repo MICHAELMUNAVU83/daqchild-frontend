@@ -126,13 +126,12 @@ function AddMix({ setStoredToken, storedToken }) {
                         onChange={(e) => setGenre(e.target.value)}
                       >
                         <option selected>Choose a genre</option>
+                        <option value="All Genres">All Genres</option>
                         <option value="Afrobeat">Afrobeat</option>
                         <option value="Gengetone">Gengetone</option>
                         <option value="Kenyan">Kenyan</option>
                         <option value="Bongo">Bongo</option>
                         <option value="Hip Hop">Hip Hop</option>
-                        <option value="House">House</option>
-                        <option value="All Genres">All Genres</option>
                         <option value="Amapiano">Amapiano</option>
                         <option value="R&B">R&B</option>
                         <option value="Reggae">Reggae</option>
