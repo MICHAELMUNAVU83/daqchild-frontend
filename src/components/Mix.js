@@ -2,7 +2,10 @@ import React, { useState, useRef } from "react";
 import { AiFillHeart } from "react-icons/ai";
 import Slider from "./slider/Slider";
 import ControlPanel from "./controls/ControlPanel";
-import { BiCloudDownload } from "react-icons/bi";
+import { FaDownload } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 const Mix = ({ mix }) => {
   const handleDownload = async (audiofile, name) => {
     const response = await fetch(audiofile);
@@ -78,7 +81,7 @@ const Mix = ({ mix }) => {
       <div className="mt-4 w-full px-4">
         <div className="flex justify-between">
           <div>
-            <BiCloudDownload
+            <FaDownload
               size={25}
               className="cursor-pointer mx-1 text-[#9d6ef4]"
               onClick={() => {
@@ -93,6 +96,16 @@ const Mix = ({ mix }) => {
                     body: JSON.stringify({ downloads: mix.downloads + 1 }),
                   }
                 );
+                toast.success("Downloaded Successfully", {
+                  position: "top-center",
+                  autoClose: 2000,
+                  hideProgressBar: false,
+
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                });
               }}
             />
           </div>
@@ -104,9 +117,10 @@ const Mix = ({ mix }) => {
             />
           </div>
           <div className="flex items-center kanit font-bold gap-2">
-            <p>{mix.likes}</p>
+            <p className="text-xl">{mix.likes}</p>
             <AiFillHeart
               className="text-2xl text-[#9d6ef4] hover:text-red-500 cursor-pointer "
+              size={25}
               onClick={() => {
                 fetch(
                   `https://gibbzthadaqchild-backend.onrender.com/mixes/${mix.id}`,
@@ -152,6 +166,7 @@ const Mix = ({ mix }) => {
           currentTime={currentTime}
         />
       </div>
+      <ToastContainer />
     </div>
   );
 };
