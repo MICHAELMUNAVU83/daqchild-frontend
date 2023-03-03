@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Slider from "../components/slider/Slider";
+import ControlPanel from "../components/controls/ControlPanel";
 
 const Mixes = () => {
   const [mixes, setMixes] = useState([]);
