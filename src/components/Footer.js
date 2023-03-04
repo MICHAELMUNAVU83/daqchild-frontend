@@ -69,6 +69,7 @@ const Footer = () => {
         <a
           href="https://www.mixcloud.com/Thadaqchild/"
           style={{ border: "1px solid white" }}
+          rel=" noreferrer"
           target="_blank"
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
         >
