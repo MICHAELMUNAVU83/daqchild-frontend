@@ -13,7 +13,7 @@ const Footer = () => {
       <section className="w-full md:w-full  flex-wrap flex bg-dark   justify-center items-center ">
         <a
           href="https://www.instagram.com/tha_daqchild/"
-          rel="noopener noreferrer"
+          rel="noreferrer"
           target="_blank"
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
           style={{ border: "1px solid white" }}
@@ -22,7 +22,7 @@ const Footer = () => {
         </a>
         <a
           href="https://www.facebook.com/darkchild.mudoga/"
-          rel="noopener noreferrer"
+          rel=" noreferrer"
 
           target="_blank"
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
@@ -32,7 +32,7 @@ const Footer = () => {
         </a>
         <a
           href="https://twitter.com/thadaqchild"
-          rel="noopener noreferrer"
+          rel=" noreferrer"
           target="_blank"
           style={{ border: "1px solid white" }}
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
@@ -41,7 +41,7 @@ const Footer = () => {
         </a>
         <a
           href="https://www.tiktok.com/@gibbzthadaqchild"
-          rel="noopener noreferrer"
+          rel=" noreferrer"
           style={{ border: "1px solid white" }}
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
         >
@@ -50,7 +50,7 @@ const Footer = () => {
 
         <a
           href="tel:0720038150"
-          rel="noopener noreferrer"
+          rel=" noreferrer"
           target="_blank"
           style={{ border: "1px solid white" }}
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
@@ -59,7 +59,7 @@ const Footer = () => {
         </a>
         <a
           href="tel:0720038150"
-          rel="noopener noreferrer"
+          rel=" noreferrer"
           target="_blank"
           style={{ border: "1px solid white" }}
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
@@ -134,7 +134,7 @@ const Footer = () => {
             <a
               className="text-white"
               href="https://michael-munavu.vercel.app/"
-              rel="noopener noreferrer"
+              rel=" noreferrer"
               target="_blank"
             >
               Michael Munavu
