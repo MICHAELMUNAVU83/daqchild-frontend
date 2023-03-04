@@ -32,7 +32,7 @@ function ControlPanel({ play, isPlaying, duration, currentTime }) {
   }
 
   return (
-    <div className="flex items-center justify-between w-full">
+    <div className="flex items-center justify-between text-gray-600 w-full">
       <div className="text-sm mx-2">{secondsToHms(currentTime)}</div>
       <Button play={play} isPlaying={isPlaying} />
       <div className="text-sm mx-2">{secondsToHms(duration)}</div>

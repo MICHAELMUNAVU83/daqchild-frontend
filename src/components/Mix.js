@@ -54,6 +54,18 @@ const Mix = ({ mix }) => {
     setPercentage(+percent);
     setCurrentTime(time.toFixed(2));
   };
+  function nFormatter(num) {
+    if (num >= 1000000000) {
+      return (num / 1000000000).toFixed(1).replace(/\.0$/, "") + "G";
+    }
+    if (num >= 1000000) {
+      return (num / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+    }
+    if (num >= 1000) {
+      return (num / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+    }
+    return num;
+  }
 
   return (
     <div className=" flex flex-col items-center shadow-[#9d6ef4] px-4 md:px-0  bg-white shadow-xl md:w-[350px] w-[300px] rounded-lg h-full py-4">
@@ -68,10 +80,11 @@ const Mix = ({ mix }) => {
       <span className="bg-[#9d6ef4] my-2 text-white text-xs px-2  text-end rounded-full  uppercase font-semibold tracking-wide">
         {mix.genre}
       </span>
-      <div className="ml-2 text-gray-600 uppercase text-sm font-semibold tracking-wider">
-        {mix.likes} {mix.likes === 1 ? "like" : "likes"} &bull; {mix.plays}{" "}
+      <div className="ml-2 text-gray-600 uppercase text-xs md:text-sm font-semibold ">
+        {nFormatter(mix.likes)} {""}
+        {mix.likes === 1 ? "like" : "likes"} &bull; {nFormatter(mix.plays)}{" "}
         {mix.plays === 1 ? "play" : "plays"} &bull;{""}
-        {""} {mix.downloads} {""}
+        {""} {nFormatter(mix.downloads)} {""}
         {mix.downloads === 1 ? "download" : "downloads"}{" "}
       </div>
       <h4 className="mt-1 text-center text-xl  bebas w-[280px] md:w-[300px]   uppercase ml-4 ">
@@ -96,11 +109,10 @@ const Mix = ({ mix }) => {
                     body: JSON.stringify({ downloads: mix.downloads + 1 }),
                   }
                 );
-                toast.success("Downloaded Successfully", {
+                toast.success("Mix will be downloaded shortly", {
                   position: "top-center",
                   autoClose: 2000,
                   hideProgressBar: false,
-
                   closeOnClick: true,
                   pauseOnHover: true,
                   draggable: true,
@@ -117,7 +129,7 @@ const Mix = ({ mix }) => {
             />
           </div>
           <div className="flex items-center kanit font-bold gap-2">
-            <p className="text-xl">{mix.likes}</p>
+            <p className="text-xl bakbak font-bold">{nFormatter(mix.likes)}</p>
             <AiFillHeart
               className="text-2xl text-[#9d6ef4] hover:text-red-500 cursor-pointer "
               size={25}
