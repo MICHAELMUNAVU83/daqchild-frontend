@@ -1,12 +1,11 @@
 import React from "react";
+import load from "./load.png";
 
 const Loader = () => {
   return (
-    <div className="bg-purple-500 h-screen">
-      <div class="flex items-center justify-center space-x-2 animate-bounce mx-auto h-screen">
-        <div class="w-8 h-8 bg-blue-400 rounded-full"></div>
-        <div class="w-8 h-8 bg-green-400 rounded-full"></div>
-        <div class="w-8 h-8 bg-black rounded-full"></div>
+    <div className="bg-white h-[100vh]  animate-spin">
+      <div className="flex justify-center items-center h-full ">
+        <img src={load} alt="loading" className="animate-spin-1" />
       </div>
     </div>
   );
