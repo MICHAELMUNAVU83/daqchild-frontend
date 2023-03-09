@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Mixes = () => {
   const [mixes, setMixes] = useState([]);
   useEffect(() => {
-    fetch("https://gibbzthadaqchild-backend.onrender.com/latest_mixes")
+    fetch("https://thadaqchild.onrender.com/latest_mixes")
       .then((response) => response.json())
       .then((data) => {
         setMixes(data);
@@ -21,7 +21,6 @@ const Mixes = () => {
 
   return (
     <div id="mixes" className="bg-black  py-6 ">
-      
       <h1 className="mt-4 ml-2 ">
         <span className="text-4xl text-[#9d6ef4] font-bold krona">
           Latest Mixes

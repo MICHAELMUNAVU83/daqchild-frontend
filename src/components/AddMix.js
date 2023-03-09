@@ -14,7 +14,6 @@ function AddMix({ setStoredToken, storedToken }) {
   const [genre, setGenre] = useState("");
 
   const uploadAudio = (files) => {
-
     const formData = new FormData();
 
     formData.append("file", files[0]);
@@ -28,8 +27,6 @@ function AddMix({ setStoredToken, storedToken }) {
         setAudio(data.secure_url);
         console.log(data);
       });
-    
-    
   };
   const uploadImage = (files) => {
     const formData = new FormData();
@@ -48,7 +45,7 @@ function AddMix({ setStoredToken, storedToken }) {
 
   const addMixFunctionality = (e) => {
     e.preventDefault();
-    fetch("https://gibbzthadaqchild-backend.onrender.com/mixes", {
+    fetch("https://thadaqchild.onrender.com/mixes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +61,7 @@ function AddMix({ setStoredToken, storedToken }) {
       .then((data) => {
         console.log(data);
       });
-    
+
     setTimeout(() => {
       navigate("/");
     }, 1000);

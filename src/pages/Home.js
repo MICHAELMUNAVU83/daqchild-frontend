@@ -8,20 +8,19 @@ import Merch from "../components/Merch";
 import NavBar from "../components/NavBar";
 import AdminNavbar from "../components/AdminNavbar";
 
-
 const Home = ({ setStoredToken, storedToken }) => {
   const [mixes, setMixes] = useState([]);
   const [events, setEvents] = useState([]);
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://gibbzthadaqchild-backend.onrender.com/mixes")
+    fetch("https://thadaqchild.onrender.com/mixes")
       .then((response) => response.json())
       .then((data) => {
         setMixes(data);
       });
   }, []);
   useEffect(() => {
-    fetch("https://gibbzthadaqchild-backend.onrender.com/events")
+    fetch("https://thadaqchild.onrender.com/events")
       .then((response) => response.json())
       .then((data) => {
         setEvents(data);
@@ -29,7 +28,7 @@ const Home = ({ setStoredToken, storedToken }) => {
   }, []);
 
   useEffect(() => {
-    fetch("https://gibbzthadaqchild-backend.onrender.com/products")
+    fetch("https://thadaqchild.onrender.com/products")
       .then((response) => response.json())
       .then((data) => {
         setProducts(data);
@@ -49,7 +48,7 @@ const Home = ({ setStoredToken, storedToken }) => {
       {products.length > 0 && <Merch />}
 
       <Photos />
-     
+
       <Footer />
     </div>
   );

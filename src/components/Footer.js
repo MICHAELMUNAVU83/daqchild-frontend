@@ -58,7 +58,7 @@ const Footer = () => {
           <FiPhoneCall className="text-4xl group-hover:text-black group-hover:scale-110 duration-300 mx-2 cursor-pointer" />
         </a>
         <a
-          href="tel:0720038150"
+          href="https://wa.me/254720038150"
           rel=" noreferrer"
           target="_blank"
           style={{ border: "1px solid white" }}

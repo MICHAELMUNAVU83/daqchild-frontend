@@ -10,7 +10,7 @@ const Product = ({ setStoredToken, storedToken }) => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
   useEffect(() => {
-    fetch(`https://gibbzthadaqchild-backend.onrender.com/products/${id}`)
+    fetch(`https://thadaqchild.onrender.com//products/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setProduct(data);
@@ -130,7 +130,9 @@ const Product = ({ setStoredToken, storedToken }) => {
               <p className="leading-relaxed">{product.description}</p>
               <div className="flex flex-col md:flex-row mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
                 <div className="flex my-4">
-                  <span className="text-2xl bakbak md:mt-1 md:text-md">Colors:</span>
+                  <span className="text-2xl bakbak md:mt-1 md:text-md">
+                    Colors:
+                  </span>
                   {product.colors &&
                     product.colors.map((color) => (
                       <button
@@ -170,7 +172,7 @@ const Product = ({ setStoredToken, storedToken }) => {
                   KSH {product.price}
                 </span>
                 {isInCart ? (
-                  <button 
+                  <button
                     className="flex ml-auto text-white bg-purple-500 border-0 py-2 px-2 md:px-4 md:px-6 text-sm focus:outline-none  duration-300 ease-in-out rounded"
                     onClick={() => removeFromArray(product.id)}
                   >

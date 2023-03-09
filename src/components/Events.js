@@ -7,7 +7,7 @@ import { ImMusic } from "react-icons/im";
 const Events = () => {
   const [events, setEvents] = useState([]);
   useEffect(() => {
-    fetch("https://gibbzthadaqchild-backend.onrender.com/events")
+    fetch("https://thadaqchild.onrender.com/events")
       .then((response) => response.json())
       .then((data) => {
         setEvents(data);

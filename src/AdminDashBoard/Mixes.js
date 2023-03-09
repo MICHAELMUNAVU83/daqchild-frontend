@@ -4,13 +4,13 @@ import MixAudio from "./MixAudio";
 const Mixes = () => {
   const [mixes, setMixes] = useState([]);
   useEffect(() => {
-    fetch("https://gibbzthadaqchild-backend.onrender.com/mixes")
+    fetch("https://thadaqchild.onrender.com/mixes")
       .then((response) => response.json())
       .then((data) => setMixes(data));
   }, [mixes]);
 
   const deleteMix = (id) => {
-    fetch(`https://gibbzthadaqchild-backend.onrender.com/mixes/${id}`, {
+    fetch(`https://thadaqchild.onrender.com/mixes/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())

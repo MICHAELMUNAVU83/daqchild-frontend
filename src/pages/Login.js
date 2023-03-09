@@ -7,12 +7,12 @@ import { ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 function Login({ setStoredToken, storedToken }) {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const navigate = useNavigate();
   const [password, setPassword] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("https://gibbzthadaqchild-backend.onrender.com/api/v1/login", {
+    fetch("https://thadaqchild.onrender.com/api/v1/login", {
       method: "POST",
       headers: {
         Accepts: "application/json",
@@ -20,7 +20,7 @@ function Login({ setStoredToken, storedToken }) {
       },
       body: JSON.stringify({
         user: {
-          username,
+          email,
           password,
         },
       }),
@@ -45,7 +45,7 @@ function Login({ setStoredToken, storedToken }) {
         }
       });
 
-    setUsername("");
+    setEmail("");
 
     setPassword("");
   };
@@ -56,7 +56,7 @@ function Login({ setStoredToken, storedToken }) {
       ) : (
         <ExtraNavbar />
       )}
-    
+
       <section>
         <div className="flex flex-col  items-center justify-center px-6 py-8 mx-auto h-screen md:h-screen lg:py-0">
           <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-black">
@@ -74,14 +74,14 @@ function Login({ setStoredToken, storedToken }) {
               <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    Username
+                    Email
                   </label>
                   <input
                     type="text"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="bg-white border border-gray-300 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
-                    placeholder="name"
+                    placeholder="Email"
                     required=""
                   />
                 </div>

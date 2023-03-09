@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 const Merch = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://gibbzthadaqchild-backend.onrender.com/products")
+    fetch("https://thadaqchild.onrender.com/products")
       .then((response) => response.json())
       .then((data) => setProducts(data));
   }, [products]);
 
   const deleteProduct = (id) => {
-    fetch(`https://gibbzthadaqchild-backend.onrender.com/products/${id}`, {
+    fetch(`https://thadaqchild.onrender.com/products/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())
@@ -53,7 +53,7 @@ const Merch = () => {
                   {product.name}
                 </td>
                 <td className="border-grey-light border hover:bg-gray-100 p-3 truncate">
-                 Ksh {product.price}
+                  Ksh {product.price}
                 </td>
                 <td
                   className="border-grey-light border hover:bg-gray-100 p-3 text-red-400 hover:text-red-600 hover:font-medium cursor-pointer"

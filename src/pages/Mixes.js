@@ -6,7 +6,7 @@ import ExtrAdminNavBar from "../components/ExtraAdminNavbar";
 const Mixes = ({ setStoredToken, storedToken }) => {
   const [mixes, setMixes] = useState([]);
   useEffect(() => {
-    fetch("https://gibbzthadaqchild-backend.onrender.com/mixes")
+    fetch("https://thadaqchild.onrender.com/mixes")
       .then((response) => response.json())
       .then((data) => {
         setMixes(data);
@@ -19,7 +19,7 @@ const Mixes = ({ setStoredToken, storedToken }) => {
       <Mix
         key={mix.id}
         mix={mix}
-        // handleDownload={handleDownload}
+     
       />
     ));
 

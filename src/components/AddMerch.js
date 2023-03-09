@@ -27,7 +27,7 @@ const AddMerch = ({ setStoredToken, storedToken }) => {
 
   const addMerchFunctionality = (e) => {
     e.preventDefault();
-    fetch("https://gibbzthadaqchild-backend.onrender.com/products", {
+    fetch("https://thadaqchild.onrender.com/products", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
