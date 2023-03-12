@@ -54,7 +54,7 @@ const Events = () => {
             <div className="text-center">
               <button className="px-4 py-2 bg-[#9d6ef4] md:my-8 my-4  text-white hover:scale-110 transition duration-500 font-bold krona ease-in-out ">
                 <a rel="noopener noreferrer" href="tel:0720038150">
-                  BOOK NOW
+                  BOOK THA DAQCHILD
                 </a>
               </button>
             </div>
