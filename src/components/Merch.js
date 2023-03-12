@@ -11,7 +11,6 @@ const Merch = () => {
     fetch("https://thadaqchild.onrender.com/products")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setProducts(data);
       });
   }, []);

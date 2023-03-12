@@ -15,7 +15,7 @@ const Mixes = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+       
         setMixes(mixes.filter((mix) => mix.id !== id));
       });
   };

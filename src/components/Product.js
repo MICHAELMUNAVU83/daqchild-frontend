@@ -14,10 +14,10 @@ const Product = ({ setStoredToken, storedToken }) => {
       .then((response) => response.json())
       .then((data) => {
         setProduct(data);
-        console.log(data);
+       
       });
   }, [id]);
-  console.log(saved.length);
+
 
   const isInCart = saved.some((item) => item.id === product.id);
 

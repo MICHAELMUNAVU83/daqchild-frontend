@@ -25,7 +25,7 @@ function AddMix({ setStoredToken, storedToken }) {
       .then((response) => response.json())
       .then((data) => {
         setAudio(data.secure_url);
-        console.log(data);
+       
       });
   };
   const uploadImage = (files) => {
@@ -58,9 +58,7 @@ function AddMix({ setStoredToken, storedToken }) {
       }),
     })
       .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      });
+     
 
     setTimeout(() => {
       navigate("/");

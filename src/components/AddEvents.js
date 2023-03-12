@@ -8,7 +8,6 @@ import "react-toastify/dist/ReactToastify.css";
 const AddEvents = ({ setStoredToken, storedToken }) => {
   const navigate = useNavigate();
   const reference = useRef();
-  console.log(reference);
   const [poster, setPoster] = useState("");
   const [location, setLocation] = useState("");
   const [date, setDate] = useState("");
@@ -39,11 +38,7 @@ const AddEvents = ({ setStoredToken, storedToken }) => {
         location: location,
         date: date,
       }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      });
+    }).then((response) => response.json());
 
     setTimeout(() => {
       navigate("/");

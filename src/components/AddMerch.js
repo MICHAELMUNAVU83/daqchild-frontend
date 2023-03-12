@@ -40,9 +40,7 @@ const AddMerch = ({ setStoredToken, storedToken }) => {
       }),
     })
       .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      });
+      
 
     setTimeout(() => {
       navigate("/");

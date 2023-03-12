@@ -14,7 +14,7 @@ const Events = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        
         setEvents(events.filter((event) => event.id !== id));
       });
   };
