@@ -3,18 +3,17 @@ import React, { useState, useEffect } from "react";
 const Events = () => {
   const [events, setEvents] = useState([]);
   useEffect(() => {
-    fetch("https://thadaqchild.onrender.com/events")
+    fetch("https://gibbz-tha-daqchild-api.herokuapp.com/events")
       .then((response) => response.json())
       .then((data) => setEvents(data));
   }, [events]);
 
   const deleteEvent = (id) => {
-    fetch(`https://thadaqchild.onrender.com/events/${id}`, {
+    fetch(`https://gibbz-tha-daqchild-api.herokuapp.com/events/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())
       .then((data) => {
-        
         setEvents(events.filter((event) => event.id !== id));
       });
   };

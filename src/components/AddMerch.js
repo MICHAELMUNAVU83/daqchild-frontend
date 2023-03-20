@@ -27,7 +27,7 @@ const AddMerch = ({ setStoredToken, storedToken }) => {
 
   const addMerchFunctionality = (e) => {
     e.preventDefault();
-    fetch("https://thadaqchild.onrender.com/products", {
+    fetch("https://gibbz-tha-daqchild-api.herokuapp.com/products", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -38,9 +38,7 @@ const AddMerch = ({ setStoredToken, storedToken }) => {
         product_image: productImage,
         description: description,
       }),
-    })
-      .then((response) => response.json())
-      
+    }).then((response) => response.json());
 
     setTimeout(() => {
       navigate("/");

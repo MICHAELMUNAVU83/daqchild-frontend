@@ -4,18 +4,17 @@ import MixAudio from "./MixAudio";
 const Mixes = () => {
   const [mixes, setMixes] = useState([]);
   useEffect(() => {
-    fetch("https://thadaqchild.onrender.com/mixes")
+    fetch("https://gibbz-tha-daqchild-api.herokuapp.com/mixes")
       .then((response) => response.json())
       .then((data) => setMixes(data));
   }, [mixes]);
 
   const deleteMix = (id) => {
-    fetch(`https://thadaqchild.onrender.com/mixes/${id}`, {
+    fetch(`https://gibbz-tha-daqchild-api.herokuapp.com/mixes/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())
       .then((data) => {
-       
         setMixes(mixes.filter((mix) => mix.id !== id));
       });
   };

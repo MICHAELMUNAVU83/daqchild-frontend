@@ -99,13 +99,16 @@ const Mix = ({ mix }) => {
               className="cursor-pointer mx-1 text-[#9d6ef4]"
               onClick={() => {
                 handleDownload(mix.audio_mp3, mix.name);
-                fetch(`https://thadaqchild.onrender.com//mixes/${mix.id}`, {
-                  method: "PATCH",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify({ downloads: mix.downloads + 1 }),
-                });
+                fetch(
+                  `https://gibbz-tha-daqchild-api.herokuapp.com//mixes/${mix.id}`,
+                  {
+                    method: "PATCH",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ downloads: mix.downloads + 1 }),
+                  }
+                );
                 toast.success("Mix will be downloaded shortly", {
                   position: "top-center",
                   autoClose: 2000,
@@ -131,13 +134,16 @@ const Mix = ({ mix }) => {
               className="text-2xl text-[#9d6ef4] hover:text-red-500 cursor-pointer "
               size={25}
               onClick={() => {
-                fetch(`https://thadaqchild.onrender.com//mixes/${mix.id}`, {
-                  method: "PATCH",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify({ likes: mix.likes + 1 }),
-                });
+                fetch(
+                  `https://gibbz-tha-daqchild-api.herokuapp.com//mixes/${mix.id}`,
+                  {
+                    method: "PATCH",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ likes: mix.likes + 1 }),
+                  }
+                );
               }}
             />
           </div>
@@ -150,13 +156,16 @@ const Mix = ({ mix }) => {
             setDuration(e.currentTarget.duration.toFixed(2));
           }}
           onPlay={() => {
-            fetch(`https://thadaqchild.onrender.com//mixes/${mix.id}`, {
-              method: "PATCH",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ plays: mix.plays + 1 }),
-            });
+            fetch(
+              `https://gibbz-tha-daqchild-api.herokuapp.com//mixes/${mix.id}`,
+              {
+                method: "PATCH",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ plays: mix.plays + 1 }),
+              }
+            );
           }}
           src={mix.audio_mp3}
           volume="0.1"

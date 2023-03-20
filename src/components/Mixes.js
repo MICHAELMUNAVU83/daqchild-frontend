@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Mixes = () => {
   const [mixes, setMixes] = useState([]);
   useEffect(() => {
-    fetch("https://thadaqchild.onrender.com/latest_mixes")
+    fetch("https://gibbz-tha-daqchild-api.herokuapp.com/latest_mixes")
       .then((response) => response.json())
       .then((data) => {
         setMixes(data);

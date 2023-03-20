@@ -6,7 +6,7 @@ import ExtrAdminNavBar from "../components/ExtraAdminNavbar";
 const Mixes = ({ setStoredToken, storedToken }) => {
   const [mixes, setMixes] = useState([]);
   useEffect(() => {
-    fetch("https://thadaqchild.onrender.com/mixes")
+    fetch("https://gibbz-tha-daqchild-api.herokuapp.com/mixes")
       .then((response) => response.json())
       .then((data) => {
         setMixes(data);
@@ -14,14 +14,7 @@ const Mixes = ({ setStoredToken, storedToken }) => {
   }, [mixes]);
 
   const mixDisplay =
-    mixes.length > 0 &&
-    mixes.map((mix) => (
-      <Mix
-        key={mix.id}
-        mix={mix}
-     
-      />
-    ));
+    mixes.length > 0 && mixes.map((mix) => <Mix key={mix.id} mix={mix} />);
 
   return (
     <>

@@ -12,7 +12,7 @@ function Login({ setStoredToken, storedToken }) {
   const [password, setPassword] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("https://thadaqchild.onrender.com/api/v1/login", {
+    fetch("https://gibbz-tha-daqchild-api.herokuapp.com/api/v1/login", {
       method: "POST",
       headers: {
         Accepts: "application/json",

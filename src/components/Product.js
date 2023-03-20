@@ -10,14 +10,12 @@ const Product = ({ setStoredToken, storedToken }) => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
   useEffect(() => {
-    fetch(`https://thadaqchild.onrender.com//products/${id}`)
+    fetch(`https://gibbz-tha-daqchild-api.herokuapp.com//products/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setProduct(data);
-       
       });
   }, [id]);
-
 
   const isInCart = saved.some((item) => item.id === product.id);
 

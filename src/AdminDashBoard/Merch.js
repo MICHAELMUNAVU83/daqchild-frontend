@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 const Merch = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://thadaqchild.onrender.com/products")
+    fetch("https://gibbz-tha-daqchild-api.herokuapp.com/products")
       .then((response) => response.json())
       .then((data) => setProducts(data));
   }, [products]);
 
   const deleteProduct = (id) => {
-    fetch(`https://thadaqchild.onrender.com/products/${id}`, {
+    fetch(`https://gibbz-tha-daqchild-api.herokuapp.com/products/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())

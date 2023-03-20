@@ -13,14 +13,14 @@ const Home = ({ setStoredToken, storedToken }) => {
   const [events, setEvents] = useState([]);
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://thadaqchild.onrender.com/mixes")
+    fetch("https://gibbz-tha-daqchild-api.herokuapp.com/mixes")
       .then((response) => response.json())
       .then((data) => {
         setMixes(data);
       });
   }, []);
   useEffect(() => {
-    fetch("https://thadaqchild.onrender.com/events")
+    fetch("https://gibbz-tha-daqchild-api.herokuapp.com/events")
       .then((response) => response.json())
       .then((data) => {
         setEvents(data);
@@ -28,7 +28,7 @@ const Home = ({ setStoredToken, storedToken }) => {
   }, []);
 
   useEffect(() => {
-    fetch("https://thadaqchild.onrender.com/products")
+    fetch("https://gibbz-tha-daqchild-api.herokuapp.com/products")
       .then((response) => response.json())
       .then((data) => {
         setProducts(data);

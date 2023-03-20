@@ -28,7 +28,7 @@ const AddEvents = ({ setStoredToken, storedToken }) => {
 
   const addEventFunctionality = (e) => {
     e.preventDefault();
-    fetch("https://thadaqchild.onrender.com/events", {
+    fetch("https://gibbz-tha-daqchild-api.herokuapp.com/events", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
