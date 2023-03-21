@@ -29,21 +29,21 @@ const Events = () => {
             </h2>
             <ul className="flex flex-col p-4 mx-2 rounded-lg my-4 ">
               {events.map((event) => (
-                <li className="border-gray-400 flex flex-row mb-2  md:h-[70px] h-[70px]">
+                <li className="border-gray-400 flex flex-row mb-2  md:h-[70px] h-[90px]">
                   <div className="select-none cursor-pointer p-2  md:p-4 rounded-2xl text-white bg-black  flex flex-1 items-center  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
                     <div className="flex flex-col rounded-md w-8 h-8 bg-[#9d6ef4] p-2 justify-center items-center mr-4">
                       <ImMusic className="text-2xl text-white" />
                     </div>
                     <div className="flex-1 pl-1 mr-16">
-                      <div className="font-bold text-2xl dancing">
+                      <div className="font-bold text-sm md:text-2xl dancing">
                         {" "}
                         {moment(event.date).format("dddd")}{" "}
                       </div>
-                      <div className=" text-sm inter ">
+                      <div className=" md:text-sm text-xs inter ">
                         {moment(event.date).format("MMM Do YYYY")}{" "}
                       </div>
                     </div>
-                    <div className="text-2xl md:text-3xl bebas">
+                    <div className="md:text-2xl text-md md:text-3xl bebas">
                       {event.location}{" "}
                     </div>
                   </div>
