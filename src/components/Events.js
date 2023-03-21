@@ -35,7 +35,7 @@ const Events = () => {
                       <ImMusic className="text-2xl text-white" />
                     </div>
                     <div className="flex-1 pl-1 mr-16">
-                      <div className="font-bold text-sm md:text-2xl dancing">
+                      <div className="font-bold text-xl md:text-2xl dancing">
                         {" "}
                         {moment(event.date).format("dddd")}{" "}
                       </div>
