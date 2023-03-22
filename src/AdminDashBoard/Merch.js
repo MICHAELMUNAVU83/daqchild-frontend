@@ -44,7 +44,7 @@ const Merch = () => {
                   <td className="border-grey-light border hover:bg-gray-100 p-3">
                     <img
                       className="w-24 h-24 rounded-full"
-                      alt="poster"
+                      alt="gibbz tha daqchild event poster"
                       src={product.product_image}
                     />
                   </td>

@@ -64,7 +64,7 @@ function Login({ setStoredToken, storedToken }) {
               <img
                 className="w-20 h-20 mr-2 rounded-full"
                 src={ma}
-                alt="logo"
+                alt="gibbz tha daqchild logo"
               />
             </div>
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">

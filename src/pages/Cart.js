@@ -90,7 +90,7 @@ const Cart = ({ setStoredToken, storedToken }) => {
                         <img
                           src={mpesa}
                           className="relative w-[100%] h-[100%] object-contain"
-                          alt="mpesa"
+                          alt="gibbz tha daqchild mpesa"
                         />
                         <span className="text-xs font-medium text-[#9d6ef4] bottom-2 text-center">
                           Pay with Mpesa

@@ -189,7 +189,7 @@ const ExtraNavBar = () => {
             >
               <img
                 src={images[current]}
-                alt="navbarImage"
+                alt="gibbz tha daqchild navbar"
                 className=" md:h-96 md:w-96   h-80"
               />
             </motion.div>

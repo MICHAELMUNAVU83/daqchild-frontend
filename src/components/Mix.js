@@ -72,7 +72,7 @@ const Mix = ({ mix }) => {
       <div>
         <img
           src={mix.poster}
-          alt=" random imgee"
+          alt=" gibbz tha daqchild mix"
           className="rounded-full  md:ml-2 shadow-md"
           style={{ width: "200px", height: "200px" }}
         />

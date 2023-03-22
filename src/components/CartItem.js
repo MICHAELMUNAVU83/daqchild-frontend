@@ -9,7 +9,7 @@ const CartItem = ({ item, removeFromArray }) => {
             src={item.product_image}
             width="60"
             className="rounded-full "
-            alt="product "
+            alt="gibbz tha daqchild product "
           />
 
           <div className="flex flex-col ml-3 ">

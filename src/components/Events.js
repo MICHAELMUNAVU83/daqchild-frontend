@@ -88,7 +88,7 @@ const Events = () => {
                 <SplideSlide key={event.id} className="w-[80%]">
                   <img
                     src={event.poster}
-                    alt="event poster"
+                    alt="gibbz tha daqchild event poster"
                     className="md:w-[100%] w-full md:rounded-2xl  rounded-3xl md:px-0 px-2 h-[350px] md:h-[500px] "
                   />
                 </SplideSlide>

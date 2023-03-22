@@ -31,7 +31,7 @@ const Product = ({ setStoredToken, storedToken }) => {
         <div className="container px-5 py-20 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <img
-              alt="ecommerce"
+              alt="gibbz tha daqchild ecommerce"
               className="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200"
               src={product.product_image}
             />

@@ -12,7 +12,7 @@ const MerchCard = ({ product }) => {
               <div className="flex  flex-col place-content-center mx-auto md:ml-0 justify-center  bg-gradient-to-b  from-purple-600 via  overflow-hidden rounded-md md:w-[350px] md:h-[300px] w-[290px] h-[270px]">
                 <img
                   src={product.product_image}
-                  alt="Just a flower"
+                  alt="gibbz tha daqchild product"
                   className="  md:mr-2   object-fill  rounded-2xl h-[250px] w-[300px]"
                 />
               </div>
