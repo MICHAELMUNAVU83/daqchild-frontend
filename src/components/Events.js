@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "@splidejs/react-splide/css";
+
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import moment from "moment";
 import { ImMusic } from "react-icons/im";
+import "./splide-purple.css";
 
 const Events = () => {
   const [events, setEvents] = useState([]);

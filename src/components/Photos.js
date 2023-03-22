@@ -9,12 +9,12 @@ const Photos = () => {
     <div className="max-w-[1240px] mx-auto py-16 text-center">
       <div className="grid grid-rows-none md:grid-cols-5 p-4 gap-4">
         <div className="w-full h-full col-span-2 md:col-span-3 row-span-2">
-          <img src={ma} alt="/" layout="responsive" width="677" height="451" />
+          <img src={ma} alt="gibbzthadaqchild" layout="responsive" width="677" height="451" />
           {/* Overlay */}
         </div>
         <div className="w-[1/2] h-[217px] cursor-pointer">
           <div className="relative">
-            <img src={J6} alt="/" layout="responsive" />
+            <img src={J6} alt="gibbzthadaqchild" layout="responsive" />
             {/* Overlay */}
             <div className="flex justify-center items-center absolute  top-0 w-[100%] left-0 right-0 bottom-0 hover:bg-black/50 transition-all duration-300 group">
               <p className="text-gray-300 hidden group-hover:block">
@@ -25,7 +25,7 @@ const Photos = () => {
         </div>
         <div className="w-[1/2] h-[217px] cursor-pointer">
           <div className="relative">
-            <img src={V1} alt="/" layout="responsive" />
+            <img src={V1} alt="gibbzthadaqchild" layout="responsive" />
             {/* Overlay */}
             <div className="flex justify-center items-center absolute  top-0 w-[100%] left-0 right-0 bottom-0 hover:bg-black/50 transition-all duration-300 group">
               <p className="text-gray-300 hidden group-hover:block">
@@ -36,7 +36,7 @@ const Photos = () => {
         </div>
         <div className="w-[1/2] h-[217px] cursor-pointer">
           <div className="relative">
-            <img src={V2} alt="/" layout="responsive" />
+            <img src={V2} alt="gibbzthadaqchild" layout="responsive" />
             {/* Overlay */}
             <div className="flex justify-center items-center absolute  top-0 w-[100%] left-0 right-0 bottom-0 hover:bg-black/50 transition-all duration-300 group">
               <p className="text-gray-300 hidden group-hover:block">
@@ -47,7 +47,7 @@ const Photos = () => {
         </div>
         <div className="w-[1/2] h-[217px] cursor-pointer">
           <div className="relative">
-            <img src={J6} alt="/" layout="responsive" />
+            <img src={J6} alt="gibbzthadaqchild" layout="responsive" />
             {/* Overlay */}
             <div className="flex justify-center items-center absolute  top-0 w-[100%] left-0 right-0 bottom-0 hover:bg-black/50 transition-all duration-300 group">
               <p className="text-gray-300 hidden group-hover:block">
