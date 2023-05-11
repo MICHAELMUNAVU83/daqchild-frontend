@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import moment from "moment";

@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Mixes from "../components/Mixes";
 import Events from "../components/Events";
 import Photos from "../components/Photos";
-import Merch from "../components/Merch";
+
 import NavBar from "../components/NavBar";
 import AdminNavbar from "../components/AdminNavbar";
 
@@ -182,7 +182,6 @@ const Home = ({ setStoredToken, storedToken }) => {
         "https://res.cloudinary.com/dakiak4mc/image/upload/v1683778769/WhatsApp_Image_2023-05-11_at_7.17.40_AM_iuo3er.jpg",
     },
   ];
-  const products = [];
 
   return (
     <div>

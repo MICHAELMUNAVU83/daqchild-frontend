@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Mix from "./Mix";
 import { Link } from "react-router-dom";
-const Mixes = ({mixes}) => {
+const Mixes = ({ mixes }) => {
   // const [mixes, setMixes] = useState([]);
   // useEffect(() => {
   //   fetch("https://gibbz-tha-daqchild-api.herokuapp.com/latest_mixes")
@@ -12,9 +12,7 @@ const Mixes = ({mixes}) => {
   // }, [mixes]);
   useEffect(() => {
     console.log("mixes", mixes);
-
   }, [mixes]);
-
 
   const mixDisplay =
     mixes.length > 0 &&
