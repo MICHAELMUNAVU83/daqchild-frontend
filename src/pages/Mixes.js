@@ -3,18 +3,20 @@ import React, { useState, useEffect } from "react";
 import ExtraNavbar from "../components/ExtraNavbar";
 import Mix from "../components/Mix";
 import ExtrAdminNavBar from "../components/ExtraAdminNavbar";
-const Mixes = ({ setStoredToken, storedToken }) => {
-  const [mixes, setMixes] = useState([]);
+const Mixes = ({ setStoredToken, storedToken, mixes }) => {
+  // const [mixes, setMixes] = useState([]);
+  // useEffect(() => {
+  //   fetch("https://gibbz-tha-daqchild-api.herokuapp.com/mixes")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setMixes(data);
+  //     });
+  // }, [mixes]);
   useEffect(() => {
-    fetch("https://gibbz-tha-daqchild-api.herokuapp.com/mixes")
-      .then((response) => response.json())
-      .then((data) => {
-        setMixes(data);
-      });
+    console.log("mixes", mixes);
   }, [mixes]);
 
-  const mixDisplay =
-    mixes.length > 0 && mixes.map((mix) => <Mix key={mix.id} mix={mix} />);
+  const mixDisplay = mixes.map((mix) => <Mix key={mix.id} mix={mix} />);
 
   return (
     <>

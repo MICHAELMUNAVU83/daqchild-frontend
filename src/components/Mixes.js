@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Mix from "./Mix";
 import { Link } from "react-router-dom";
-const Mixes = () => {
-  const [mixes, setMixes] = useState([]);
+const Mixes = ({mixes}) => {
+  // const [mixes, setMixes] = useState([]);
+  // useEffect(() => {
+  //   fetch("https://gibbz-tha-daqchild-api.herokuapp.com/latest_mixes")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setMixes(data);
+  //     });
+  // }, [mixes]);
   useEffect(() => {
-    fetch("https://gibbz-tha-daqchild-api.herokuapp.com/latest_mixes")
-      .then((response) => response.json())
-      .then((data) => {
-        setMixes(data);
-      });
+    console.log("mixes", mixes);
+
   }, [mixes]);
+
 
   const mixDisplay =
     mixes.length > 0 &&

@@ -5,15 +5,15 @@ import moment from "moment";
 import { ImMusic } from "react-icons/im";
 import "./splide-purple.css";
 
-const Events = () => {
-  const [events, setEvents] = useState([]);
-  useEffect(() => {
-    fetch("https://gibbz-tha-daqchild-api.herokuapp.com/events")
-      .then((response) => response.json())
-      .then((data) => {
-        setEvents(data);
-      });
-  }, []);
+const Events = ({ events }) => {
+  // const [events, setEvents] = useState([]);
+  // useEffect(() => {
+  //   fetch("https://gibbz-tha-daqchild-api.herokuapp.com/events")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setEvents(data);
+  //     });
+  // }, []);
 
   return (
     <div id="events" className="py-4  ">
