@@ -25,7 +25,7 @@ const Mixes = () => {
         <table className="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5">
           <thead className="text-white">
             {mixes.map((mix) => (
-              <tr className="bg-[#9d6ef4]  flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0">
+              <tr className="bg-[#DDA3B2]  flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0">
                 {window.innerWidth > 768 && (
                   <th className="p-3 text-left">Poster</th>
                 )}

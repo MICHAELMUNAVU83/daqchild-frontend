@@ -68,7 +68,7 @@ const Mix = ({ mix }) => {
   }
 
   return (
-    <div className=" flex flex-col items-center shadow-[#9d6ef4] px-4 md:px-0  bg-white shadow-xl md:w-[350px] w-[300px] rounded-lg h-full py-4">
+    <div className=" flex flex-col items-center shadow-[#DDA3B2] px-4 md:px-0  bg-white shadow-xl md:w-[350px] w-[300px] rounded-lg h-full py-4">
       <div>
         <img
           src={mix.poster}
@@ -77,7 +77,7 @@ const Mix = ({ mix }) => {
           style={{ width: "200px", height: "200px" }}
         />
       </div>
-      <span className="bg-[#9d6ef4] my-2 text-white text-xs px-2  text-end rounded-full  uppercase font-semibold tracking-wide">
+      <span className="bg-[#DDA3B2] my-2 text-white text-xs px-2  text-end rounded-full  uppercase font-semibold tracking-wide">
         {mix.genre}
       </span>
       <div className="ml-2 text-gray-600 uppercase text-xs md:text-sm font-semibold ">
@@ -96,7 +96,7 @@ const Mix = ({ mix }) => {
           <div>
             <FaDownload
               size={25}
-              className="cursor-pointer mx-1 text-[#9d6ef4]"
+              className="cursor-pointer mx-1 text-[#DDA3B2]"
               onClick={() => {
                 handleDownload(mix.audio_mp3, mix.name);
                 fetch(
@@ -131,7 +131,7 @@ const Mix = ({ mix }) => {
           <div className="flex items-center kanit font-bold gap-2">
             <p className="text-xl bakbak font-bold">{nFormatter(mix.likes)}</p>
             <AiFillHeart
-              className="text-2xl text-[#9d6ef4] hover:text-red-500 cursor-pointer "
+              className="text-2xl text-[#DDA3B2] hover:text-red-500 cursor-pointer "
               size={25}
               onClick={() => {
                 fetch(

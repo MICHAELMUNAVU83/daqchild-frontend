@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Mixes from "../components/Mixes";
 import Events from "../components/Events";
 import Photos from "../components/Photos";
+import australia from "./australia.jpg";
 
 import NavBar from "../components/NavBar";
 import AdminNavbar from "../components/AdminNavbar";
@@ -153,33 +154,25 @@ const Home = ({ setStoredToken, storedToken }) => {
   const events = [
     {
       id: 1,
-      location: "Captain's Lounge",
-      date: "2023-05-11T00:00:00.000Z",
+      location: "Quiver kitengela",
+      date: "2023-05-26T00:00:00.000Z",
       poster:
-        "https://res.cloudinary.com/dakiak4mc/image/upload/v1683778715/WhatsApp_Image_2023-05-11_at_7.16.54_AM_caqfgv.jpg",
+        "https://res.cloudinary.com/dakiak4mc/image/upload/v1685083178/WhatsApp_Image_2023-05-26_at_9.22.06_AM_syosed.jpg",
     },
     {
       id: 2,
-      location: "Quiver Thika Road",
-      date: "2023-05-12T00:00:00.000Z",
+      location: "Wessyde Lounge",
+      date: "2023-05-27T00:00:00.000Z",
       poster:
-        "https://res.cloudinary.com/dakiak4mc/image/upload/v1683778727/WhatsApp_Image_2023-05-11_at_7.16.55_AM_lcuts6.jpg",
+        "https://res.cloudinary.com/dakiak4mc/image/upload/v1685083178/WhatsApp_Image_2023-05-26_at_9.22.05_AM_xxroam.jpg",
     },
     {
       id: 3,
 
-      location: "Art Club",
+      location: "Australia",
 
-      date: "2023-05-13T00:00:00.000Z",
-      poster:
-        "https://res.cloudinary.com/dakiak4mc/image/upload/v1683778769/WhatsApp_Image_2023-05-11_at_7.16.55_AM_1_coxof9.jpg",
-    },
-    {
-      id: 4,
-      location: "Allure Lounge",
-      date: "2023-05-14T00:00:00.000Z",
-      poster:
-        "https://res.cloudinary.com/dakiak4mc/image/upload/v1683778769/WhatsApp_Image_2023-05-11_at_7.17.40_AM_iuo3er.jpg",
+      date: "2023-07-9T00:00:00.000Z",
+      poster: australia,
     },
   ];
 

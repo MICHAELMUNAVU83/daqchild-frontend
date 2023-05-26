@@ -25,7 +25,7 @@ const Mixes = ({ mixes }) => {
   return (
     <div id="mixes" className="bg-black  py-6 ">
       <h1 className="mt-4 ml-2 ">
-        <span className="text-4xl text-[#9d6ef4] font-bold krona">
+        <span className="text-4xl text-[#DDA3B2] font-bold krona">
           Latest Mixes
         </span>
       </h1>
@@ -41,7 +41,7 @@ const Mixes = ({ mixes }) => {
       </div>
       <div className="flex justify-center mt-10">
         <Link to="/mixes">
-          <button className="px-4 py-2 bg-[#9d6ef4] my-16  md:my-0 text-white hover:scale-110 transition duration-500 font-bold krona ease-in-out ">
+          <button className="px-4 py-2 bg-[#DDA3B2] my-16  md:my-0 text-white hover:scale-110 transition duration-500 font-bold krona ease-in-out ">
             ALL MIXES
           </button>
         </Link>

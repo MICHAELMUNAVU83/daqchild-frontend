@@ -68,7 +68,7 @@ function Login({ setStoredToken, storedToken }) {
               />
             </div>
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-              <h1 className="text-xl font-bold leading-tight tracking-tight text-[#9d6ef4] md:text-2xl ">
+              <h1 className="text-xl font-bold leading-tight tracking-tight text-[#DDA3B2] md:text-2xl ">
                 Sign in to your account
               </h1>
               <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
@@ -103,7 +103,7 @@ function Login({ setStoredToken, storedToken }) {
 
                 <button
                   type="submit"
-                  className="w-full text-white bg-[#9d6ef4] border border-transparent rounded-lg py-2.5 px-4 hover:bg-[#9d6ef4] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-600"
+                  className="w-full text-white bg-[#DDA3B2] border border-transparent rounded-lg py-2.5 px-4 hover:bg-[#DDA3B2] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-600"
                 >
                   Sign in
                 </button>

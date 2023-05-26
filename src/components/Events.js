@@ -32,7 +32,7 @@ const Events = ({ events }) => {
               {events.map((event) => (
                 <li className="border-gray-400 flex flex-row mb-2  md:h-[70px] h-[90px]">
                   <div className="select-none cursor-pointer p-2  md:p-4 rounded-2xl text-white bg-black  flex flex-1 items-center  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
-                    <div className="flex flex-col rounded-md w-8 h-8 bg-[#9d6ef4] p-2 justify-center items-center mr-4">
+                    <div className="flex flex-col rounded-md w-8 h-8 bg-[#DDA3B2] p-2 justify-center items-center mr-4">
                       <ImMusic className="text-2xl text-white" />
                     </div>
                     <div className="flex-1 pl-1 mr-16">
@@ -53,7 +53,7 @@ const Events = ({ events }) => {
             </ul>
 
             <div className="text-center">
-              <button className="px-4 py-2 bg-[#9d6ef4] md:my-8 my-4  text-white hover:scale-110 transition duration-500 font-bold krona ease-in-out ">
+              <button className="px-4 py-2 bg-[#DDA3B2] md:my-8 my-4  text-white hover:scale-110 transition duration-500 font-bold krona ease-in-out ">
                 <a rel="noopener noreferrer" href="tel:0720038150">
                   BOOK THA DAQCHILD
                 </a>

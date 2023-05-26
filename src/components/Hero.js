@@ -21,9 +21,14 @@ const Hero = () => {
           >
             GIBBZ THA DAQCHILD
           </h1>
-          <p className="text-2xl md:text-4xl text-white font-bold  bangers ">
+          {/* <p className="text-2xl md:text-4xl text-white font-bold  bangers ">
             KING OF GOOD TIMES
+          </p> */}
+
+          <p className="text-2xl md:text-4xl text-white font-bold  bangers ">
+            LIVE IN AUSTRALIA JULY 9TH
           </p>
+
           {/* 
           <div
             className="marquee-w text-3xl bakbak

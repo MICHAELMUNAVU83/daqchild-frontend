@@ -9,7 +9,7 @@ import { FiPhoneCall } from "react-icons/fi";
 const Footer = () => {
   return (
     <div className="bg-black h-full text-white md:p-4 p-2 z-0 ">
-      <p className="text-center p-3 krona text-[#9d6ef4] text-4xl">FOLLOW ME</p>
+      <p className="text-center p-3 krona text-[#DDA3B2] text-4xl">FOLLOW ME</p>
       <section className="w-full md:w-full  flex-wrap flex bg-dark   justify-center items-center ">
         <a
           href="https://www.instagram.com/tha_daqchild/"
@@ -23,7 +23,6 @@ const Footer = () => {
         <a
           href="https://www.facebook.com/darkchild.mudoga/"
           rel=" noreferrer"
-
           target="_blank"
           className=" md:p-4 p-2 group hover:bg-purple-500 duration-300  ease-in-out  cursor-pointer   "
           style={{ border: "1px solid white" }}
@@ -79,7 +78,7 @@ const Footer = () => {
 
       <section className="flex flex-col mt-10 md:gap-24 gap-10 md:flex-row justify-center my-4 items-center">
         <div className="flex flex-col group justify-center items-center ">
-          <p className="text-center p-3  text-[#9d6ef4] text-4xl krona">
+          <p className="text-center p-3  text-[#DDA3B2] text-4xl krona">
             MIXES
           </p>
           <p className="text-center p-1 group-hover:text-white text-gray-400 ">
@@ -93,7 +92,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex flex-col group justify-center items-center">
-          <p className="text-center p-3 text-[#9d6ef4] krona text-4xl">
+          <p className="text-center p-3 text-[#DDA3B2] krona text-4xl">
             Merchandise
           </p>
           <p className="text-center p-1 group-hover:text-white  text-gray-400  ">
@@ -108,7 +107,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col group justify-center items-center">
-          <p className="text-center p-3 text-[#9d6ef4] krona text-4xl">
+          <p className="text-center p-3 text-[#DDA3B2] krona text-4xl">
             Contact
           </p>
           <p className="text-center p-1 group-hover:text-white text-gray-400 ">

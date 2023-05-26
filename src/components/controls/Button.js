@@ -5,7 +5,7 @@ import { FaPause } from "react-icons/fa";
 
 function Button({ play, isPlaying }) {
   return (
-    <div className="  text-[#9d6ef4]">
+    <div className="  text-[#DDA3B2]">
       {isPlaying ? (
         <button className="btn" onClick={play}>
           <FaPause size={20} />

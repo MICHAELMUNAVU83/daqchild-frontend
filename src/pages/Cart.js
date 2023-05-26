@@ -92,7 +92,7 @@ const Cart = ({ setStoredToken, storedToken }) => {
                           className="relative w-[100%] h-[100%] object-contain"
                           alt="gibbz tha daqchild mpesa"
                         />
-                        <span className="text-xs font-medium text-[#9d6ef4] bottom-2 text-center">
+                        <span className="text-xs font-medium text-[#DDA3B2] bottom-2 text-center">
                           Pay with Mpesa
                         </span>
                       </div>
@@ -109,7 +109,7 @@ const Cart = ({ setStoredToken, storedToken }) => {
                       />
                     </div>
 
-                    <button className="h-12 mt-12 w-full  bg-[#9d6ef4] rounded focus:outline-none text-white hover:bg-purple-500">
+                    <button className="h-12 mt-12 w-full  bg-[#DDA3B2] rounded focus:outline-none text-white hover:bg-purple-500">
                       Check Out
                     </button>
                   </div>

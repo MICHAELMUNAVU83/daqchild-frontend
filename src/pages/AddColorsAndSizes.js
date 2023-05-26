@@ -115,7 +115,7 @@ const AddColorsAndSizes = ({ storedToken, setStoredToken }) => {
 
           <div className=" my-4 flex flex-col items-center">
             <button
-              className="px-4 py-2 bg-[#9d6ef4] my-2  md:my-0 text-white hover:scale-110 transition duration-500 font-bold krona ease-in-out"
+              className="px-4 py-2 bg-[#DDA3B2] my-2  md:my-0 text-white hover:scale-110 transition duration-500 font-bold krona ease-in-out"
               onClick={() => {
                 addColor();
               }}
@@ -150,7 +150,7 @@ const AddColorsAndSizes = ({ storedToken, setStoredToken }) => {
 
           <div className=" my-4 flex flex-col items-center">
             <button
-              className="px-4 py-2 bg-[#9d6ef4] my-2  md:my-0 text-white hover:scale-110 transition duration-500 font-bold krona ease-in-out"
+              className="px-4 py-2 bg-[#DDA3B2] my-2  md:my-0 text-white hover:scale-110 transition duration-500 font-bold krona ease-in-out"
               onClick={() => {
                 addSize();
               }}
