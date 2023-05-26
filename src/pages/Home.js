@@ -171,7 +171,7 @@ const Home = ({ setStoredToken, storedToken }) => {
 
       location: "Australia",
 
-      date: "2023-07-9T00:00:00.000Z",
+      date: "2023-07-09T00:00:00.000Z",
       poster: australia,
     },
   ];
