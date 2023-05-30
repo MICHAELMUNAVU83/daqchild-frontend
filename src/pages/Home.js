@@ -4,7 +4,6 @@ import Hero from "../components/Hero";
 import Mixes from "../components/Mixes";
 import Events from "../components/Events";
 import Photos from "../components/Photos";
-import australia from "./australia.jpg";
 
 import NavBar from "../components/NavBar";
 import AdminNavbar from "../components/AdminNavbar";
@@ -154,25 +153,40 @@ const Home = ({ setStoredToken, storedToken }) => {
   const events = [
     {
       id: 1,
-      location: "Quiver kitengela",
-      date: "2023-05-26T00:00:00.000Z",
+      location: "Whiskey River Lounge",
+      date: "2023-05-31T00:00:00.000Z",
       poster:
-        "https://res.cloudinary.com/dakiak4mc/image/upload/v1685083178/WhatsApp_Image_2023-05-26_at_9.22.06_AM_syosed.jpg",
+        "https://res.cloudinary.com/dakiak4mc/image/upload/v1685420289/WhatsApp_Image_2023-05-30_at_7.11.02_AM_sqqee0.jpg",
     },
     {
       id: 2,
-      location: "Wessyde Lounge",
-      date: "2023-05-27T00:00:00.000Z",
+      location: "Groundless Lounge , Nakuru",
+      date: "2023-06-02T00:00:00.000Z",
       poster:
-        "https://res.cloudinary.com/dakiak4mc/image/upload/v1685083178/WhatsApp_Image_2023-05-26_at_9.22.05_AM_xxroam.jpg",
+        "https://res.cloudinary.com/dakiak4mc/image/upload/v1685420279/WhatsApp_Image_2023-05-30_at_7.11.02_AM_1_vsgzim.jpg",
     },
     {
       id: 3,
+      location: "Allure Lounge",
+      date: "2023-06-03T00:00:00.000Z",
+      poster:
+        "https://res.cloudinary.com/dakiak4mc/image/upload/v1685420284/WhatsApp_Image_2023-05-30_at_7.11.02_AM_2_ohc6hp.jpg",
+    },
+    {
+      id: 4,
+      location: "Laviva Lounge",
+      date: "2023-06-04T00:00:00.000Z",
+      poster:
+        "https://res.cloudinary.com/dakiak4mc/image/upload/v1685420304/WhatsApp_Image_2023-05-30_at_7.11.03_AM_x7sdey.jpg",
+    },
+    {
+      id: 5,
 
       location: "Australia",
 
       date: "2023-07-09T00:00:00.000Z",
-      poster: australia,
+      poster:
+        "https://res.cloudinary.com/dakiak4mc/image/upload/v1685420661/WhatsApp_Image_2023-05-30_at_7.23.58_AM_ui1sfr.jpg",
     },
   ];
 
