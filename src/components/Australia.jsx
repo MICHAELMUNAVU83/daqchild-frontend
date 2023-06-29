@@ -28,12 +28,12 @@ const Australia = () => {
     },
   ];
   return (
-    <div className="h-[100vh]  bg-[#DDA3B2]/80  ">
+    <div className="md:h-[100vh]  bg-[#DDA3B2]/80  ">
       <p className="p-8 text-7xl font-bold bebas">Australian Tour Dates</p>
       <p className="p-8 playfair text-center text-xl">
         Catch me live in Asutralia from July 7th to July 16th .
       </p>
-      <div className=" w-[90%] mx-auto grid grid-cols-4 gap-8">
+      <div className=" w-[90%] mx-auto grid md:grid-cols-4 gap-8">
         {shows.map((show) => (
           <div className="bg-black rounded-xl hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer">
             <img
