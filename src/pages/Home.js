@@ -7,6 +7,7 @@ import Photos from "../components/Photos";
 
 import NavBar from "../components/NavBar";
 import AdminNavbar from "../components/AdminNavbar";
+import Australia from "../components/Australia";
 
 const Home = ({ setStoredToken, storedToken }) => {
   // const [mixes, setMixes] = useState([
@@ -153,40 +154,17 @@ const Home = ({ setStoredToken, storedToken }) => {
   const events = [
     {
       id: 1,
-      location: "Whiskey River Lounge",
-      date: "2023-05-31T00:00:00.000Z",
+      location: "The Manhattan",
+      date: "2023-06-30T00:00:00.000Z",
       poster:
-        "https://res.cloudinary.com/dakiak4mc/image/upload/v1685420289/WhatsApp_Image_2023-05-30_at_7.11.02_AM_sqqee0.jpg",
+        "https://res.cloudinary.com/dakiak4mc/image/upload/v1688014377/WhatsApp_Image_2023-06-29_at_5.09.53_AM_sc7wfw.jpg",
     },
     {
       id: 2,
-      location: "Groundless Lounge , Nakuru",
-      date: "2023-06-02T00:00:00.000Z",
+      location: "The Hideout Dubai",
+      date: "2023-07-02T00:00:00.000Z",
       poster:
-        "https://res.cloudinary.com/dakiak4mc/image/upload/v1685420279/WhatsApp_Image_2023-05-30_at_7.11.02_AM_1_vsgzim.jpg",
-    },
-    {
-      id: 3,
-      location: "Allure Lounge",
-      date: "2023-06-03T00:00:00.000Z",
-      poster:
-        "https://res.cloudinary.com/dakiak4mc/image/upload/v1685420284/WhatsApp_Image_2023-05-30_at_7.11.02_AM_2_ohc6hp.jpg",
-    },
-    {
-      id: 4,
-      location: "Laviva Lounge",
-      date: "2023-06-04T00:00:00.000Z",
-      poster:
-        "https://res.cloudinary.com/dakiak4mc/image/upload/v1685420304/WhatsApp_Image_2023-05-30_at_7.11.03_AM_x7sdey.jpg",
-    },
-    {
-      id: 5,
-
-      location: "Australia",
-
-      date: "2023-07-09T00:00:00.000Z",
-      poster:
-        "https://res.cloudinary.com/dakiak4mc/image/upload/v1685420661/WhatsApp_Image_2023-05-30_at_7.23.58_AM_ui1sfr.jpg",
+        "https://res.cloudinary.com/dakiak4mc/image/upload/v1688014377/WhatsApp_Image_2023-06-29_at_5.09.52_AM_ka08dj.jpg",
     },
   ];
 
@@ -199,7 +177,9 @@ const Home = ({ setStoredToken, storedToken }) => {
       )}
       <Hero />
       {events && <Events events={events} />}
+      <Australia />
       {mixes && <Mixes mixes={mixes} />}
+
       {/* {products && <Merch />} */}
 
       <Photos />

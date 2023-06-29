@@ -14,6 +14,7 @@ import AddColorsAndSizes from "./pages/AddColorsAndSizes";
 import Error from "./pages/Error";
 import Loader from "./pages/Loader";
 
+
 function App() {
   const [loading, setLoading] = useState(true);
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
