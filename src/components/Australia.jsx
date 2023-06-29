@@ -39,6 +39,7 @@ const Australia = () => {
             <img
               src={show.poster}
               className="h-[400px] rounded-t-xl object-cover"
+              alt={show.location}
             />
 
             <div className="text-white text-center bebas text-xl py-2">
