@@ -28,7 +28,7 @@ const Australia = () => {
     },
   ];
   return (
-    <div className="md:h-[100vh]  bg-[#DDA3B2]/80  ">
+    <div className="md:h-[100vh] py-8 bg-[#DDA3B2]/80  ">
       <p className="p-8 text-7xl font-bold bebas">Australian Tour Dates</p>
       <p className="p-8 playfair text-center text-xl">
         Catch me live in Asutralia from July 7th to July 16th .
