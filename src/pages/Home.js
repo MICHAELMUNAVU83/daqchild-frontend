@@ -7,7 +7,7 @@ import Photos from "../components/Photos";
 
 import NavBar from "../components/NavBar";
 import AdminNavbar from "../components/AdminNavbar";
-import Australia from "../components/Australia";
+
 
 const Home = ({ setStoredToken, storedToken }) => {
   // const [mixes, setMixes] = useState([
