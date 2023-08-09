@@ -87,7 +87,7 @@ const Home = ({ setStoredToken, storedToken }) => {
       audio_mp3:
         "https://res.cloudinary.com/dakiak4mc/video/upload/v1691558177/9f27-0abf-45b6-ada6-41ae5e90cc42_mtkhcq.m4a",
       poster:
-        "https://res.cloudinary.com/dakiak4mc/image/upload/v1691558393/Screenshot_2023-08-09_at_08.17.48_gksslb.png",
+        "https://res.cloudinary.com/dakiak4mc/image/upload/v1677434030/tsomwbawkbrcewxkuka6.jpg",
       name: "NAIROBI TO JOZI VOL.2 2022 AMAPIANO BANGERS mixxed by DJ GIBBZ THADAQCHILD",
       likes: 7431,
       plays: 4895,
