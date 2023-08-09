@@ -37,9 +37,53 @@ const Home = ({ setStoredToken, storedToken }) => {
   //       setProducts(data);
   //     });
   // }, []);
+
+  //   fetch("https://gibbz-tha-daqchild-api.herokuapp.com/events")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setEvents(data);
+  //     });
+  // }, []);
+
+  // useEffect(() => {
+  //   fetch("https://gibbz-tha-daqchild-api.herokuapp.com/products")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setProducts(data);
+  //     });
+  // }, []);
   const mixes = [
     {
-      id: 0,
+      id: 1,
+      audio_mp3:
+        "https://res.cloudinary.com/dakiak4mc/video/upload/v1691566817/e074-7f1b-4261-94b4-4b90061f6987_mwpcri.m4a",
+      poster:
+        "https://res.cloudinary.com/dakiak4mc/image/upload/v1691566824/Screenshot_2023-08-09_at_10.39.37_uiptmm.png",
+      name: "DJ GIBBZ THADAQCHILD feat MC JOSEE live club mix ''ALUTA'' Mo spice",
+      likes: 9031,
+      plays: 5432,
+      genre: "All Genres",
+      downloads: 6282,
+      created_at: "2023-03-20T15:25:37.255Z",
+      updated_at: "2023-04-10T13:13:33.459Z",
+    },
+    {
+      id: 2,
+      audio_mp3:
+        "https://res.cloudinary.com/dakiak4mc/video/upload/v1691558177/9f27-0abf-45b6-ada6-41ae5e90cc42_mtkhcq.m4a",
+      poster:
+        "https://res.cloudinary.com/dakiak4mc/image/upload/v1691558393/Screenshot_2023-08-09_at_08.17.48_gksslb.png",
+      name: "DAQCHILD AND MIDO LIVE",
+      likes: 8931,
+      plays: 4012,
+      genre: "All Genres",
+      downloads: 6282,
+      created_at: "2023-03-20T15:25:37.255Z",
+      updated_at: "2023-04-10T13:13:33.459Z",
+    },
+
+    {
+      id: 3,
       audio_mp3:
         "https://res.cloudinary.com/dakiak4mc/video/upload/v1691558177/9f27-0abf-45b6-ada6-41ae5e90cc42_mtkhcq.m4a",
       poster:
@@ -52,22 +96,9 @@ const Home = ({ setStoredToken, storedToken }) => {
       created_at: "2023-03-20T15:25:37.255Z",
       updated_at: "2023-04-10T13:13:33.459Z",
     },
+
     {
-      id: 3,
-      audio_mp3:
-        "https://res.cloudinary.com/dakiak4mc/video/upload/v1677434070/n4req8bmfj0xqntt4txs.m4a",
-      poster:
-        "https://res.cloudinary.com/dakiak4mc/image/upload/v1677434030/tsomwbawkbrcewxkuka6.jpg",
-      name: "NAIROBI TO JOZI VOL.2 2022 AMAPIANO BANGERS mixxed by DJ GIBBZ THADAQCHILD",
-      likes: 7431,
-      plays: 4895,
-      genre: "Amapiano",
-      downloads: 3052,
-      created_at: "2023-03-20T15:25:37.255Z",
-      updated_at: "2023-04-10T13:13:33.459Z",
-    },
-    {
-      id: 2,
+      id: 4,
       audio_mp3:
         "https://res.cloudinary.com/dakiak4mc/video/upload/v1677433441/lzcrwrnniyj8axb8qapo.m4a",
       poster:
@@ -81,7 +112,7 @@ const Home = ({ setStoredToken, storedToken }) => {
       updated_at: "2023-04-06T08:53:46.796Z",
     },
     {
-      id: 1,
+      id: 5,
       audio_mp3:
         "https://res.cloudinary.com/dakiak4mc/video/upload/v1677432880/rgaxrulvnuzngznslufm.m4a",
       poster:
@@ -95,7 +126,7 @@ const Home = ({ setStoredToken, storedToken }) => {
       updated_at: "2023-04-10T13:13:53.611Z",
     },
     {
-      id: 7,
+      id: 6,
       audio_mp3:
         "https://res.cloudinary.com/dakiak4mc/video/upload/v1678950590/lrxntgf5mxqdzqjeeg1i.mp3",
       poster:
@@ -109,7 +140,7 @@ const Home = ({ setStoredToken, storedToken }) => {
       updated_at: "2023-04-10T11:02:03.463Z",
     },
     {
-      id: 4,
+      id: 7,
       audio_mp3:
         "https://res.cloudinary.com/dakiak4mc/video/upload/v1677434668/hhyyufxmoavvqzis6q3w.m4a",
       poster:
@@ -123,7 +154,7 @@ const Home = ({ setStoredToken, storedToken }) => {
       updated_at: "2023-04-10T11:02:19.052Z",
     },
     {
-      id: 5,
+      id: 8,
       audio_mp3:
         "https://res.cloudinary.com/dakiak4mc/video/upload/v1677435367/n7wxyxbbq6bwbd3brrt6.m4a",
       poster:
@@ -137,7 +168,7 @@ const Home = ({ setStoredToken, storedToken }) => {
       updated_at: "2023-04-10T13:19:33.466Z",
     },
     {
-      id: 6,
+      id: 9,
       audio_mp3:
         "https://res.cloudinary.com/dakiak4mc/video/upload/v1677435797/czye9itoflesxcgldbmq.m4a",
       poster:
@@ -150,12 +181,27 @@ const Home = ({ setStoredToken, storedToken }) => {
       created_at: "2023-03-20T15:25:37.268Z",
       updated_at: "2023-04-09T21:33:46.719Z",
     },
+    {
+      id: 10,
+      audio_mp3:
+        "https://res.cloudinary.com/dakiak4mc/video/upload/v1680069563/f27hecsqfqi5cok5h6jv.m4a",
+      poster:
+        "https://res.cloudinary.com/dakiak4mc/image/upload/v1680069513/yeb6gut3cstrgiueiuyl.jpg",
+      name: "Trace Radio Africe Live Mix",
+      likes: 8021,
+      plays: 4658,
+      genre: "All Genres",
+      downloads: 3753,
+      created_at: "2023-03-29T05:59:35.051Z",
+      updated_at: "2023-04-10T19:03:27.777Z",
+    },
   ];
+
   const events = [
     {
       id: 1,
       location: "Undeground Bar & Lounge",
-      date: "2023-08-10T00:00:00.000Z",
+      date: "2023-08-10T00:00:00.000",
       poster:
         "https://res.cloudinary.com/dakiak4mc/image/upload/v1691558167/WhatsApp_Image_2023-08-09_at_7.55.04_AM_1_p2mynb.jpg",
     },
