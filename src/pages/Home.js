@@ -39,6 +39,20 @@ const Home = ({ setStoredToken, storedToken }) => {
   // }, []);
   const mixes = [
     {
+      id: 0,
+      audio_mp3:
+        "https://res.cloudinary.com/dakiak4mc/video/upload/v1691558177/9f27-0abf-45b6-ada6-41ae5e90cc42_mtkhcq.m4a",
+      poster:
+        "https://res.cloudinary.com/dakiak4mc/image/upload/v1691558393/Screenshot_2023-08-09_at_08.17.48_gksslb.png",
+      name: "NAIROBI TO JOZI VOL.2 2022 AMAPIANO BANGERS mixxed by DJ GIBBZ THADAQCHILD",
+      likes: 7431,
+      plays: 4895,
+      genre: "All Genres",
+      downloads: 3052,
+      created_at: "2023-03-20T15:25:37.255Z",
+      updated_at: "2023-04-10T13:13:33.459Z",
+    },
+    {
       id: 3,
       audio_mp3:
         "https://res.cloudinary.com/dakiak4mc/video/upload/v1677434070/n4req8bmfj0xqntt4txs.m4a",
@@ -154,17 +168,10 @@ const Home = ({ setStoredToken, storedToken }) => {
   const events = [
     {
       id: 1,
-      location: "The Manhattan",
-      date: "2023-06-30T00:00:00.000Z",
+      location: "Undeground Bar & Lounge",
+      date: "2023-08-10T00:00:00.000Z",
       poster:
-        "https://res.cloudinary.com/dakiak4mc/image/upload/v1688014377/WhatsApp_Image_2023-06-29_at_5.09.53_AM_sc7wfw.jpg",
-    },
-    {
-      id: 2,
-      location: "The Hideout Dubai",
-      date: "2023-07-02T00:00:00.000Z",
-      poster:
-        "https://res.cloudinary.com/dakiak4mc/image/upload/v1688014377/WhatsApp_Image_2023-06-29_at_5.09.52_AM_ka08dj.jpg",
+        "https://res.cloudinary.com/dakiak4mc/image/upload/v1691558167/WhatsApp_Image_2023-08-09_at_7.55.04_AM_1_p2mynb.jpg",
     },
   ];
 
@@ -177,7 +184,7 @@ const Home = ({ setStoredToken, storedToken }) => {
       )}
       <Hero />
       {events && <Events events={events} />}
-      <Australia />
+
       {mixes && <Mixes mixes={mixes} />}
 
       {/* {products && <Merch />} */}

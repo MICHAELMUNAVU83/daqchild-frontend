@@ -26,7 +26,7 @@ const Hero = () => {
           </p> */}
 
           <p className="text-2xl md:text-4xl text-white font-bold  bangers ">
-            LIVE IN AUSTRALIA JULY 9TH - 16 TH
+            LIVE IN DOHA QATAR DOHA THURSDAY 10TH AUGUST{" "}
           </p>
 
           {/* 
