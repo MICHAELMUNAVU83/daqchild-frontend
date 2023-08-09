@@ -150,20 +150,6 @@ const Home = ({ setStoredToken, storedToken }) => {
       created_at: "2023-03-20T15:25:37.268Z",
       updated_at: "2023-04-09T21:33:46.719Z",
     },
-    {
-      id: 9,
-      audio_mp3:
-        "https://res.cloudinary.com/dakiak4mc/video/upload/v1680069563/f27hecsqfqi5cok5h6jv.m4a",
-      poster:
-        "https://res.cloudinary.com/dakiak4mc/image/upload/v1680069513/yeb6gut3cstrgiueiuyl.jpg",
-      name: "Trace Radio Africe Live Mix",
-      likes: 8021,
-      plays: 4658,
-      genre: "All Genres",
-      downloads: 3753,
-      created_at: "2023-03-29T05:59:35.051Z",
-      updated_at: "2023-04-10T19:03:27.777Z",
-    },
   ];
   const events = [
     {
